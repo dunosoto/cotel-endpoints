@@ -17,9 +17,9 @@
 								"method": "GET",
 								"header": [],
 								"url": {
-									"raw": "{{url}}/user-roles",
+									"raw": "{{url-external-plant}}/user-roles",
 									"host": [
-										"{{url}}"
+										"{{url-external-plant}}"
 									],
 									"path": [
 										"user-roles"
@@ -54,9 +54,9 @@
 									}
 								},
 								"url": {
-									"raw": "{{url}}/user-roles/1",
+									"raw": "{{url-external-plant}}/user-roles/1",
 									"host": [
-										"{{url}}"
+										"{{url-external-plant}}"
 									],
 									"path": [
 										"user-roles",
@@ -97,9 +97,9 @@
 									}
 								},
 								"url": {
-									"raw": "{{url}}/user-groups",
+									"raw": "{{url-external-plant}}/user-groups",
 									"host": [
-										"{{url}}"
+										"{{url-external-plant}}"
 									],
 									"path": [
 										"user-groups"
@@ -151,9 +151,9 @@
 									}
 								},
 								"url": {
-									"raw": "{{url}}/login",
+									"raw": "{{url-external-plant}}/login",
 									"host": [
-										"{{url}}"
+										"{{url-external-plant}}"
 									],
 									"path": [
 										"login"
@@ -178,9 +178,9 @@
 								"method": "POST",
 								"header": [],
 								"url": {
-									"raw": "{{url}}/logout",
+									"raw": "{{url-external-plant}}/logout",
 									"host": [
-										"{{url}}"
+										"{{url-external-plant}}"
 									],
 									"path": [
 										"logout"
@@ -197,9 +197,9 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "{{url}}/users",
+							"raw": "{{url-external-plant}}/users",
 							"host": [
-								"{{url}}"
+								"{{url-external-plant}}"
 							],
 							"path": [
 								"users"
@@ -234,9 +234,9 @@
 							}
 						},
 						"url": {
-							"raw": "{{url}}/users",
+							"raw": "{{url-external-plant}}/users",
 							"host": [
-								"{{url}}"
+								"{{url-external-plant}}"
 							],
 							"path": [
 								"users"
@@ -271,9 +271,9 @@
 							}
 						},
 						"url": {
-							"raw": "{{url}}/users/2",
+							"raw": "{{url-external-plant}}/users/2",
 							"host": [
-								"{{url}}"
+								"{{url-external-plant}}"
 							],
 							"path": [
 								"users",
@@ -289,9 +289,9 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "{{url}}/users/3",
+							"raw": "{{url-external-plant}}/users/3",
 							"host": [
-								"{{url}}"
+								"{{url-external-plant}}"
 							],
 							"path": [
 								"users",
@@ -307,9 +307,9 @@
 						"method": "DELETE",
 						"header": [],
 						"url": {
-							"raw": "{{url}}/users/1",
+							"raw": "{{url-external-plant}}/users/1",
 							"host": [
-								"{{url}}"
+								"{{url-external-plant}}"
 							],
 							"path": [
 								"users",
@@ -330,9 +330,9 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "{{url}}/areas",
+							"raw": "{{url-external-plant}}/areas",
 							"host": [
-								"{{url}}"
+								"{{url-external-plant}}"
 							],
 							"path": [
 								"areas"
@@ -352,9 +352,9 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "{{url}}/companies",
+							"raw": "{{url-external-plant}}/companies",
 							"host": [
-								"{{url}}"
+								"{{url-external-plant}}"
 							],
 							"path": [
 								"companies"
@@ -374,9 +374,9 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "{{url}}/groups",
+							"raw": "{{url-external-plant}}/groups",
 							"host": [
-								"{{url}}"
+								"{{url-external-plant}}"
 							],
 							"path": [
 								"groups"
@@ -411,9 +411,9 @@
 							}
 						},
 						"url": {
-							"raw": "{{url}}/groups",
+							"raw": "{{url-external-plant}}/groups",
 							"host": [
-								"{{url}}"
+								"{{url-external-plant}}"
 							],
 							"path": [
 								"groups"
@@ -428,9 +428,9 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "{{url}}/groups/1",
+							"raw": "{{url-external-plant}}/groups/1",
 							"host": [
-								"{{url}}"
+								"{{url-external-plant}}"
 							],
 							"path": [
 								"groups",
@@ -466,9 +466,9 @@
 							}
 						},
 						"url": {
-							"raw": "{{url}}/groups/5",
+							"raw": "{{url-external-plant}}/groups/5",
 							"host": [
-								"{{url}}"
+								"{{url-external-plant}}"
 							],
 							"path": [
 								"groups",
@@ -484,9 +484,9 @@
 						"method": "DELETE",
 						"header": [],
 						"url": {
-							"raw": "{{url}}/groups/4",
+							"raw": "{{url-external-plant}}/groups/4",
 							"host": [
-								"{{url}}"
+								"{{url-external-plant}}"
 							],
 							"path": [
 								"groups",
@@ -502,9 +502,9 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "{{url}}/groups/create",
+							"raw": "{{url-external-plant}}/groups/create",
 							"host": [
-								"{{url}}"
+								"{{url-external-plant}}"
 							],
 							"path": [
 								"groups",
@@ -525,9 +525,9 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "{{url}}/tags",
+							"raw": "{{url-external-plant}}/tags",
 							"host": [
-								"{{url}}"
+								"{{url-external-plant}}"
 							],
 							"path": [
 								"tags"
@@ -562,9 +562,9 @@
 							}
 						},
 						"url": {
-							"raw": "{{url}}/tags/1",
+							"raw": "{{url-external-plant}}/tags/1",
 							"host": [
-								"{{url}}"
+								"{{url-external-plant}}"
 							],
 							"path": [
 								"tags",
@@ -588,9 +588,9 @@
 								"method": "GET",
 								"header": [],
 								"url": {
-									"raw": "{{url}}/client-categories",
+									"raw": "{{url-external-plant}}/client-categories",
 									"host": [
-										"{{url}}"
+										"{{url-external-plant}}"
 									],
 									"path": [
 										"client-categories"
@@ -627,9 +627,9 @@
 							}
 						},
 						"url": {
-							"raw": "{{url}}/clients",
+							"raw": "{{url-external-plant}}/clients",
 							"host": [
-								"{{url}}"
+								"{{url-external-plant}}"
 							],
 							"path": [
 								"clients"
@@ -644,9 +644,9 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "{{url}}/clients",
+							"raw": "{{url-external-plant}}/clients",
 							"host": [
-								"{{url}}"
+								"{{url-external-plant}}"
 							],
 							"path": [
 								"clients"
@@ -661,9 +661,9 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "{{url}}/clients/1",
+							"raw": "{{url-external-plant}}/clients/1",
 							"host": [
-								"{{url}}"
+								"{{url-external-plant}}"
 							],
 							"path": [
 								"clients",
@@ -679,9 +679,9 @@
 						"method": "DELETE",
 						"header": [],
 						"url": {
-							"raw": "{{url}}/clients/1",
+							"raw": "{{url-external-plant}}/clients/1",
 							"host": [
-								"{{url}}"
+								"{{url-external-plant}}"
 							],
 							"path": [
 								"clients",
@@ -717,9 +717,9 @@
 							}
 						},
 						"url": {
-							"raw": "{{url}}/clients/2",
+							"raw": "{{url-external-plant}}/clients/2",
 							"host": [
-								"{{url}}"
+								"{{url-external-plant}}"
 							],
 							"path": [
 								"clients",
@@ -743,9 +743,9 @@
 								"method": "GET",
 								"header": [],
 								"url": {
-									"raw": "{{url}}/units",
+									"raw": "{{url-external-plant}}/units",
 									"host": [
-										"{{url}}"
+										"{{url-external-plant}}"
 									],
 									"path": [
 										"units"
@@ -782,9 +782,9 @@
 							}
 						},
 						"url": {
-							"raw": "{{url}}/materials",
+							"raw": "{{url-external-plant}}/materials",
 							"host": [
-								"{{url}}"
+								"{{url-external-plant}}"
 							],
 							"path": [
 								"materials"
@@ -799,9 +799,9 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "{{url}}/materials",
+							"raw": "{{url-external-plant}}/materials",
 							"host": [
-								"{{url}}"
+								"{{url-external-plant}}"
 							],
 							"path": [
 								"materials"
@@ -816,9 +816,9 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "{{url}}/materials/3",
+							"raw": "{{url-external-plant}}/materials/3",
 							"host": [
-								"{{url}}"
+								"{{url-external-plant}}"
 							],
 							"path": [
 								"materials",
@@ -854,9 +854,9 @@
 							}
 						},
 						"url": {
-							"raw": "{{url}}/materials/1",
+							"raw": "{{url-external-plant}}/materials/1",
 							"host": [
-								"{{url}}"
+								"{{url-external-plant}}"
 							],
 							"path": [
 								"materials",
@@ -872,9 +872,9 @@
 						"method": "DELETE",
 						"header": [],
 						"url": {
-							"raw": "{{url}}/materials/3",
+							"raw": "{{url-external-plant}}/materials/3",
 							"host": [
-								"{{url}}"
+								"{{url-external-plant}}"
 							],
 							"path": [
 								"materials",
@@ -890,9 +890,9 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "{{url}}/general-materials",
+							"raw": "{{url-external-plant}}/general-materials",
 							"host": [
-								"{{url}}"
+								"{{url-external-plant}}"
 							],
 							"path": [
 								"general-materials"
@@ -912,9 +912,9 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "{{url}}/tools",
+							"raw": "{{url-external-plant}}/tools",
 							"host": [
-								"{{url}}"
+								"{{url-external-plant}}"
 							],
 							"path": [
 								"tools"
@@ -949,9 +949,9 @@
 							}
 						},
 						"url": {
-							"raw": "{{url}}/tools",
+							"raw": "{{url-external-plant}}/tools",
 							"host": [
-								"{{url}}"
+								"{{url-external-plant}}"
 							],
 							"path": [
 								"tools"
@@ -966,9 +966,9 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "{{url}}/tools/1",
+							"raw": "{{url-external-plant}}/tools/1",
 							"host": [
-								"{{url}}"
+								"{{url-external-plant}}"
 							],
 							"path": [
 								"tools",
@@ -1004,9 +1004,9 @@
 							}
 						},
 						"url": {
-							"raw": "{{url}}/tools/1",
+							"raw": "{{url-external-plant}}/tools/1",
 							"host": [
-								"{{url}}"
+								"{{url-external-plant}}"
 							],
 							"path": [
 								"tools",
@@ -1022,9 +1022,9 @@
 						"method": "DELETE",
 						"header": [],
 						"url": {
-							"raw": "{{url}}/tools/1",
+							"raw": "{{url-external-plant}}/tools/1",
 							"host": [
-								"{{url}}"
+								"{{url-external-plant}}"
 							],
 							"path": [
 								"tools",
@@ -1045,9 +1045,9 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "{{url}}/cleaning-materials",
+							"raw": "{{url-external-plant}}/cleaning-materials",
 							"host": [
-								"{{url}}"
+								"{{url-external-plant}}"
 							],
 							"path": [
 								"cleaning-materials"
@@ -1082,9 +1082,9 @@
 							}
 						},
 						"url": {
-							"raw": "{{url}}/cleaning-materials",
+							"raw": "{{url-external-plant}}/cleaning-materials",
 							"host": [
-								"{{url}}"
+								"{{url-external-plant}}"
 							],
 							"path": [
 								"cleaning-materials"
@@ -1099,9 +1099,9 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "{{url}}/cleaning-materials/1",
+							"raw": "{{url-external-plant}}/cleaning-materials/1",
 							"host": [
-								"{{url}}"
+								"{{url-external-plant}}"
 							],
 							"path": [
 								"cleaning-materials",
@@ -1137,9 +1137,9 @@
 							}
 						},
 						"url": {
-							"raw": "{{url}}/cleaning-materials/1",
+							"raw": "{{url-external-plant}}/cleaning-materials/1",
 							"host": [
-								"{{url}}"
+								"{{url-external-plant}}"
 							],
 							"path": [
 								"cleaning-materials",
@@ -1155,9 +1155,9 @@
 						"method": "DELETE",
 						"header": [],
 						"url": {
-							"raw": "{{url}}/cleaning-materials/1",
+							"raw": "{{url-external-plant}}/cleaning-materials/1",
 							"host": [
-								"{{url}}"
+								"{{url-external-plant}}"
 							],
 							"path": [
 								"cleaning-materials",
@@ -1178,9 +1178,9 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "{{url}}/vehicles",
+							"raw": "{{url-external-plant}}/vehicles",
 							"host": [
-								"{{url}}"
+								"{{url-external-plant}}"
 							],
 							"path": [
 								"vehicles"
@@ -1215,9 +1215,9 @@
 							}
 						},
 						"url": {
-							"raw": "{{url}}/vehicles",
+							"raw": "{{url-external-plant}}/vehicles",
 							"host": [
-								"{{url}}"
+								"{{url-external-plant}}"
 							],
 							"path": [
 								"vehicles"
@@ -1232,9 +1232,9 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "{{url}}/vehicles/1",
+							"raw": "{{url-external-plant}}/vehicles/1",
 							"host": [
-								"{{url}}"
+								"{{url-external-plant}}"
 							],
 							"path": [
 								"vehicles",
@@ -1270,9 +1270,9 @@
 							}
 						},
 						"url": {
-							"raw": "{{url}}/vehicles/1",
+							"raw": "{{url-external-plant}}/vehicles/1",
 							"host": [
-								"{{url}}"
+								"{{url-external-plant}}"
 							],
 							"path": [
 								"vehicles",
@@ -1288,9 +1288,9 @@
 						"method": "DELETE",
 						"header": [],
 						"url": {
-							"raw": "{{url}}/vehicles/1",
+							"raw": "{{url-external-plant}}/vehicles/1",
 							"host": [
-								"{{url}}"
+								"{{url-external-plant}}"
 							],
 							"path": [
 								"vehicles",
@@ -1314,9 +1314,9 @@
 								"method": "GET",
 								"header": [],
 								"url": {
-									"raw": "{{url}}/olt-categories",
+									"raw": "{{url-external-plant}}/olt-categories",
 									"host": [
-										"{{url}}"
+										"{{url-external-plant}}"
 									],
 									"path": [
 										"olt-categories"
@@ -1351,9 +1351,9 @@
 									}
 								},
 								"url": {
-									"raw": "{{url}}/olt-categories",
+									"raw": "{{url-external-plant}}/olt-categories",
 									"host": [
-										"{{url}}"
+										"{{url-external-plant}}"
 									],
 									"path": [
 										"olt-categories"
@@ -1368,9 +1368,9 @@
 								"method": "GET",
 								"header": [],
 								"url": {
-									"raw": "{{url}}/olt-categories/3",
+									"raw": "{{url-external-plant}}/olt-categories/3",
 									"host": [
-										"{{url}}"
+										"{{url-external-plant}}"
 									],
 									"path": [
 										"olt-categories",
@@ -1406,9 +1406,9 @@
 									}
 								},
 								"url": {
-									"raw": "{{url}}/olt-categories/4",
+									"raw": "{{url-external-plant}}/olt-categories/4",
 									"host": [
-										"{{url}}"
+										"{{url-external-plant}}"
 									],
 									"path": [
 										"olt-categories",
@@ -1424,9 +1424,9 @@
 								"method": "DELETE",
 								"header": [],
 								"url": {
-									"raw": "{{url}}/olt-categories/3",
+									"raw": "{{url-external-plant}}/olt-categories/3",
 									"host": [
-										"{{url}}"
+										"{{url-external-plant}}"
 									],
 									"path": [
 										"olt-categories",
@@ -1447,9 +1447,9 @@
 								"method": "GET",
 								"header": [],
 								"url": {
-									"raw": "{{url}}/olt-states",
+									"raw": "{{url-external-plant}}/olt-states",
 									"host": [
-										"{{url}}"
+										"{{url-external-plant}}"
 									],
 									"path": [
 										"olt-states"
@@ -1484,9 +1484,9 @@
 									}
 								},
 								"url": {
-									"raw": "{{url}}/olt-states",
+									"raw": "{{url-external-plant}}/olt-states",
 									"host": [
-										"{{url}}"
+										"{{url-external-plant}}"
 									],
 									"path": [
 										"olt-states"
@@ -1501,9 +1501,9 @@
 								"method": "GET",
 								"header": [],
 								"url": {
-									"raw": "{{url}}/olt-states/5",
+									"raw": "{{url-external-plant}}/olt-states/5",
 									"host": [
-										"{{url}}"
+										"{{url-external-plant}}"
 									],
 									"path": [
 										"olt-states",
@@ -1539,9 +1539,9 @@
 									}
 								},
 								"url": {
-									"raw": "{{url}}/olt-states/5",
+									"raw": "{{url-external-plant}}/olt-states/5",
 									"host": [
-										"{{url}}"
+										"{{url-external-plant}}"
 									],
 									"path": [
 										"olt-states",
@@ -1557,9 +1557,9 @@
 								"method": "DELETE",
 								"header": [],
 								"url": {
-									"raw": "{{url}}/olt-states/5",
+									"raw": "{{ururl-external-plantl}}/olt-states/5",
 									"host": [
-										"{{url}}"
+										"{{ururl-external-plantl}}"
 									],
 									"path": [
 										"olt-states",
@@ -1577,9 +1577,9 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "{{url}}/olts",
+							"raw": "{{url-external-plant}}/olts",
 							"host": [
-								"{{url}}"
+								"{{url-external-plant}}"
 							],
 							"path": [
 								"olts"
@@ -1631,9 +1631,9 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "{{url}}/olts/1",
+							"raw": "{{url-external-plant}}/olts/1",
 							"host": [
-								"{{url}}"
+								"{{url-external-plant}}"
 							],
 							"path": [
 								"olts",
@@ -1669,9 +1669,9 @@
 							}
 						},
 						"url": {
-							"raw": "{{url}}/olts/1",
+							"raw": "{{url-external-plant}}/olts/1",
 							"host": [
-								"{{url}}"
+								"{{url-external-plant}}"
 							],
 							"path": [
 								"olts",
@@ -1687,9 +1687,9 @@
 						"method": "DELETE",
 						"header": [],
 						"url": {
-							"raw": "{{url}}/olts/1",
+							"raw": "{{url-external-plant}}/olts/1",
 							"host": [
-								"{{url}}"
+								"{{url-external-plant}}"
 							],
 							"path": [
 								"olts",
@@ -1710,9 +1710,9 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "{{url}}/odns",
+							"raw": "{{url-external-plant}}/odns",
 							"host": [
-								"{{url}}"
+								"{{url-external-plant}}"
 							],
 							"path": [
 								"odns"
@@ -1846,9 +1846,9 @@
 								"method": "GET",
 								"header": [],
 								"url": {
-									"raw": "{{url}}/work-order/categories",
+									"raw": "{{url-external-plant}}/work-order/categories",
 									"host": [
-										"{{url}}"
+										"{{url-external-plant}}"
 									],
 									"path": [
 										"work-order",
@@ -1869,9 +1869,9 @@
 								"method": "GET",
 								"header": [],
 								"url": {
-									"raw": "{{url}}/work-order/clasifications",
+									"raw": "{{url-external-plant}}/work-order/clasifications",
 									"host": [
-										"{{url}}"
+										"{{url-external-plant}}"
 									],
 									"path": [
 										"work-order",
@@ -1892,9 +1892,9 @@
 								"method": "GET",
 								"header": [],
 								"url": {
-									"raw": "{{url}}/work-order/types",
+									"raw": "{{url-external-plant}}/work-order/types",
 									"host": [
-										"{{url}}"
+										"{{url-external-plant}}"
 									],
 									"path": [
 										"work-order",
@@ -1932,9 +1932,9 @@
 							}
 						},
 						"url": {
-							"raw": "{{url}}/work-orders",
+							"raw": "{{url-external-plant}}/work-orders",
 							"host": [
-								"{{url}}"
+								"{{url-external-plant}}"
 							],
 							"path": [
 								"work-orders"
@@ -1961,7 +1961,7 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n  \"olt_id\" : 1,\r\n  \"odn_id\" : 1,\r\n  \"affected_customers\" : 15,\r\n  \"registration_date\" : \"2022-05-11 00:00:00\",\r\n  \"estimated_end_date\" : \"2022-05-12 00:00:00\",\r\n  \"category_id\" : 3,\r\n  \"tag_id\" : 1,\r\n  \"group_id\" : 1,\r\n  \"type_id\" : 2,\r\n  \"company_id\" : 2,\r\n  \"typology_id\": 2,\r\n  \"description\": \"otra descripcion muy buena obvio si\"\r\n}",
+							"raw": "{\r\n  \"olt_id\" : 1,\r\n  \"odn_id\" : 1,\r\n  \"affected_customers\" : 15,\r\n  \"registration_date\" : \"2022-05-11 00:00:00\",\r\n  \"estimated_end_date\" : \"2022-05-12 00:00:00\",\r\n  \"category_id\" : 3,\r\n  \"tag_id\" : 2,\r\n  \"group_id\" : 1,\r\n  \"type_id\" : 2,\r\n  \"company_id\" : 2,\r\n  \"typology_id\": 2,\r\n  \"description\": \"otra descripcion muy buena obvio si\"\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -1969,9 +1969,9 @@
 							}
 						},
 						"url": {
-							"raw": "{{url}}/work-orders/1",
+							"raw": "{{url-external-plant}}/work-orders/1",
 							"host": [
-								"{{url}}"
+								"{{url-external-plant}}"
 							],
 							"path": [
 								"work-orders",
@@ -1987,9 +1987,9 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "{{url}}/work-orders",
+							"raw": "{{url-external-plant}}/work-orders",
 							"host": [
-								"{{url}}"
+								"{{url-external-plant}}"
 							],
 							"path": [
 								"work-orders"
@@ -2004,9 +2004,9 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "{{url}}/work-orders/1",
+							"raw": "{{url-external-plant}}/work-orders/1",
 							"host": [
-								"{{url}}"
+								"{{url-external-plant}}"
 							],
 							"path": [
 								"work-orders",
@@ -2022,9 +2022,9 @@
 						"method": "DELETE",
 						"header": [],
 						"url": {
-							"raw": "{{url}}/work-orders/1",
+							"raw": "{{url-external-plant}}/work-orders/1",
 							"host": [
-								"{{url}}"
+								"{{url-external-plant}}"
 							],
 							"path": [
 								"work-orders",
