@@ -1,6 +1,6 @@
 {
 	"info": {
-		"_postman_id": "30fda32f-4108-4bdf-af10-c037ee3c2dd3",
+		"_postman_id": "cfb95f83-17a4-4735-a220-7a07d0d99111",
 		"name": "CO-4",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
 	},
@@ -1846,11 +1846,12 @@
 								"method": "GET",
 								"header": [],
 								"url": {
-									"raw": "{{url}}/work-order/categories",
+									"raw": "{{url}}/external-plant/work-order/categories",
 									"host": [
 										"{{url}}"
 									],
 									"path": [
+										"external-plant",
 										"work-order",
 										"categories"
 									]
@@ -1869,11 +1870,12 @@
 								"method": "GET",
 								"header": [],
 								"url": {
-									"raw": "{{url}}/work-order/clasifications",
+									"raw": "{{url}}/external-plant/work-order/clasifications",
 									"host": [
 										"{{url}}"
 									],
 									"path": [
+										"external-plant",
 										"work-order",
 										"clasifications"
 									]
@@ -1892,11 +1894,12 @@
 								"method": "GET",
 								"header": [],
 								"url": {
-									"raw": "{{url}}/work-order/types",
+									"raw": "{{url}}/external-plant/work-order/types",
 									"host": [
 										"{{url}}"
 									],
 									"path": [
+										"external-plant",
 										"work-order",
 										"types"
 									]
@@ -1932,11 +1935,12 @@
 							}
 						},
 						"url": {
-							"raw": "{{url}}/work-orders",
+							"raw": "{{url}}/external-plant/work-orders",
 							"host": [
 								"{{url}}"
 							],
 							"path": [
+								"external-plant",
 								"work-orders"
 							]
 						}
