@@ -1862,30 +1862,6 @@
 					]
 				},
 				{
-					"name": "work order clasifications",
-					"item": [
-						{
-							"name": "work order clasifications",
-							"request": {
-								"method": "GET",
-								"header": [],
-								"url": {
-									"raw": "{{url}}/external-plant/work-order/clasifications",
-									"host": [
-										"{{url}}"
-									],
-									"path": [
-										"external-plant",
-										"work-order",
-										"clasifications"
-									]
-								}
-							},
-							"response": []
-						}
-					]
-				},
-				{
 					"name": "work order types",
 					"item": [
 						{
@@ -1927,7 +1903,7 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n  \"olt_id\" : 1,\r\n  \"odn_id\" : 1,\r\n  \"affected_customers\" : 15,\r\n  \"registration_date\" : \"2022-05-11 00:00:00\",\r\n  \"estimated_end_date\" : \"2022-05-11 00:00:00\",\r\n  \"category_id\" : 3,\r\n  \"tag_id\" : 1,\r\n  \"type_id\" : 1,\r\n  \"group_id\" : \"\",\r\n  \"company_id\" : 2,\r\n  \"typology_id\": 1,\r\n  \"description\": \"se tiene que hacer mantenimiento por que esta del asco\"\r\n}",
+							"raw": "{\r\n  \"olt_id\" : 1,\r\n  \"odn_id\" : 1,\r\n  \"affected_customers\" : 15,\r\n  \"registration_date\" : \"2022-05-12 00:00:00\",\r\n  \"estimated_end_date\" : \"2022-05-12 00:00:00\",\r\n  \"category_id\" : 3,\r\n  \"tags\": {\r\n    \"clasification_id\" : 1,\r\n    \"status_id\" : 2\r\n  },\r\n  \"group_id\" : \"\",\r\n  \"type_id\" : 1,\r\n  \"company_id\" : 2,\r\n  \"typology_id\": 1,\r\n  \"description\": \"se tiene que hacer mantenimiento por que esta del asco\"\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -1965,7 +1941,7 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n  \"olt_id\" : 1,\r\n  \"odn_id\" : 1,\r\n  \"affected_customers\" : 15,\r\n  \"registration_date\" : \"2022-05-11 00:00:00\",\r\n  \"estimated_end_date\" : \"2022-05-12 00:00:00\",\r\n  \"category_id\" : 3,\r\n  \"tag_id\" : 1,\r\n  \"group_id\" : 1,\r\n  \"type_id\" : 2,\r\n  \"company_id\" : 2,\r\n  \"typology_id\": 2,\r\n  \"description\": \"otra descripcion muy buena obvio si\"\r\n}",
+							"raw": "{\r\n  \"olt_id\" : 1,\r\n  \"odn_id\" : 1,\r\n  \"affected_customers\" : 15,\r\n  \"registration_date\" : \"2022-05-11 00:00:00\",\r\n  \"estimated_end_date\" : \"2022-05-12 00:00:00\",\r\n  \"category_id\" : 3,\r\n  \"clasification_id\" : 1,\r\n  \"status_id\" : 1,\r\n  \"type_id\" : 2,\r\n  \"company_id\" : 2,\r\n  \"typology_id\": 2,\r\n  \"description\": \"otra descripcion muy buena obvio si\"\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -2029,14 +2005,14 @@
 						"method": "DELETE",
 						"header": [],
 						"url": {
-							"raw": "{{url}}/external-plant/work-orders/1",
+							"raw": "{{url}}/external-plant/work-orders/3",
 							"host": [
 								"{{url}}"
 							],
 							"path": [
 								"external-plant",
 								"work-orders",
-								"1"
+								"3"
 							]
 						}
 					},
