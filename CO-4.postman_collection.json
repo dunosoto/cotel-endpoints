@@ -1285,28 +1285,27 @@
 					"name": "groups",
 					"item": [
 						{
-							"name": "materials",
+							"name": "group items",
 							"item": [
 								{
-									"name": "get groups materials",
+									"name": "get group items",
 									"request": {
 										"method": "GET",
 										"header": [],
 										"url": {
-											"raw": "{{url}}/groups/materials",
+											"raw": "{{url}}/group-items",
 											"host": [
 												"{{url}}"
 											],
 											"path": [
-												"groups",
-												"materials"
+												"group-items"
 											]
 										}
 									},
 									"response": []
 								},
 								{
-									"name": "post groups materials",
+									"name": "post group items",
 									"protocolProfileBehavior": {
 										"disabledSystemHeaders": {
 											"accept": true
@@ -1323,7 +1322,7 @@
 										],
 										"body": {
 											"mode": "raw",
-											"raw": "{\r\n  \"group_id\": 1,\r\n  \"model_id\": 1,\r\n  \"incoming\": 50,\r\n  \"remaining\": 50\r\n}",
+											"raw": "{\r\n  \"group_items\": [\r\n    {\r\n      \"group_id\": 1,\r\n      \"quantity_variant_id\": 1,\r\n      \"incoming\": 10,\r\n      \"date_incoming\": \"2022-05-14 00:00:00\"\r\n    },\r\n    {\r\n      \"group_id\": 1,\r\n      \"quantity_variant_id\": 1,\r\n      \"incoming\": 10,\r\n      \"date_incoming\": \"2022-05-14 00:00:00\"\r\n    }\r\n  ]\r\n}",
 											"options": {
 												"raw": {
 													"language": "json"
@@ -1331,31 +1330,29 @@
 											}
 										},
 										"url": {
-											"raw": "{{url}}/groups/materials",
+											"raw": "{{url}}/group-items",
 											"host": [
 												"{{url}}"
 											],
 											"path": [
-												"groups",
-												"materials"
+												"group-items"
 											]
 										}
 									},
 									"response": []
 								},
 								{
-									"name": "get groups material",
+									"name": "get group item",
 									"request": {
 										"method": "GET",
 										"header": [],
 										"url": {
-											"raw": "{{url}}/groups/materials/1",
+											"raw": "{{url}}/group-items/1",
 											"host": [
 												"{{url}}"
 											],
 											"path": [
-												"groups",
-												"materials",
+												"group-items",
 												"1"
 											]
 										}
@@ -1363,7 +1360,7 @@
 									"response": []
 								},
 								{
-									"name": "update group material",
+									"name": "update group item",
 									"protocolProfileBehavior": {
 										"disabledSystemHeaders": {
 											"accept": true
@@ -1380,7 +1377,7 @@
 										],
 										"body": {
 											"mode": "raw",
-											"raw": "{\r\n  \"group_id\": 1,\r\n  \"material_id\": 1,\r\n  \"amount\": 100\r\n}",
+											"raw": "{\r\n  \"group_id\": 1,\r\n  \"quantity_variant_id\": 1,\r\n  \"incoming\": 50,\r\n  \"date_incoming\": \"2022-05-14 00:00:00\"\r\n}",
 											"options": {
 												"raw": {
 													"language": "json"
@@ -1388,13 +1385,12 @@
 											}
 										},
 										"url": {
-											"raw": "{{url}}/groups/materials/1",
+											"raw": "{{url}}/group-items/1",
 											"host": [
 												"{{url}}"
 											],
 											"path": [
-												"groups",
-												"materials",
+												"group-items",
 												"1"
 											]
 										}
@@ -1402,156 +1398,17 @@
 									"response": []
 								},
 								{
-									"name": "delete group material",
+									"name": "delete group item",
 									"request": {
 										"method": "DELETE",
 										"header": [],
 										"url": {
-											"raw": "{{url}}/groups/materials/1",
+											"raw": "{{url}}/group-items/1",
 											"host": [
 												"{{url}}"
 											],
 											"path": [
-												"groups",
-												"materials",
-												"1"
-											]
-										}
-									},
-									"response": []
-								}
-							]
-						},
-						{
-							"name": "tools",
-							"item": [
-								{
-									"name": "get group tools",
-									"request": {
-										"method": "GET",
-										"header": [],
-										"url": {
-											"raw": "{{url}}/groups/tools",
-											"host": [
-												"{{url}}"
-											],
-											"path": [
-												"groups",
-												"tools"
-											]
-										}
-									},
-									"response": []
-								},
-								{
-									"name": "post group tool",
-									"protocolProfileBehavior": {
-										"disabledSystemHeaders": {
-											"accept": true
-										}
-									},
-									"request": {
-										"method": "POST",
-										"header": [
-											{
-												"key": "Accept",
-												"value": "application/json",
-												"type": "text"
-											}
-										],
-										"body": {
-											"mode": "raw",
-											"raw": "{\r\n  \"group_id\": 1,\r\n  \"tool_id\": 1,\r\n  \"amount\": 50\r\n}",
-											"options": {
-												"raw": {
-													"language": "json"
-												}
-											}
-										},
-										"url": {
-											"raw": "{{url}}/groups/tools",
-											"host": [
-												"{{url}}"
-											],
-											"path": [
-												"groups",
-												"tools"
-											]
-										}
-									},
-									"response": []
-								},
-								{
-									"name": "get group tool ",
-									"request": {
-										"method": "GET",
-										"header": [],
-										"url": {
-											"raw": "{{url}}/groups/tools/1",
-											"host": [
-												"{{url}}"
-											],
-											"path": [
-												"groups",
-												"tools",
-												"1"
-											]
-										}
-									},
-									"response": []
-								},
-								{
-									"name": "update group tool ",
-									"protocolProfileBehavior": {
-										"disabledSystemHeaders": {
-											"accept": true
-										}
-									},
-									"request": {
-										"method": "PUT",
-										"header": [
-											{
-												"key": "Accept",
-												"value": "application/json",
-												"type": "text"
-											}
-										],
-										"body": {
-											"mode": "raw",
-											"raw": "{\r\n  \"group_id\": 1,\r\n  \"tool_id\": 1,\r\n  \"amount\": 100\r\n}",
-											"options": {
-												"raw": {
-													"language": "json"
-												}
-											}
-										},
-										"url": {
-											"raw": "{{url}}/groups/tools/1",
-											"host": [
-												"{{url}}"
-											],
-											"path": [
-												"groups",
-												"tools",
-												"1"
-											]
-										}
-									},
-									"response": []
-								},
-								{
-									"name": "delete group tools ",
-									"request": {
-										"method": "DELETE",
-										"header": [],
-										"url": {
-											"raw": "{{url}}/groups/tools/1",
-											"host": [
-												"{{url}}"
-											],
-											"path": [
-												"groups",
-												"tools",
+												"group-items",
 												"1"
 											]
 										}
@@ -1595,7 +1452,7 @@
 								],
 								"body": {
 									"mode": "raw",
-									"raw": "{\r\n  \"prefix\": \"PEX-78\",\r\n  \"areas_id\": [1,2],\r\n  \"users_id\": [3, 78]\r\n}",
+									"raw": "{\r\n  \"prefix\": \"PEX-78\",\r\n  \"areas_id\": [1,2],\r\n  \"users_id\": [2]\r\n}",
 									"options": {
 										"raw": {
 											"language": "json"
