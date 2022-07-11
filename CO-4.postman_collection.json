@@ -2333,13 +2333,12 @@
 										"method": "GET",
 										"header": [],
 										"url": {
-											"raw": "{{url}}/items/categories",
+											"raw": "{{url}}/items-categories",
 											"host": [
 												"{{url}}"
 											],
 											"path": [
-												"items",
-												"categories"
+												"items-categories"
 											]
 										}
 									},
@@ -2371,13 +2370,12 @@
 											}
 										},
 										"url": {
-											"raw": "{{url}}/items/categories",
+											"raw": "{{url}}/items-categories",
 											"host": [
 												"{{url}}"
 											],
 											"path": [
-												"items",
-												"categories"
+												"items-categories"
 											]
 										}
 									},
@@ -2409,13 +2407,12 @@
 											}
 										},
 										"url": {
-											"raw": "{{url}}/items/categories/1",
+											"raw": "{{url}}/items-categories/1",
 											"host": [
 												"{{url}}"
 											],
 											"path": [
-												"items",
-												"categories",
+												"items-categories",
 												"1"
 											]
 										}
