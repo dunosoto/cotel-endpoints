@@ -263,6 +263,153 @@
 									]
 								},
 								{
+									"name": "certifications",
+									"item": [
+										{
+											"name": "post certification",
+											"protocolProfileBehavior": {
+												"disabledSystemHeaders": {
+													"accept": true
+												}
+											},
+											"request": {
+												"method": "POST",
+												"header": [
+													{
+														"key": "Accept",
+														"value": "application/json",
+														"type": "text"
+													}
+												],
+												"body": {
+													"mode": "raw",
+													"raw": "[\r\n  {\r\n    \"work_order_id\": 1,\r\n    \"material_id\": 1,\r\n    \"group_item_id\": 1,\r\n    \"action_id\": 1,\r\n    \"quantity\": {\r\n      \"item\": 12,\r\n      \"workforce\": 12\r\n    }\r\n  },\r\n  {\r\n    \"work_order_id\": 1,\r\n    \"material_id\": 1,\r\n    \"group_item_id\": 1,\r\n    \"action_id\": 1,\r\n    \"quantity\": {\r\n      \"item\": 12,\r\n      \"workforce\": 12\r\n    }\r\n  }\r\n]",
+													"options": {
+														"raw": {
+															"language": "json"
+														}
+													}
+												},
+												"url": {
+													"raw": "{{url}}/external-plant/work-order/certifications",
+													"host": [
+														"{{url}}"
+													],
+													"path": [
+														"external-plant",
+														"work-order",
+														"certifications"
+													]
+												}
+											},
+											"response": []
+										}
+									]
+								},
+								{
+									"name": "interventions",
+									"item": [
+										{
+											"name": "post intervention",
+											"protocolProfileBehavior": {
+												"disabledSystemHeaders": {
+													"accept": true
+												}
+											},
+											"request": {
+												"method": "POST",
+												"header": [
+													{
+														"key": "Accept",
+														"value": "application/json",
+														"type": "text"
+													}
+												],
+												"body": {
+													"mode": "raw",
+													"raw": "{\r\n  \"work_order_id\": 1,\r\n  \"used_material\": true,\r\n  \"personal_presentation\": \"Buena\",\r\n  \"repair_quality\": \"Mala\",\r\n  \"diferences\": true,\r\n  \"current_report\": true,\r\n  \"used_report\": true\r\n}",
+													"options": {
+														"raw": {
+															"language": "json"
+														}
+													}
+												},
+												"url": {
+													"raw": "{{url}}/external-plant/work-order/quality-interventions",
+													"host": [
+														"{{url}}"
+													],
+													"path": [
+														"external-plant",
+														"work-order",
+														"quality-interventions"
+													]
+												}
+											},
+											"response": []
+										},
+										{
+											"name": "get intervention",
+											"request": {
+												"method": "GET",
+												"header": [],
+												"url": {
+													"raw": "{{url}}/external-plant/work-order/quality-interventions",
+													"host": [
+														"{{url}}"
+													],
+													"path": [
+														"external-plant",
+														"work-order",
+														"quality-interventions"
+													]
+												}
+											},
+											"response": []
+										},
+										{
+											"name": "update intervention",
+											"protocolProfileBehavior": {
+												"disabledSystemHeaders": {
+													"accept": true
+												}
+											},
+											"request": {
+												"method": "PUT",
+												"header": [
+													{
+														"key": "Accept",
+														"value": "application/json",
+														"type": "text"
+													}
+												],
+												"body": {
+													"mode": "raw",
+													"raw": "{\r\n  \"work_order_id\": 1,\r\n  \"used_material\": true,\r\n  \"personal_presentation\": \"Muy Buena\",\r\n  \"repair_quality\": \"Mala\",\r\n  \"diferences\": false,\r\n  \"current_report\": true,\r\n  \"used_report\": true\r\n}",
+													"options": {
+														"raw": {
+															"language": "json"
+														}
+													}
+												},
+												"url": {
+													"raw": "{{url}}/external-plant/work-order/quality-interventions/1",
+													"host": [
+														"{{url}}"
+													],
+													"path": [
+														"external-plant",
+														"work-order",
+														"quality-interventions",
+														"1"
+													]
+												}
+											},
+											"response": []
+										}
+									]
+								},
+								{
 									"name": "post work order",
 									"protocolProfileBehavior": {
 										"disabledSystemHeaders": {
