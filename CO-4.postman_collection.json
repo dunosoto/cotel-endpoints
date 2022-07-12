@@ -266,6 +266,113 @@
 									"name": "certifications",
 									"item": [
 										{
+											"name": "certification check",
+											"item": [
+												{
+													"name": "post certifications check",
+													"protocolProfileBehavior": {
+														"disabledSystemHeaders": {
+															"accept": true
+														}
+													},
+													"request": {
+														"method": "POST",
+														"header": [
+															{
+																"key": "Accept",
+																"value": "application/json",
+																"type": "text"
+															}
+														],
+														"body": {
+															"mode": "raw",
+															"raw": "{\r\n  \"certification_id\": 1,\r\n  \"item\": 10,\r\n  \"workforce\": 20\r\n}",
+															"options": {
+																"raw": {
+																	"language": "json"
+																}
+															}
+														},
+														"url": {
+															"raw": "{{url}}/external-plant/work-order/certifications/check",
+															"host": [
+																"{{url}}"
+															],
+															"path": [
+																"external-plant",
+																"work-order",
+																"certifications",
+																"check"
+															]
+														}
+													},
+													"response": []
+												},
+												{
+													"name": "get certification check",
+													"request": {
+														"method": "GET",
+														"header": [],
+														"url": {
+															"raw": "{{url}}/external-plant/work-order/certifications/check/1",
+															"host": [
+																"{{url}}"
+															],
+															"path": [
+																"external-plant",
+																"work-order",
+																"certifications",
+																"check",
+																"1"
+															]
+														}
+													},
+													"response": []
+												},
+												{
+													"name": "update certifications check",
+													"protocolProfileBehavior": {
+														"disabledSystemHeaders": {
+															"accept": true
+														}
+													},
+													"request": {
+														"method": "PUT",
+														"header": [
+															{
+																"key": "Accept",
+																"value": "application/json",
+																"type": "text"
+															}
+														],
+														"body": {
+															"mode": "raw",
+															"raw": "{\r\n  \"certification_id\": 1,\r\n  \"item\": 20,\r\n  \"workforce\": 20\r\n}",
+															"options": {
+																"raw": {
+																	"language": "json"
+																}
+															}
+														},
+														"url": {
+															"raw": "{{url}}/external-plant/work-order/certifications/check/1",
+															"host": [
+																"{{url}}"
+															],
+															"path": [
+																"external-plant",
+																"work-order",
+																"certifications",
+																"check",
+																"1"
+															]
+														}
+													},
+													"response": []
+												}
+											]
+										},
+										{
 											"name": "post certification",
 											"protocolProfileBehavior": {
 												"disabledSystemHeaders": {
@@ -273,6 +380,16 @@
 												}
 											},
 											"request": {
+												"auth": {
+													"type": "bearer",
+													"bearer": [
+														{
+															"key": "token",
+															"value": "{{token}}",
+															"type": "string"
+														}
+													]
+												},
 												"method": "POST",
 												"header": [
 													{
@@ -283,7 +400,7 @@
 												],
 												"body": {
 													"mode": "raw",
-													"raw": "[\r\n  {\r\n    \"work_order_id\": 1,\r\n    \"material_id\": 1,\r\n    \"group_item_id\": 1,\r\n    \"action_id\": 1,\r\n    \"quantity\": {\r\n      \"item\": 12,\r\n      \"workforce\": 12\r\n    }\r\n  },\r\n  {\r\n    \"work_order_id\": 1,\r\n    \"material_id\": 1,\r\n    \"group_item_id\": 1,\r\n    \"action_id\": 1,\r\n    \"quantity\": {\r\n      \"item\": 12,\r\n      \"workforce\": 12\r\n    }\r\n  }\r\n]",
+													"raw": "[\r\n  {\r\n    \"work_order_id\": 1,\r\n    \"group_item_id\": 1,\r\n    \"action_id\": 1,\r\n    \"material\": {\r\n      \"variant_id\": 1,\r\n      \"no_serie\":\"ea28p8\",\r\n      \"used\": false,\r\n      \"activated\": true\r\n    },\r\n    \"quantity\": {\r\n      \"item\": 12,\r\n      \"workforce\": 12\r\n    }\r\n  },\r\n  {\r\n    \"work_order_id\": 1,\r\n    \"group_item_id\": 1,\r\n    \"action_id\": 1,\r\n    \"material\": {\r\n      \"variant_id\": 1,\r\n      \"no_serie\":\"ead8p10\",\r\n      \"used\": false,\r\n      \"activated\": true\r\n    },\r\n    \"quantity\": {\r\n      \"item\": 12,\r\n      \"workforce\": 12\r\n    }\r\n  }\r\n]",
 													"options": {
 														"raw": {
 															"language": "json"
@@ -299,6 +416,107 @@
 														"external-plant",
 														"work-order",
 														"certifications"
+													]
+												}
+											},
+											"response": []
+										},
+										{
+											"name": "get certification",
+											"protocolProfileBehavior": {
+												"disableBodyPruning": true,
+												"disabledSystemHeaders": {
+													"accept": true
+												}
+											},
+											"request": {
+												"auth": {
+													"type": "bearer",
+													"bearer": [
+														{
+															"key": "token",
+															"value": "{{token}}",
+															"type": "string"
+														}
+													]
+												},
+												"method": "GET",
+												"header": [
+													{
+														"key": "Accept",
+														"value": "application/json",
+														"type": "text"
+													}
+												],
+												"body": {
+													"mode": "raw",
+													"raw": "",
+													"options": {
+														"raw": {
+															"language": "json"
+														}
+													}
+												},
+												"url": {
+													"raw": "{{url}}/external-plant/work-order/certifications/1",
+													"host": [
+														"{{url}}"
+													],
+													"path": [
+														"external-plant",
+														"work-order",
+														"certifications",
+														"1"
+													]
+												}
+											},
+											"response": []
+										},
+										{
+											"name": "update certifications",
+											"protocolProfileBehavior": {
+												"disabledSystemHeaders": {
+													"accept": true
+												}
+											},
+											"request": {
+												"auth": {
+													"type": "bearer",
+													"bearer": [
+														{
+															"key": "token",
+															"value": "{{token}}",
+															"type": "string"
+														}
+													]
+												},
+												"method": "PUT",
+												"header": [
+													{
+														"key": "Accept",
+														"value": "application/json",
+														"type": "text"
+													}
+												],
+												"body": {
+													"mode": "raw",
+													"raw": "{\r\n  \"work_order_id\": 1,\r\n  \"group_item_id\": 1,\r\n  \"action_id\": 2,\r\n  \"material\": {\r\n    \"variant_id\": 1,\r\n    \"no_serie\":\"ea28p8\",\r\n    \"used\": true,\r\n    \"activated\": true\r\n  },\r\n  \"quantity\": {\r\n    \"item\": 11,\r\n    \"workforce\": 20\r\n  }\r\n}",
+													"options": {
+														"raw": {
+															"language": "json"
+														}
+													}
+												},
+												"url": {
+													"raw": "{{url}}/external-plant/work-order/certifications/1",
+													"host": [
+														"{{url}}"
+													],
+													"path": [
+														"external-plant",
+														"work-order",
+														"certifications",
+														"1"
 													]
 												}
 											},
