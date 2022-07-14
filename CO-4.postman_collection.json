@@ -6,23 +6,156 @@
 	},
 	"item": [
 		{
-			"name": "clients",
+			"name": "faults",
 			"item": [
 				{
-					"name": "categories",
+					"name": "clients",
 					"item": [
 						{
-							"name": "get client categories",
+							"name": "categories",
+							"item": [
+								{
+									"name": "get client categories",
+									"request": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{url}}/client-categories",
+											"host": [
+												"{{url}}"
+											],
+											"path": [
+												"client-categories"
+											]
+										}
+									},
+									"response": []
+								}
+							]
+						},
+						{
+							"name": "get clients",
 							"request": {
 								"method": "GET",
 								"header": [],
 								"url": {
-									"raw": "{{url}}/client-categories",
+									"raw": "{{url}}/clients",
 									"host": [
 										"{{url}}"
 									],
 									"path": [
-										"client-categories"
+										"clients"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "post client",
+							"protocolProfileBehavior": {
+								"disabledSystemHeaders": {
+									"accept": true
+								}
+							},
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"client\": {\r\n    \"code\": \"aqwe1wbx3v\",\r\n    \"name\": \"daniel\",\r\n    \"last_name\": \"gomez bolanos\",\r\n    \"phones\": [\"4678897\", \"78910334\",\"78235412\"],\r\n    \"category_id\": 1\r\n  },\r\n  \"addresses\": [\r\n    {\r\n      \"place_id\": \"sagsdfg1324\",\r\n      \"lat\": \"12.1\",\r\n      \"lon\": \"23.1\",\r\n      \"location\": \"cercado\",\r\n      \"city\": \"cochabamba\",\r\n      \"direction\":\"av aroma\"\r\n    },\r\n    {\r\n      \"place_id\": \"sagsdfg1324\",\r\n      \"lat\": \"98.3\",\r\n      \"lon\": \"34.6\",\r\n      \"location\": \"sacaba\",\r\n      \"city\": \"cochabamba\",\r\n      \"direction\":\"av patito\"\r\n    }\r\n  ]\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{url}}/clients",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"clients"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "get client",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{url}}/clients/1",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"clients",
+										"1"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "update client",
+							"protocolProfileBehavior": {
+								"disabledSystemHeaders": {
+									"accept": true
+								}
+							},
+							"request": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"client\": {\r\n    \"code\": \"asddanie91bxqv\",\r\n    \"name\": \"juan\",\r\n    \"last_name\": \"flores soto\",\r\n    \"phones\": [\"61608275\", \"72210334\",\"78235467\"],\r\n    \"category_id\": 1\r\n  },\r\n  \"addresses\": [\r\n    {\r\n      \"place_id\": \"98gsdfg1324\",\r\n      \"lat\": \"11.1\",\r\n      \"lon\": \"23.1\",\r\n      \"location\": \"cercado\",\r\n      \"city\": \"cochabamba\",\r\n      \"direction\":\"av siglo xx\"\r\n    },\r\n    {\r\n      \"place_id\": \"sagsdyui71324\",\r\n      \"lat\": \"98.3\",\r\n      \"lon\": \"34.6\",\r\n      \"location\": \"sacaba\",\r\n      \"city\": \"cochabamba\",\r\n      \"direction\":\"av aroma\"\r\n    }\r\n  ]\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{url}}/clients/3",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"clients",
+										"3"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "delete client",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "{{url}}/clients/1",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"clients",
+										"1"
 									]
 								}
 							},
@@ -31,132 +164,154 @@
 					]
 				},
 				{
-					"name": "post client",
-					"protocolProfileBehavior": {
-						"disabledSystemHeaders": {
-							"accept": true
-						}
-					},
-					"request": {
-						"method": "POST",
-						"header": [
-							{
-								"key": "Accept",
-								"value": "application/json",
-								"type": "text"
-							}
-						],
-						"body": {
-							"mode": "raw",
-							"raw": "{\r\n  \"client\": {\r\n    \"code\": \"aqweewbx3v\",\r\n    \"name\": \"daniel\",\r\n    \"last_name\": \"gomez bolanos\",\r\n    \"phones\": [\"4678897\", \"78910334\",\"78235412\"],\r\n    \"category_id\": 9\r\n  },\r\n  \"addresses\": [\r\n    {\r\n      \"place_id\": \"sagsdfg1324\",\r\n      \"lat\": \"12.1\",\r\n      \"lon\": \"23.1\",\r\n      \"location\": \"cercado\",\r\n      \"city\": \"cochabamba\",\r\n      \"direction\":\"av aroma\"\r\n    },\r\n    {\r\n      \"place_id\": \"sagsdfg1324\",\r\n      \"lat\": \"98.3\",\r\n      \"lon\": \"34.6\",\r\n      \"location\": \"sacaba\",\r\n      \"city\": \"cochabamba\",\r\n      \"direction\":\"av patito\"\r\n    }\r\n  ]\r\n}",
-							"options": {
-								"raw": {
-									"language": "json"
+					"name": "services",
+					"item": [
+						{
+							"name": "service connections",
+							"item": [
+								{
+									"name": "get services connections",
+									"request": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{url}}/faults/services-connections",
+											"host": [
+												"{{url}}"
+											],
+											"path": [
+												"faults",
+												"services-connections"
+											]
+										}
+									},
+									"response": []
 								}
-							}
+							]
 						},
-						"url": {
-							"raw": "{{url}}/clients",
-							"host": [
-								"{{url}}"
-							],
-							"path": [
-								"clients"
-							]
-						}
-					},
-					"response": []
-				},
-				{
-					"name": "get clients",
-					"request": {
-						"method": "GET",
-						"header": [],
-						"url": {
-							"raw": "{{url}}/clients",
-							"host": [
-								"{{url}}"
-							],
-							"path": [
-								"clients"
-							]
-						}
-					},
-					"response": []
-				},
-				{
-					"name": "get client",
-					"request": {
-						"method": "GET",
-						"header": [],
-						"url": {
-							"raw": "{{url}}/clients/1",
-							"host": [
-								"{{url}}"
-							],
-							"path": [
-								"clients",
-								"1"
-							]
-						}
-					},
-					"response": []
-				},
-				{
-					"name": "delete client",
-					"request": {
-						"method": "DELETE",
-						"header": [],
-						"url": {
-							"raw": "{{url}}/clients/1",
-							"host": [
-								"{{url}}"
-							],
-							"path": [
-								"clients",
-								"1"
-							]
-						}
-					},
-					"response": []
-				},
-				{
-					"name": "update client",
-					"protocolProfileBehavior": {
-						"disabledSystemHeaders": {
-							"accept": true
-						}
-					},
-					"request": {
-						"method": "PUT",
-						"header": [
-							{
-								"key": "Accept",
-								"value": "application/json",
-								"type": "text"
-							}
-						],
-						"body": {
-							"mode": "raw",
-							"raw": "{\r\n  \"client\": {\r\n    \"code\": \"asddanie91bxqv\",\r\n    \"name\": \"jimi\",\r\n    \"last_name\": \"flores soto\",\r\n    \"phones\": [\"61608275\", \"72210334\",\"78235467\"]\r\n  },\r\n  \"addresses\": [\r\n    {\r\n      \"place_id\": \"98gsdfg1324\",\r\n      \"lat\": \"11.1\",\r\n      \"lon\": \"23.1\",\r\n      \"location\": \"cercado\",\r\n      \"city\": \"cochabamba\",\r\n      \"direction\":\"av siglo xx\"\r\n    },\r\n    {\r\n      \"place_id\": \"sagsdyui71324\",\r\n      \"lat\": \"98.3\",\r\n      \"lon\": \"34.6\",\r\n      \"location\": \"sacaba\",\r\n      \"city\": \"cochabamba\",\r\n      \"direction\":\"av aroma\"\r\n    }\r\n  ]\r\n}",
-							"options": {
-								"raw": {
-									"language": "json"
+						{
+							"name": "service type",
+							"item": [
+								{
+									"name": "get service type",
+									"request": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{url}}/faults/services-types",
+											"host": [
+												"{{url}}"
+											],
+											"path": [
+												"faults",
+												"services-types"
+											]
+										}
+									},
+									"response": []
 								}
-							}
-						},
-						"url": {
-							"raw": "{{url}}/clients/2",
-							"host": [
-								"{{url}}"
-							],
-							"path": [
-								"clients",
-								"2"
 							]
+						},
+						{
+							"name": "technical datas",
+							"item": []
+						},
+						{
+							"name": "get services",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{url}}/faults/services",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"faults",
+										"services"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "post service",
+							"protocolProfileBehavior": {
+								"disabledSystemHeaders": {
+									"accept": true
+								}
+							},
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"instance\": \"123\",\r\n  \"type_id\": 1,\r\n  \"address_id\": 2,\r\n  \"connections\": [1,2],\r\n  \"technical_datas\": {\r\n    \"central_port\": \"123qwe\",\r\n    \"link_pair\": \"123qwe\",\r\n    \"peer_node\": \"123qwe\",\r\n    \"box_pair\": \"123qwe\"\r\n  }\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{url}}/faults/services",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"faults",
+										"services"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "update service",
+							"protocolProfileBehavior": {
+								"disabledSystemHeaders": {
+									"accept": true
+								}
+							},
+							"request": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"instance\": \"12io3\",\r\n  \"type_id\": 2,\r\n  \"address_id\": 1,\r\n  \"connections\": [1,2]\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{url}}/faults/services/1",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"faults",
+										"services",
+										"1"
+									]
+								}
+							},
+							"response": []
 						}
-					},
-					"response": []
+					]
 				}
 			]
 		},
@@ -400,7 +555,7 @@
 												],
 												"body": {
 													"mode": "raw",
-													"raw": "[\r\n  {\r\n    \"work_order_id\": 1,\r\n    \"group_item_id\": 1,\r\n    \"action_id\": 1,\r\n    \"material\": {\r\n      \"variant_id\": 1,\r\n      \"no_serie\":\"ea28p8\",\r\n      \"used\": false,\r\n      \"activated\": true\r\n    },\r\n    \"quantity\": {\r\n      \"item\": 12,\r\n      \"workforce\": 12\r\n    }\r\n  },\r\n  {\r\n    \"work_order_id\": 1,\r\n    \"group_item_id\": 1,\r\n    \"action_id\": 1,\r\n    \"material\": {\r\n      \"variant_id\": 1,\r\n      \"no_serie\":\"ead8p10\",\r\n      \"used\": false,\r\n      \"activated\": true\r\n    },\r\n    \"quantity\": {\r\n      \"item\": 12.14,\r\n      \"workforce\": 12.39\r\n    }\r\n  }\r\n]",
+													"raw": "[\r\n  {\r\n    \"work_order_id\": 1,\r\n    \"group_item_id\": 1,\r\n    \"action_id\": 1,\r\n    \"material\": {\r\n      \"variant_id\": 1,\r\n      \"no_serie\":\"67a19p8\",\r\n      \"used\": false,\r\n      \"activated\": true\r\n    },\r\n    \"quantity\": {\r\n      \"item\": 12,\r\n      \"workforce\": 12\r\n    }\r\n  },\r\n  {\r\n    \"work_order_id\": 1,\r\n    \"group_item_id\": 1,\r\n    \"action_id\": 1,\r\n    \"material\": {\r\n      \"variant_id\": 1,\r\n      \"no_serie\":\"57aqw8p10\",\r\n      \"used\": false,\r\n      \"activated\": true\r\n    },\r\n    \"quantity\": {\r\n      \"item\": 12.14,\r\n      \"workforce\": 12.39\r\n    }\r\n  }\r\n]",
 													"options": {
 														"raw": {
 															"language": "json"
@@ -445,7 +600,8 @@
 													{
 														"key": "Accept",
 														"value": "application/json",
-														"type": "text"
+														"type": "text",
+														"disabled": true
 													}
 												],
 												"body": {
@@ -458,7 +614,7 @@
 													}
 												},
 												"url": {
-													"raw": "{{url}}/external-plant/work-order/certifications/1",
+													"raw": "{{url}}/external-plant/work-order/certifications/89",
 													"host": [
 														"{{url}}"
 													],
@@ -466,7 +622,7 @@
 														"external-plant",
 														"work-order",
 														"certifications",
-														"1"
+														"89"
 													]
 												}
 											},
@@ -2015,7 +2171,7 @@
 										],
 										"body": {
 											"mode": "raw",
-											"raw": "{\r\n  \"group_items\": [\r\n    {\r\n      \"group_id\": 1,\r\n      \"quantity_variant_id\": 1,\r\n      \"incoming\": 16.34,\r\n      \"date_incoming\": \"2022-05-14 00:00:00\"\r\n    },\r\n    {\r\n      \"group_id\": 1,\r\n      \"quantity_variant_id\": 1,\r\n      \"incoming\": 20.12,\r\n      \"date_incoming\": \"2022-05-14 00:00:00\"\r\n    }\r\n  ]\r\n}",
+											"raw": "{\r\n  \"group_items\": [\r\n    {\r\n      \"group_id\": 1,\r\n      \"quantity_variant_id\": 1,\r\n      \"incoming\": 1.34,\r\n      \"date_incoming\": \"2022-05-14 00:00:00\"\r\n    },\r\n    {\r\n      \"group_id\": 1,\r\n      \"quantity_variant_id\": 1,\r\n      \"incoming\": 1.12,\r\n      \"date_incoming\": \"2022-05-14 00:00:00\"\r\n    }\r\n  ]\r\n}",
 											"options": {
 												"raw": {
 													"language": "json"
@@ -2145,7 +2301,7 @@
 								],
 								"body": {
 									"mode": "raw",
-									"raw": "{\r\n  \"prefix\": \"PEX-83\",\r\n  \"areas_id\": [1],\r\n  \"users_id\": [1,2]\r\n}",
+									"raw": "{\r\n  \"prefix\": \"PEX-84\",\r\n  \"areas_id\": [1],\r\n  \"users_id\": [1,2]\r\n}",
 									"options": {
 										"raw": {
 											"language": "json"
@@ -3141,6 +3297,23 @@
 												}
 											}
 										},
+										"url": {
+											"raw": "{{url}}/variants-quantities",
+											"host": [
+												"{{url}}"
+											],
+											"path": [
+												"variants-quantities"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "get variants quantities",
+									"request": {
+										"method": "GET",
+										"header": [],
 										"url": {
 											"raw": "{{url}}/variants-quantities",
 											"host": [
