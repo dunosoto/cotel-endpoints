@@ -2524,6 +2524,121 @@
 			"name": "warehouse",
 			"item": [
 				{
+					"name": "equipments",
+					"item": [
+						{
+							"name": "get equipments",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{url}}/equipments",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"equipments"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "post equipments",
+							"protocolProfileBehavior": {
+								"disabledSystemHeaders": {
+									"accept": true
+								}
+							},
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"equipments\": [\r\n    {\r\n      \"no_serie\": \"asdf123\",\r\n      \"variant_id\": 1\r\n    },\r\n    {\r\n      \"no_serie\": \"345ert\",\r\n      \"variant_id\": 1\r\n    }\r\n  ]\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{url}}/equipments",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"equipments"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "get equipment",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{url}}/equipments/1",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"equipments",
+										"1"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "update equipment",
+							"protocolProfileBehavior": {
+								"disabledSystemHeaders": {
+									"accept": true
+								}
+							},
+							"request": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"no_serie\": \"345er2\",\r\n  \"variant_id\": 2\r\n}\r\n",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{url}}/equipments/1",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"equipments",
+										"1"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
 					"name": "materials",
 					"item": [
 						{
@@ -3635,8 +3750,62 @@
 										}
 									},
 									"response": []
+								},
+								{
+									"name": "post article type",
+									"protocolProfileBehavior": {
+										"disabledSystemHeaders": {
+											"accept": true
+										}
+									},
+									"request": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "application/json",
+												"type": "text"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n  \"name\": \"EQUIPOS\"\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{url}}/article-types",
+											"host": [
+												"{{url}}"
+											],
+											"path": [
+												"article-types"
+											]
+										}
+									},
+									"response": []
 								}
 							]
+						},
+						{
+							"name": "get variants",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{url}}/variants",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"variants"
+									]
+								}
+							},
+							"response": []
 						},
 						{
 							"name": "post variants",
@@ -3656,7 +3825,7 @@
 								],
 								"body": {
 									"mode": "raw",
-									"raw": "{\r\n  \"subcategory_id\": 1,\r\n  \"item_category_id\": 1,\r\n  \"name\":\"cable de red\",\r\n  \"description\":\"cable empalme bien chido \",\r\n  \"unit_id\": 3,\r\n  \"image\": \"asdfadf\",\r\n  \"company_id\": 1,\r\n  \"stock\": {\r\n    \"incoming\": 81,\r\n    \"minimum\": 223,\r\n    \"date_incoming\": \"2022-05-14 00:00:00\"\r\n  },\r\n  \"price\": {\r\n    \"material\": 23.1,\r\n    \"workforce\": 23.1\r\n  }\r\n}",
+									"raw": "{\r\n  \"subcategory_id\": 1,\r\n  \"item_category_id\": 1,\r\n  \"name\":\"cable FO\",\r\n  \"description\":\"cable FO bien chido \",\r\n  \"unit_id\": 3,\r\n  \"image\": \"asdfadf\",\r\n  \"company_id\": 1,\r\n  \"stock\": {\r\n    \"incoming\": 81,\r\n    \"minimum\": 223,\r\n    \"date_incoming\": \"2022-05-14 00:00:00\"\r\n  },\r\n  \"price\": {\r\n    \"material\": 23.1,\r\n    \"workforce\": 23.1\r\n  }\r\n}",
 									"options": {
 										"raw": {
 											"language": "json"
@@ -3708,23 +3877,6 @@
 									"path": [
 										"variants",
 										"1"
-									]
-								}
-							},
-							"response": []
-						},
-						{
-							"name": "get variants",
-							"request": {
-								"method": "GET",
-								"header": [],
-								"url": {
-									"raw": "{{url}}/variants",
-									"host": [
-										"{{url}}"
-									],
-									"path": [
-										"variants"
 									]
 								}
 							},
