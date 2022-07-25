@@ -68,7 +68,7 @@
 								],
 								"body": {
 									"mode": "raw",
-									"raw": "{\r\n  \"client\": {\r\n    \"code\": \"aqwe1wbx3v\",\r\n    \"name\": \"daniel\",\r\n    \"last_name\": \"gomez bolanos\",\r\n    \"phones\": [\"4678897\", \"78910334\",\"78235412\"],\r\n    \"category_id\": 1\r\n  },\r\n  \"addresses\": [\r\n    {\r\n      \"place_id\": \"sagsdfg1324\",\r\n      \"lat\": \"12.1\",\r\n      \"lon\": \"23.1\",\r\n      \"location\": \"cercado\",\r\n      \"city\": \"cochabamba\",\r\n      \"direction\":\"av aroma\"\r\n    },\r\n    {\r\n      \"place_id\": \"sagsdfg1324\",\r\n      \"lat\": \"98.3\",\r\n      \"lon\": \"34.6\",\r\n      \"location\": \"sacaba\",\r\n      \"city\": \"cochabamba\",\r\n      \"direction\":\"av patito\"\r\n    }\r\n  ]\r\n}",
+									"raw": "{\r\n  \"client\": {\r\n    \"code\": \"aqwe1wbx3v\",\r\n    \"name\": \"daniel\",\r\n    \"last_name\": \"gomez bolanos\",\r\n    \"phones\": [\"4678897\", \"78910334\",\"78235412\"],\r\n    \"category_id\": 1\r\n  },\r\n  \"addresses\": [\r\n    {\r\n      \"place_id\": \"zxc456\",\r\n      \"lat\": \"12.1\",\r\n      \"lon\": \"23.1\",\r\n      \"location\": \"cercado\",\r\n      \"city\": \"cochabamba\",\r\n      \"direction\":\"av aroma\"\r\n    },\r\n    {\r\n      \"place_id\": \"zxc956\",\r\n      \"lat\": \"98.3\",\r\n      \"lon\": \"34.6\",\r\n      \"location\": \"sacaba\",\r\n      \"city\": \"cochabamba\",\r\n      \"direction\":\"av patito\"\r\n    }\r\n  ]\r\n}",
 									"options": {
 										"raw": {
 											"language": "json"
@@ -131,13 +131,13 @@
 									}
 								},
 								"url": {
-									"raw": "{{url}}/clients/3",
+									"raw": "{{url}}/clients/2",
 									"host": [
 										"{{url}}"
 									],
 									"path": [
 										"clients",
-										"3"
+										"2"
 									]
 								}
 							},
@@ -217,6 +217,29 @@
 							"item": []
 						},
 						{
+							"name": "service access",
+							"item": [
+								{
+									"name": "get service access",
+									"request": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{url}}/faults/services-access",
+											"host": [
+												"{{url}}"
+											],
+											"path": [
+												"faults",
+												"services-access"
+											]
+										}
+									},
+									"response": []
+								}
+							]
+						},
+						{
 							"name": "get services",
 							"request": {
 								"method": "GET",
@@ -252,7 +275,7 @@
 								],
 								"body": {
 									"mode": "raw",
-									"raw": "{\r\n  \"instance\": \"123\",\r\n  \"type_id\": 1,\r\n  \"address_id\": 2,\r\n  \"connections\": [1,2],\r\n  \"technical_datas\": {\r\n    \"central_port\": \"123qwe\",\r\n    \"link_pair\": \"123qwe\",\r\n    \"peer_node\": \"123qwe\",\r\n    \"box_pair\": \"123qwe\"\r\n  }\r\n}",
+									"raw": "{\r\n  \"instance\": \"112223\",\r\n  \"address_id\": 1,\r\n  \"type_id\": 1,\r\n  \"access_id\": 2,\r\n  \"connections\": [1,2],\r\n  \"technical_datas\": {\r\n    \"central_port\": \"123qwe\",\r\n    \"link_pair\": \"123qwe\",\r\n    \"peer_node\": \"123qwe\",\r\n    \"box_pair\": \"123qwe\",\r\n    \"observation\": \"observation\"\r\n  }\r\n}",
 									"options": {
 										"raw": {
 											"language": "json"
@@ -290,7 +313,7 @@
 								],
 								"body": {
 									"mode": "raw",
-									"raw": "{\r\n  \"instance\": \"12io3\",\r\n  \"type_id\": 2,\r\n  \"address_id\": 1,\r\n  \"connections\": [1,2]\r\n}",
+									"raw": "{\r\n  \"instance\": \"12io3\",\r\n  \"type_id\": 2,\r\n  \"address_id\": 1,\r\n  \"access_id\": 1,\r\n  \"connections\": [1,2]\r\n}",
 									"options": {
 										"raw": {
 											"language": "json"
@@ -312,1342 +335,867 @@
 							"response": []
 						}
 					]
+				},
+				{
+					"name": "work order",
+					"item": [
+						{
+							"name": "activities",
+							"item": [
+								{
+									"name": "work order faults",
+									"item": [
+										{
+											"name": "localization CRM",
+											"item": [
+												{
+													"name": "get localizations CRM",
+													"request": {
+														"method": "GET",
+														"header": [],
+														"url": {
+															"raw": "{{url}}/faults/work-orders/activities/fault-crms",
+															"host": [
+																"{{url}}"
+															],
+															"path": [
+																"faults",
+																"work-orders",
+																"activities",
+																"fault-crms"
+															]
+														}
+													},
+													"response": []
+												},
+												{
+													"name": "post localizations CRM",
+													"protocolProfileBehavior": {
+														"disabledSystemHeaders": {
+															"accept": true
+														}
+													},
+													"request": {
+														"method": "POST",
+														"header": [
+															{
+																"key": "Accept",
+																"value": "application/json",
+																"type": "text"
+															}
+														],
+														"body": {
+															"mode": "raw",
+															"raw": "{\r\n  \"name\": \"F.O.DROP\"\r\n}",
+															"options": {
+																"raw": {
+																	"language": "json"
+																}
+															}
+														},
+														"url": {
+															"raw": "{{url}}/faults/work-orders/activities/fault-crms",
+															"host": [
+																"{{url}}"
+															],
+															"path": [
+																"faults",
+																"work-orders",
+																"activities",
+																"fault-crms"
+															]
+														}
+													},
+													"response": []
+												},
+												{
+													"name": "update localization CRM",
+													"protocolProfileBehavior": {
+														"disabledSystemHeaders": {
+															"accept": true
+														}
+													},
+													"request": {
+														"method": "PUT",
+														"header": [
+															{
+																"key": "Accept",
+																"value": "application/json",
+																"type": "text"
+															}
+														],
+														"body": {
+															"mode": "raw",
+															"raw": "{\r\n  \"name\": \"F.O.DROP\"\r\n}",
+															"options": {
+																"raw": {
+																	"language": "json"
+																}
+															}
+														},
+														"url": {
+															"raw": "{{url}}/faults/work-orders/activities/fault-crms/1",
+															"host": [
+																"{{url}}"
+															],
+															"path": [
+																"faults",
+																"work-orders",
+																"activities",
+																"fault-crms",
+																"1"
+															]
+														}
+													},
+													"response": []
+												}
+											]
+										},
+										{
+											"name": "localization ATT",
+											"item": [
+												{
+													"name": "get localizations ATT",
+													"request": {
+														"method": "GET",
+														"header": [],
+														"url": {
+															"raw": "{{url}}/faults/work-orders/activities/fault-atts",
+															"host": [
+																"{{url}}"
+															],
+															"path": [
+																"faults",
+																"work-orders",
+																"activities",
+																"fault-atts"
+															]
+														}
+													},
+													"response": []
+												},
+												{
+													"name": "post localizations ATT",
+													"protocolProfileBehavior": {
+														"disabledSystemHeaders": {
+															"accept": true
+														}
+													},
+													"request": {
+														"method": "POST",
+														"header": [
+															{
+																"key": "Accept",
+																"value": "application/json",
+																"type": "text"
+															}
+														],
+														"body": {
+															"mode": "raw",
+															"raw": "{\r\n  \"name\": \"Otro\"\r\n}",
+															"options": {
+																"raw": {
+																	"language": "json"
+																}
+															}
+														},
+														"url": {
+															"raw": "{{url}}/faults/work-orders/activities/fault-atts",
+															"host": [
+																"{{url}}"
+															],
+															"path": [
+																"faults",
+																"work-orders",
+																"activities",
+																"fault-atts"
+															]
+														}
+													},
+													"response": []
+												},
+												{
+													"name": "udpate localizations ATT",
+													"protocolProfileBehavior": {
+														"disabledSystemHeaders": {
+															"accept": true
+														}
+													},
+													"request": {
+														"method": "PUT",
+														"header": [
+															{
+																"key": "Accept",
+																"value": "application/json",
+																"type": "text"
+															}
+														],
+														"body": {
+															"mode": "raw",
+															"raw": "{\r\n  \"name\": \"Otro\"\r\n}",
+															"options": {
+																"raw": {
+																	"language": "json"
+																}
+															}
+														},
+														"url": {
+															"raw": "{{url}}/faults/work-orders/activities/fault-atts/5",
+															"host": [
+																"{{url}}"
+															],
+															"path": [
+																"faults",
+																"work-orders",
+																"activities",
+																"fault-atts",
+																"5"
+															]
+														}
+													},
+													"response": []
+												}
+											]
+										},
+										{
+											"name": "CRM types",
+											"item": [
+												{
+													"name": "get  CRM types",
+													"request": {
+														"method": "GET",
+														"header": [],
+														"url": {
+															"raw": "{{url}}/faults/work-orders/activities/fault-types",
+															"host": [
+																"{{url}}"
+															],
+															"path": [
+																"faults",
+																"work-orders",
+																"activities",
+																"fault-types"
+															]
+														}
+													},
+													"response": []
+												},
+												{
+													"name": "post CRM types",
+													"protocolProfileBehavior": {
+														"disabledSystemHeaders": {
+															"accept": true
+														}
+													},
+													"request": {
+														"method": "POST",
+														"header": [
+															{
+																"key": "Accept",
+																"value": "application/json",
+																"type": "text"
+															}
+														],
+														"body": {
+															"mode": "raw",
+															"raw": "{\r\n  \"prefix\": \"FTT_AU_001\",\r\n  \"name\": \"CONNECTORES AVERIADOS\"\r\n}",
+															"options": {
+																"raw": {
+																	"language": "json"
+																}
+															}
+														},
+														"url": {
+															"raw": "{{url}}/faults/work-orders/activities/fault-types",
+															"host": [
+																"{{url}}"
+															],
+															"path": [
+																"faults",
+																"work-orders",
+																"activities",
+																"fault-types"
+															]
+														}
+													},
+													"response": []
+												},
+												{
+													"name": "udpate CRM types",
+													"protocolProfileBehavior": {
+														"disabledSystemHeaders": {
+															"accept": true
+														}
+													},
+													"request": {
+														"method": "PUT",
+														"header": [
+															{
+																"key": "Accept",
+																"value": "application/json",
+																"type": "text"
+															}
+														],
+														"body": {
+															"mode": "raw",
+															"raw": "{\r\n  \"prefix\": \"FTT_AU_001\",\r\n  \"name\": \"CONNECTORES AVERIADOS\"\r\n}",
+															"options": {
+																"raw": {
+																	"language": "json"
+																}
+															}
+														},
+														"url": {
+															"raw": "{{url}}/faults/work-orders/activities/fault-types/1",
+															"host": [
+																"{{url}}"
+															],
+															"path": [
+																"faults",
+																"work-orders",
+																"activities",
+																"fault-types",
+																"1"
+															]
+														}
+													},
+													"response": []
+												}
+											]
+										},
+										{
+											"name": "get work order faults",
+											"request": {
+												"method": "GET",
+												"header": [],
+												"url": {
+													"raw": "{{url}}/faults/work-orders/activities/faults",
+													"host": [
+														"{{url}}"
+													],
+													"path": [
+														"faults",
+														"work-orders",
+														"activities",
+														"faults"
+													]
+												}
+											},
+											"response": []
+										},
+										{
+											"name": "post work order faults",
+											"protocolProfileBehavior": {
+												"disabledSystemHeaders": {
+													"accept": true
+												}
+											},
+											"request": {
+												"method": "POST",
+												"header": [
+													{
+														"key": "Accept",
+														"value": "application/json",
+														"type": "text"
+													}
+												],
+												"body": {
+													"mode": "raw",
+													"raw": "{\r\n  \"work_order_id\": 1,\r\n  \"att_id\": 1,\r\n  \"crm_id\": 1,\r\n  \"type_id\": 1\r\n}",
+													"options": {
+														"raw": {
+															"language": "json"
+														}
+													}
+												},
+												"url": {
+													"raw": "{{url}}/faults/work-orders/activities/faults",
+													"host": [
+														"{{url}}"
+													],
+													"path": [
+														"faults",
+														"work-orders",
+														"activities",
+														"faults"
+													]
+												}
+											},
+											"response": []
+										},
+										{
+											"name": "update work order fault",
+											"protocolProfileBehavior": {
+												"disabledSystemHeaders": {
+													"accept": true
+												}
+											},
+											"request": {
+												"method": "PUT",
+												"header": [
+													{
+														"key": "Accept",
+														"value": "application/json",
+														"type": "text"
+													}
+												],
+												"body": {
+													"mode": "raw",
+													"raw": "{\r\n  \"work_order_id\": 1,\r\n  \"att_id\": 1,\r\n  \"crm_id\": 1,\r\n  \"type_id\": 1\r\n}",
+													"options": {
+														"raw": {
+															"language": "json"
+														}
+													}
+												},
+												"url": {
+													"raw": "{{url}}/faults/work-orders/activities/faults/1",
+													"host": [
+														"{{url}}"
+													],
+													"path": [
+														"faults",
+														"work-orders",
+														"activities",
+														"faults",
+														"1"
+													]
+												}
+											},
+											"response": []
+										}
+									]
+								},
+								{
+									"name": "post activities",
+									"protocolProfileBehavior": {
+										"disabledSystemHeaders": {
+											"accept": true
+										}
+									},
+									"request": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "application/json",
+												"type": "text"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n  \"activity\": {\r\n    \"process\": \" descripcion del proceso\",\r\n    \"observation\": \"observacion de una actividad de fallas\"\r\n  },\r\n  \"images\": [\r\n    {\r\n      \"url\": \"https://imagen.com\",\r\n      \"date\": \"2022-07-08 00:00:00\"\r\n    },\r\n    {\r\n      \"url\": \"https://imagen.com\",\r\n      \"date\": \"2022-07-08 00:00:00\"\r\n    }\r\n  ],\r\n  \"blueprint\": {\r\n    \"url\": \"https://imagen.com\",\r\n    \"date\": \"2022-07-08 00:00:00\"\r\n  } \r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{url}}/faults/work-orders/1/activities",
+											"host": [
+												"{{url}}"
+											],
+											"path": [
+												"faults",
+												"work-orders",
+												"1",
+												"activities"
+											]
+										}
+									},
+									"response": []
+								}
+							]
+						},
+						{
+							"name": "installed equipment",
+							"item": [
+								{
+									"name": "get installed-equipment",
+									"request": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{url}}/faults/installed-equipment",
+											"host": [
+												"{{url}}"
+											],
+											"path": [
+												"faults",
+												"installed-equipment"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "post installed equipment",
+									"protocolProfileBehavior": {
+										"disabledSystemHeaders": {
+											"accept": true
+										}
+									},
+									"request": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "application/json",
+												"type": "text"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "[\r\n  {\r\n    \"work_order_id\": 1,\r\n    \"type_id\": 1,\r\n    \"group_item_id\": 1,\r\n    \"equipment_id\": 1,\r\n    \"description\": \"descripcion de la instalacion\"\r\n  },\r\n  {\r\n    \"work_order_id\": 1,\r\n    \"type_id\": 3,\r\n    \"equipment_id\": 2,\r\n    \"group_item_id\": 1,\r\n    \"description\": \"descripcion de la instalacion\"\r\n  }\r\n]",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{url}}/faults/installed-equipment",
+											"host": [
+												"{{url}}"
+											],
+											"path": [
+												"faults",
+												"installed-equipment"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "update installed equipment",
+									"protocolProfileBehavior": {
+										"disabledSystemHeaders": {
+											"accept": true
+										}
+									},
+									"request": {
+										"method": "PUT",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "application/json",
+												"type": "text"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n  \"work_order_id\": 1,\r\n  \"type_id\": 1,\r\n  \"group_item_id\": 1,\r\n  \"equipment_id\": 1,\r\n  \"description\": \"descripcion de la instalacion del equipo\"\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{url}}/faults/installed-equipment/1",
+											"host": [
+												"{{url}}"
+											],
+											"path": [
+												"faults",
+												"installed-equipment",
+												"1"
+											]
+										}
+									},
+									"response": []
+								}
+							]
+						},
+						{
+							"name": "withdrawn equipment",
+							"item": [
+								{
+									"name": "get withdrawn equipment",
+									"request": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{url}}/faults/withdrawn-equipment",
+											"host": [
+												"{{url}}"
+											],
+											"path": [
+												"faults",
+												"withdrawn-equipment"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "post withdrawn equipment",
+									"protocolProfileBehavior": {
+										"disabledSystemHeaders": {
+											"accept": true
+										}
+									},
+									"request": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "application/json",
+												"type": "text"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "[\r\n  {\r\n    \"work_order_id\": 1,\r\n    \"type_id\": 1,\r\n    \"variant_id\": 1,\r\n    \"no_serie\": \"123wsc\",\r\n    \"description\": \"detalle del retiro del equipo\"\r\n  },\r\n  {\r\n    \"work_order_id\": 1,\r\n    \"type_id\": 2,\r\n    \"variant_id\": 1,\r\n    \"no_serie\": \"124wsc\",\r\n    \"description\": \"detalle del retiro del equipo\"\r\n  }\r\n]",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{url}}/faults/withdrawn-equipment",
+											"host": [
+												"{{url}}"
+											],
+											"path": [
+												"faults",
+												"withdrawn-equipment"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "update withdrawn equipment",
+									"protocolProfileBehavior": {
+										"disabledSystemHeaders": {
+											"accept": true
+										}
+									},
+									"request": {
+										"method": "PUT",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "application/json",
+												"type": "text"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n  \"work_order_id\": 1,\r\n  \"type_id\": 2,\r\n  \"variant_id\": 1,\r\n  \"no_serie\": \"124wsc\",\r\n  \"description\": \"detalle del retiro del equipo\"\r\n}\r\n",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{url}}/faults/withdrawn-equipment/5",
+											"host": [
+												"{{url}}"
+											],
+											"path": [
+												"faults",
+												"withdrawn-equipment",
+												"5"
+											]
+										}
+									},
+									"response": []
+								}
+							]
+						},
+						{
+							"name": "quality",
+							"item": [
+								{
+									"name": "get quality interventions",
+									"request": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{url}}/faults/quality-interventions",
+											"host": [
+												"{{url}}"
+											],
+											"path": [
+												"faults",
+												"quality-interventions"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "post quality interventions",
+									"protocolProfileBehavior": {
+										"disabledSystemHeaders": {
+											"accept": true
+										}
+									},
+									"request": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "application/json",
+												"type": "text"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n  \"work_order_id\": 1,\r\n  \"repair_quality\": \"B\",\r\n  \"technical_data_reported\": \"B\",\r\n  \"poles_used\": \"B\",\r\n  \"material_difference\": 1.23,\r\n  \"material_used\": \"M\",\r\n  \"hygiene\": \"B\",\r\n  \"customer_support\": \"B\",\r\n  \"date\": \"2022-07-18 00:00:00\"\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{url}}/faults/quality-interventions",
+											"host": [
+												"{{url}}"
+											],
+											"path": [
+												"faults",
+												"quality-interventions"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "update quality interventions",
+									"protocolProfileBehavior": {
+										"disabledSystemHeaders": {
+											"accept": true
+										}
+									},
+									"request": {
+										"method": "PUT",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "application/json",
+												"type": "text"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n  \"work_order_id\": 1,\r\n  \"repair_quality\": true,\r\n  \"technical_data_reported\": false,\r\n  \"poles_used\": false,\r\n  \"material_difference\": 1.23,\r\n  \"material_used\": true,\r\n  \"hygiene\": true,\r\n  \"customer_support\": true,\r\n  \"date\": \"2022-07-18 00:00:00\"\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{url}}/faults/quality-interventions/1",
+											"host": [
+												"{{url}}"
+											],
+											"path": [
+												"faults",
+												"quality-interventions",
+												"1"
+											]
+										}
+									},
+									"response": []
+								}
+							]
+						},
+						{
+							"name": "post work order",
+							"protocolProfileBehavior": {
+								"disabledSystemHeaders": {
+									"accept": true
+								}
+							},
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"work_order\": {\r\n    \"service_id\": 1,\r\n    \"observation\": \"observation\",\r\n    \"claim_date\": \"2022-07-18 00:00:00\",\r\n    \"date\": \"2022-07-18 00:00:00\"\r\n  },\r\n  \"estimated_date\" : {\r\n    \"start\": \"2022-07-18 00:00:00\",\r\n    \"finish\": \"2022-07-18 00:00:00\"\r\n  },\r\n  \"tags\": {\r\n    \"clasification_id\" : 6,\r\n    \"status_id\" : 1\r\n  },\r\n  \"groups\" : [{\"id\": 1, \"mandated\": true},{\"id\": 2, \"mandated\": false}]\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{url}}/faults/work-orders",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"faults",
+										"work-orders"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "get work orders",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{url}}/faults/work-orders",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"faults",
+										"work-orders"
+									]
+								}
+							},
+							"response": []
+						}
+					]
 				}
 			]
 		},
 		{
-			"name": "work orders",
+			"name": "external plant",
 			"item": [
 				{
-					"name": "external plant",
+					"name": "olts",
 					"item": [
 						{
-							"name": "work order",
+							"name": "olt categories",
 							"item": [
 								{
-									"name": "activities",
-									"item": [
-										{
-											"name": "get activities",
-											"request": {
-												"method": "GET",
-												"header": [],
-												"url": {
-													"raw": "{{url}}/external-plant/work-order/activities",
-													"host": [
-														"{{url}}"
-													],
-													"path": [
-														"external-plant",
-														"work-order",
-														"activities"
-													]
-												}
-											},
-											"response": []
-										},
-										{
-											"name": "work-orders activities",
-											"protocolProfileBehavior": {
-												"disabledSystemHeaders": {
-													"accept": true
-												}
-											},
-											"request": {
-												"auth": {
-													"type": "bearer",
-													"bearer": [
-														{
-															"key": "token",
-															"value": "{{token}}",
-															"type": "string"
-														}
-													]
-												},
-												"method": "POST",
-												"header": [
-													{
-														"key": "Accept",
-														"value": "application/json",
-														"type": "text"
-													}
-												],
-												"body": {
-													"mode": "raw",
-													"raw": "{\r\n  \"activity\": {\r\n    \"process\": \"process proceso\", \r\n    \"observation\": \"observation  de esto\", \r\n    \"work_order_id\": 1\r\n  },\r\n  \"images\": [\r\n    {\r\n      \"url\": \"https://imagen.com\",\r\n      \"date\": \"2022-07-08 00:00:00\"\r\n    },\r\n    {\r\n      \"url\": \"https://imagen.com\",\r\n      \"date\": \"2022-07-08 00:00:00\"\r\n    }\r\n  ],\r\n  \"blueprint\": {\r\n    \"url\": \"https://imagen.com\",\r\n    \"date\": \"2022-07-08 00:00:00\"\r\n  } \r\n}",
-													"options": {
-														"raw": {
-															"language": "json"
-														}
-													}
-												},
-												"url": {
-													"raw": "{{url}}/external-plant/work-order/activities",
-													"host": [
-														"{{url}}"
-													],
-													"path": [
-														"external-plant",
-														"work-order",
-														"activities"
-													]
-												}
-											},
-											"response": []
-										},
-										{
-											"name": "get activity",
-											"request": {
-												"method": "GET",
-												"header": [],
-												"url": {
-													"raw": "{{url}}/external-plant/work-order/activities/1",
-													"host": [
-														"{{url}}"
-													],
-													"path": [
-														"external-plant",
-														"work-order",
-														"activities",
-														"1"
-													]
-												}
-											},
-											"response": []
-										}
-									]
-								},
-								{
-									"name": "certifications",
-									"item": [
-										{
-											"name": "certification check",
-											"item": [
-												{
-													"name": "post certifications check",
-													"protocolProfileBehavior": {
-														"disabledSystemHeaders": {
-															"accept": true
-														}
-													},
-													"request": {
-														"method": "POST",
-														"header": [
-															{
-																"key": "Accept",
-																"value": "application/json",
-																"type": "text"
-															}
-														],
-														"body": {
-															"mode": "raw",
-															"raw": "{\r\n  \"certification_id\": 1,\r\n  \"item\": 10.13,\r\n  \"workforce\": 10.11\r\n}",
-															"options": {
-																"raw": {
-																	"language": "json"
-																}
-															}
-														},
-														"url": {
-															"raw": "{{url}}/external-plant/work-order/certifications/check",
-															"host": [
-																"{{url}}"
-															],
-															"path": [
-																"external-plant",
-																"work-order",
-																"certifications",
-																"check"
-															]
-														}
-													},
-													"response": []
-												},
-												{
-													"name": "get certification check",
-													"request": {
-														"method": "GET",
-														"header": [],
-														"url": {
-															"raw": "{{url}}/external-plant/work-order/certifications/check/1",
-															"host": [
-																"{{url}}"
-															],
-															"path": [
-																"external-plant",
-																"work-order",
-																"certifications",
-																"check",
-																"1"
-															]
-														}
-													},
-													"response": []
-												},
-												{
-													"name": "update certifications check",
-													"protocolProfileBehavior": {
-														"disabledSystemHeaders": {
-															"accept": true
-														}
-													},
-													"request": {
-														"method": "PUT",
-														"header": [
-															{
-																"key": "Accept",
-																"value": "application/json",
-																"type": "text"
-															}
-														],
-														"body": {
-															"mode": "raw",
-															"raw": "{\r\n  \"certification_id\": 1,\r\n  \"item\": 20,\r\n  \"workforce\": 20\r\n}",
-															"options": {
-																"raw": {
-																	"language": "json"
-																}
-															}
-														},
-														"url": {
-															"raw": "{{url}}/external-plant/work-order/certifications/check/1",
-															"host": [
-																"{{url}}"
-															],
-															"path": [
-																"external-plant",
-																"work-order",
-																"certifications",
-																"check",
-																"1"
-															]
-														}
-													},
-													"response": []
-												}
-											]
-										},
-										{
-											"name": "post certification",
-											"protocolProfileBehavior": {
-												"disabledSystemHeaders": {
-													"accept": true
-												}
-											},
-											"request": {
-												"auth": {
-													"type": "bearer",
-													"bearer": [
-														{
-															"key": "token",
-															"value": "{{token}}",
-															"type": "string"
-														}
-													]
-												},
-												"method": "POST",
-												"header": [
-													{
-														"key": "Accept",
-														"value": "application/json",
-														"type": "text"
-													}
-												],
-												"body": {
-													"mode": "raw",
-													"raw": "[\r\n  {\r\n    \"work_order_id\": 1,\r\n    \"group_item_id\": 1,\r\n    \"action_id\": 1,\r\n    \"material\": {\r\n      \"variant_id\": 1,\r\n      \"no_serie\":\"67a19p8\",\r\n      \"used\": false,\r\n      \"activated\": true\r\n    },\r\n    \"quantity\": {\r\n      \"item\": 12,\r\n      \"workforce\": 12\r\n    }\r\n  },\r\n  {\r\n    \"work_order_id\": 1,\r\n    \"group_item_id\": 1,\r\n    \"action_id\": 1,\r\n    \"material\": {\r\n      \"variant_id\": 1,\r\n      \"no_serie\":\"57aqw8p10\",\r\n      \"used\": false,\r\n      \"activated\": true\r\n    },\r\n    \"quantity\": {\r\n      \"item\": 12.14,\r\n      \"workforce\": 12.39\r\n    }\r\n  }\r\n]",
-													"options": {
-														"raw": {
-															"language": "json"
-														}
-													}
-												},
-												"url": {
-													"raw": "{{url}}/external-plant/work-order/certifications",
-													"host": [
-														"{{url}}"
-													],
-													"path": [
-														"external-plant",
-														"work-order",
-														"certifications"
-													]
-												}
-											},
-											"response": []
-										},
-										{
-											"name": "get certification",
-											"protocolProfileBehavior": {
-												"disableBodyPruning": true,
-												"disabledSystemHeaders": {
-													"accept": true
-												}
-											},
-											"request": {
-												"auth": {
-													"type": "bearer",
-													"bearer": [
-														{
-															"key": "token",
-															"value": "{{token}}",
-															"type": "string"
-														}
-													]
-												},
-												"method": "GET",
-												"header": [
-													{
-														"key": "Accept",
-														"value": "application/json",
-														"type": "text",
-														"disabled": true
-													}
-												],
-												"body": {
-													"mode": "raw",
-													"raw": "",
-													"options": {
-														"raw": {
-															"language": "json"
-														}
-													}
-												},
-												"url": {
-													"raw": "{{url}}/external-plant/work-order/certifications/89",
-													"host": [
-														"{{url}}"
-													],
-													"path": [
-														"external-plant",
-														"work-order",
-														"certifications",
-														"89"
-													]
-												}
-											},
-											"response": []
-										},
-										{
-											"name": "update certifications",
-											"protocolProfileBehavior": {
-												"disabledSystemHeaders": {
-													"accept": true
-												}
-											},
-											"request": {
-												"auth": {
-													"type": "bearer",
-													"bearer": [
-														{
-															"key": "token",
-															"value": "{{token}}",
-															"type": "string"
-														}
-													]
-												},
-												"method": "PUT",
-												"header": [
-													{
-														"key": "Accept",
-														"value": "application/json",
-														"type": "text"
-													}
-												],
-												"body": {
-													"mode": "raw",
-													"raw": "{\r\n  \"work_order_id\": 1,\r\n  \"group_item_id\": 1,\r\n  \"action_id\": 2,\r\n  \"material\": {\r\n    \"variant_id\": 1,\r\n    \"no_serie\":\"ea28p8\",\r\n    \"used\": true,\r\n    \"activated\": true\r\n  },\r\n  \"quantity\": {\r\n    \"item\": 11,\r\n    \"workforce\": 20\r\n  }\r\n}",
-													"options": {
-														"raw": {
-															"language": "json"
-														}
-													}
-												},
-												"url": {
-													"raw": "{{url}}/external-plant/work-order/certifications/1",
-													"host": [
-														"{{url}}"
-													],
-													"path": [
-														"external-plant",
-														"work-order",
-														"certifications",
-														"1"
-													]
-												}
-											},
-											"response": []
-										}
-									]
-								},
-								{
-									"name": "interventions",
-									"item": [
-										{
-											"name": "post intervention",
-											"protocolProfileBehavior": {
-												"disabledSystemHeaders": {
-													"accept": true
-												}
-											},
-											"request": {
-												"method": "POST",
-												"header": [
-													{
-														"key": "Accept",
-														"value": "application/json",
-														"type": "text"
-													}
-												],
-												"body": {
-													"mode": "raw",
-													"raw": "{\r\n  \"work_order_id\": 1,\r\n  \"used_material\": true,\r\n  \"personal_presentation\": \"Buena\",\r\n  \"repair_quality\": \"Mala\",\r\n  \"diferences\": true,\r\n  \"current_report\": true,\r\n  \"used_report\": true\r\n}",
-													"options": {
-														"raw": {
-															"language": "json"
-														}
-													}
-												},
-												"url": {
-													"raw": "{{url}}/external-plant/work-order/quality-interventions",
-													"host": [
-														"{{url}}"
-													],
-													"path": [
-														"external-plant",
-														"work-order",
-														"quality-interventions"
-													]
-												}
-											},
-											"response": []
-										},
-										{
-											"name": "get intervention",
-											"request": {
-												"method": "GET",
-												"header": [],
-												"url": {
-													"raw": "{{url}}/external-plant/work-order/quality-interventions",
-													"host": [
-														"{{url}}"
-													],
-													"path": [
-														"external-plant",
-														"work-order",
-														"quality-interventions"
-													]
-												}
-											},
-											"response": []
-										},
-										{
-											"name": "update intervention",
-											"protocolProfileBehavior": {
-												"disabledSystemHeaders": {
-													"accept": true
-												}
-											},
-											"request": {
-												"method": "PUT",
-												"header": [
-													{
-														"key": "Accept",
-														"value": "application/json",
-														"type": "text"
-													}
-												],
-												"body": {
-													"mode": "raw",
-													"raw": "{\r\n  \"work_order_id\": 1,\r\n  \"used_material\": true,\r\n  \"personal_presentation\": \"Muy Buena\",\r\n  \"repair_quality\": \"Mala\",\r\n  \"diferences\": false,\r\n  \"current_report\": true,\r\n  \"used_report\": true\r\n}",
-													"options": {
-														"raw": {
-															"language": "json"
-														}
-													}
-												},
-												"url": {
-													"raw": "{{url}}/external-plant/work-order/quality-interventions/1",
-													"host": [
-														"{{url}}"
-													],
-													"path": [
-														"external-plant",
-														"work-order",
-														"quality-interventions",
-														"1"
-													]
-												}
-											},
-											"response": []
-										}
-									]
-								},
-								{
-									"name": "withdrawn materials",
-									"item": [
-										{
-											"name": "withdrawn checks",
-											"item": [
-												{
-													"name": "get withdrawn check",
-													"request": {
-														"method": "GET",
-														"header": [],
-														"url": {
-															"raw": "{{url}}/external-plant/work-order/withdrawn-materials/checks/1",
-															"host": [
-																"{{url}}"
-															],
-															"path": [
-																"external-plant",
-																"work-order",
-																"withdrawn-materials",
-																"checks",
-																"1"
-															]
-														}
-													},
-													"response": []
-												},
-												{
-													"name": "post withdrawn check",
-													"protocolProfileBehavior": {
-														"disabledSystemHeaders": {
-															"accept": true
-														}
-													},
-													"request": {
-														"method": "POST",
-														"header": [
-															{
-																"key": "Accept",
-																"value": "application/json",
-																"type": "text"
-															}
-														],
-														"body": {
-															"mode": "raw",
-															"raw": "{\r\n  \"material_id\": 1,\r\n  \"received\": 12.34\r\n}",
-															"options": {
-																"raw": {
-																	"language": "json"
-																}
-															}
-														},
-														"url": {
-															"raw": "{{url}}/external-plant/work-order/withdrawn-materials/checks",
-															"host": [
-																"{{url}}"
-															],
-															"path": [
-																"external-plant",
-																"work-order",
-																"withdrawn-materials",
-																"checks"
-															]
-														}
-													},
-													"response": []
-												},
-												{
-													"name": "update withdrawn check",
-													"protocolProfileBehavior": {
-														"disabledSystemHeaders": {
-															"accept": true
-														}
-													},
-													"request": {
-														"method": "PUT",
-														"header": [
-															{
-																"key": "Accept",
-																"value": "application/json",
-																"type": "text"
-															}
-														],
-														"body": {
-															"mode": "raw",
-															"raw": "{\r\n  \"material_id\": 1,\r\n  \"received\": 12.35\r\n}",
-															"options": {
-																"raw": {
-																	"language": "json"
-																}
-															}
-														},
-														"url": {
-															"raw": "{{url}}/external-plant/work-order/withdrawn-materials/checks/1",
-															"host": [
-																"{{url}}"
-															],
-															"path": [
-																"external-plant",
-																"work-order",
-																"withdrawn-materials",
-																"checks",
-																"1"
-															]
-														}
-													},
-													"response": []
-												}
-											]
-										},
-										{
-											"name": "get withdrawn materials",
-											"request": {
-												"method": "GET",
-												"header": [],
-												"url": {
-													"raw": "{{url}}/external-plant/work-order/withdrawn-materials",
-													"host": [
-														"{{url}}"
-													],
-													"path": [
-														"external-plant",
-														"work-order",
-														"withdrawn-materials"
-													]
-												}
-											},
-											"response": []
-										},
-										{
-											"name": "post withdrawn materials",
-											"protocolProfileBehavior": {
-												"disabledSystemHeaders": {
-													"accept": true
-												}
-											},
-											"request": {
-												"method": "POST",
-												"header": [
-													{
-														"key": "Accept",
-														"value": "application/json",
-														"type": "text"
-													}
-												],
-												"body": {
-													"mode": "raw",
-													"raw": "[\r\n  {\r\n    \"work_order_id\": 1,\r\n    \"variant_id\": 1,\r\n    \"no_serie\": \"asdf123ad\",\r\n    \"reported\": 12.11\r\n  },\r\n  {\r\n    \"work_order_id\": 1,\r\n    \"variant_id\": 1,\r\n    \"no_serie\": \"a43df123ad\",\r\n    \"reported\": 10.12\r\n  }\r\n]",
-													"options": {
-														"raw": {
-															"language": "json"
-														}
-													}
-												},
-												"url": {
-													"raw": "{{url}}/external-plant/work-order/withdrawn-materials",
-													"host": [
-														"{{url}}"
-													],
-													"path": [
-														"external-plant",
-														"work-order",
-														"withdrawn-materials"
-													]
-												}
-											},
-											"response": []
-										},
-										{
-											"name": "get withdrawn material",
-											"request": {
-												"method": "GET",
-												"header": [],
-												"url": {
-													"raw": "{{url}}/external-plant/work-order/withdrawn-materials/1",
-													"host": [
-														"{{url}}"
-													],
-													"path": [
-														"external-plant",
-														"work-order",
-														"withdrawn-materials",
-														"1"
-													]
-												}
-											},
-											"response": []
-										},
-										{
-											"name": "update withdrawn material",
-											"protocolProfileBehavior": {
-												"disabledSystemHeaders": {
-													"accept": true
-												}
-											},
-											"request": {
-												"method": "PUT",
-												"header": [
-													{
-														"key": "Accept",
-														"value": "application/json",
-														"type": "text"
-													}
-												],
-												"body": {
-													"mode": "raw",
-													"raw": "{\r\n  \"work_order_id\": 1,\r\n  \"variant_id\": 1,\r\n  \"no_serie\": \"asdf123ad\",\r\n  \"reported\": 14\r\n}\r\n",
-													"options": {
-														"raw": {
-															"language": "json"
-														}
-													}
-												},
-												"url": {
-													"raw": "{{url}}/external-plant/work-order/withdrawn-materials/1",
-													"host": [
-														"{{url}}"
-													],
-													"path": [
-														"external-plant",
-														"work-order",
-														"withdrawn-materials",
-														"1"
-													]
-												}
-											},
-											"response": []
-										}
-									]
-								},
-								{
-									"name": "post work order",
-									"protocolProfileBehavior": {
-										"disabledSystemHeaders": {
-											"accept": true
-										}
-									},
-									"request": {
-										"method": "POST",
-										"header": [
-											{
-												"key": "Accept",
-												"value": "application/json",
-												"type": "text"
-											}
-										],
-										"body": {
-											"mode": "raw",
-											"raw": "{\r\n  \"work_order\": {\r\n    \"odn_id\" : 1,\r\n    \"description\": \"mantenimiento por polvo\",\r\n    \"affected_customers\" : 20,\r\n    \"company_id\" : 2,\r\n    \"category_id\" : 3,\r\n    \"type_id\" : 2,\r\n    \"typology_id\": 1\r\n  },\r\n  \"estimated_date\" : {\r\n    \"start\": \"2022-07-12 00:00:00\",\r\n    \"finish\": \"2022-07-12 00:00:00\"\r\n  },\r\n  \"tags\": {\r\n    \"clasification_id\" : 6,\r\n    \"status_id\" : 1\r\n  },\r\n  \"groups\" : [{\"id\": 1, \"mandated\": true},{\"id\": 2, \"mandated\": false}],\r\n  \"user_id\": 2\r\n}",
-											"options": {
-												"raw": {
-													"language": "json"
-												}
-											}
-										},
-										"url": {
-											"raw": "{{url}}/external-plant/work-orders",
-											"host": [
-												"{{url}}"
-											],
-											"path": [
-												"external-plant",
-												"work-orders"
-											]
-										}
-									},
-									"response": []
-								},
-								{
-									"name": "update work order",
-									"protocolProfileBehavior": {
-										"disabledSystemHeaders": {
-											"accept": true
-										}
-									},
-									"request": {
-										"method": "PUT",
-										"header": [
-											{
-												"key": "Accept",
-												"value": "application/json",
-												"type": "text"
-											}
-										],
-										"body": {
-											"mode": "raw",
-											"raw": "{\r\n  \"work_order\": {\r\n    \"odn_id\" : 1,\r\n    \"description\": \"se tiene que hacer mantenimiento por que esta del asco\",\r\n    \"affected_customers\" : 15,\r\n    \"category_id\" : 2,\r\n    \"type_id\" : 1,\r\n    \"typology_id\": 1,\r\n    \"company_id\" : 2\r\n  },\r\n\r\n  \"tags\": {\r\n    \"clasification_id\" : 6,\r\n    \"status_id\" : 2\r\n  },\r\n  \"groups\" : [{\"id\": 1, \"mandated\": true},{\"id\": 2, \"mandated\": false}],\r\n  \"user_id\": 2\r\n}",
-											"options": {
-												"raw": {
-													"language": "json"
-												}
-											}
-										},
-										"url": {
-											"raw": "{{url}}/external-plant/work-orders/1",
-											"host": [
-												"{{url}}"
-											],
-											"path": [
-												"external-plant",
-												"work-orders",
-												"1"
-											]
-										}
-									},
-									"response": []
-								},
-								{
-									"name": "get work orders",
+									"name": "get olt cateogires",
 									"request": {
 										"method": "GET",
 										"header": [],
 										"url": {
-											"raw": "{{url}}/external-plant/work-orders",
+											"raw": "{{url}}/olt-categories",
 											"host": [
 												"{{url}}"
 											],
 											"path": [
-												"external-plant",
-												"work-orders"
+												"olt-categories"
 											]
 										}
 									},
 									"response": []
 								},
-								{
-									"name": "get work order",
-									"request": {
-										"method": "GET",
-										"header": [],
-										"url": {
-											"raw": "{{url}}/external-plant/work-orders/1",
-											"host": [
-												"{{url}}"
-											],
-											"path": [
-												"external-plant",
-												"work-orders",
-												"1"
-											]
-										}
-									},
-									"response": []
-								},
-								{
-									"name": "delete work order",
-									"request": {
-										"method": "DELETE",
-										"header": [],
-										"url": {
-											"raw": "{{url}}/external-plant/work-orders/3",
-											"host": [
-												"{{url}}"
-											],
-											"path": [
-												"external-plant",
-												"work-orders",
-												"3"
-											]
-										}
-									},
-									"response": []
-								}
-							]
-						},
-						{
-							"name": "odns",
-							"item": [
-								{
-									"name": "get odns",
-									"request": {
-										"method": "GET",
-										"header": [],
-										"url": {
-											"raw": "{{url}}/odns",
-											"host": [
-												"{{url}}"
-											],
-											"path": [
-												"odns"
-											]
-										}
-									},
-									"response": []
-								},
-								{
-									"name": "post odn",
-									"protocolProfileBehavior": {
-										"disabledSystemHeaders": {
-											"accept": true
-										}
-									},
-									"request": {
-										"method": "POST",
-										"header": [
-											{
-												"key": "Accept",
-												"value": "application/json",
-												"type": "text"
-											}
-										],
-										"body": {
-											"mode": "raw",
-											"raw": "{\r\n  \"odns\":[\r\n    {\r\n      \"code\": \"dan123\",\r\n      \"lat\": \"-14.098756\",\r\n      \"lon\": \"-13.123543\",\r\n      \"address\" : \"av patito esq tu ex\",\r\n      \"olt_id\": 1\r\n    },\r\n    {\r\n      \"code\": \"dan890\",\r\n      \"lat\": \"-14.098756\",\r\n      \"lon\": \"-13.123543\",\r\n      \"address\" : \"av patito esq tu ex\",\r\n      \"olt_id\": 1\r\n    }\r\n  ]\r\n}",
-											"options": {
-												"raw": {
-													"language": "json"
-												}
-											}
-										},
-										"url": {
-											"raw": "{{url}}/odns",
-											"host": [
-												"{{url}}"
-											],
-											"path": [
-												"odns"
-											]
-										}
-									},
-									"response": []
-								},
-								{
-									"name": "get odn",
-									"request": {
-										"method": "GET",
-										"header": [],
-										"url": {
-											"raw": "{{url}}/odns/9",
-											"host": [
-												"{{url}}"
-											],
-											"path": [
-												"odns",
-												"9"
-											]
-										}
-									},
-									"response": []
-								},
-								{
-									"name": "update odn",
-									"protocolProfileBehavior": {
-										"disabledSystemHeaders": {
-											"accept": true
-										}
-									},
-									"request": {
-										"method": "PUT",
-										"header": [
-											{
-												"key": "Accept",
-												"value": "application/json",
-												"type": "text"
-											}
-										],
-										"body": {
-											"mode": "raw",
-											"raw": "{\r\n  \"code\": \"a400f\",\r\n  \"lat\": \"-15.123457\",\r\n  \"lon\": \"-15.098762\",\r\n  \"address\" : \"av patito esq tu\",\r\n  \"olt_id\": 3\r\n}",
-											"options": {
-												"raw": {
-													"language": "json"
-												}
-											}
-										},
-										"url": {
-											"raw": "{{url}}/odns/9",
-											"host": [
-												"{{url}}"
-											],
-											"path": [
-												"odns",
-												"9"
-											]
-										}
-									},
-									"response": []
-								},
-								{
-									"name": "delete odn",
-									"request": {
-										"method": "DELETE",
-										"header": [],
-										"url": {
-											"raw": "{{url}}/odns/10",
-											"host": [
-												"{{url}}"
-											],
-											"path": [
-												"odns",
-												"10"
-											]
-										}
-									},
-									"response": []
-								}
-							]
-						},
-						{
-							"name": "olts",
-							"item": [
 								{
 									"name": "olt categories",
-									"item": [
-										{
-											"name": "get olt cateogires",
-											"request": {
-												"method": "GET",
-												"header": [],
-												"url": {
-													"raw": "{{url}}/olt-categories",
-													"host": [
-														"{{url}}"
-													],
-													"path": [
-														"olt-categories"
-													]
-												}
-											},
-											"response": []
-										},
-										{
-											"name": "olt categories",
-											"protocolProfileBehavior": {
-												"disabledSystemHeaders": {
-													"accept": true
-												}
-											},
-											"request": {
-												"method": "POST",
-												"header": [
-													{
-														"key": "Accept",
-														"value": "application/json",
-														"type": "text"
-													}
-												],
-												"body": {
-													"mode": "raw",
-													"raw": "{\r\n  \"prefix\": \"dfaasdffassd\",\r\n  \"name\": \"otro cosa\"\r\n}",
-													"options": {
-														"raw": {
-															"language": "json"
-														}
-													}
-												},
-												"url": {
-													"raw": "{{url}}/olt-categories",
-													"host": [
-														"{{url}}"
-													],
-													"path": [
-														"olt-categories"
-													]
-												}
-											},
-											"response": []
-										},
-										{
-											"name": "get olt category",
-											"request": {
-												"method": "GET",
-												"header": [],
-												"url": {
-													"raw": "{{url}}/olt-categories/3",
-													"host": [
-														"{{url}}"
-													],
-													"path": [
-														"olt-categories",
-														"3"
-													]
-												}
-											},
-											"response": []
-										},
-										{
-											"name": "update olt category",
-											"protocolProfileBehavior": {
-												"disabledSystemHeaders": {
-													"accept": true
-												}
-											},
-											"request": {
-												"method": "PUT",
-												"header": [
-													{
-														"key": "Accept",
-														"value": "application/json",
-														"type": "text"
-													}
-												],
-												"body": {
-													"mode": "raw",
-													"raw": "{\r\n  \"prefix\": \"dfaasdfas\",\r\n  \"name\": \"otro muy diferente\"\r\n}",
-													"options": {
-														"raw": {
-															"language": "json"
-														}
-													}
-												},
-												"url": {
-													"raw": "{{url}}/olt-categories/3",
-													"host": [
-														"{{url}}"
-													],
-													"path": [
-														"olt-categories",
-														"3"
-													]
-												}
-											},
-											"response": []
-										},
-										{
-											"name": "delete olt category",
-											"request": {
-												"method": "DELETE",
-												"header": [],
-												"url": {
-													"raw": "{{url}}/olt-categories/3",
-													"host": [
-														"{{url}}"
-													],
-													"path": [
-														"olt-categories",
-														"3"
-													]
-												}
-											},
-											"response": []
-										}
-									]
-								},
-								{
-									"name": "olt states",
-									"item": [
-										{
-											"name": "get olt states",
-											"request": {
-												"method": "GET",
-												"header": [],
-												"url": {
-													"raw": "{{url}}/olt-states",
-													"host": [
-														"{{url}}"
-													],
-													"path": [
-														"olt-states"
-													]
-												}
-											},
-											"response": []
-										},
-										{
-											"name": "post olt states",
-											"protocolProfileBehavior": {
-												"disabledSystemHeaders": {
-													"accept": true
-												}
-											},
-											"request": {
-												"method": "POST",
-												"header": [
-													{
-														"key": "Accept",
-														"value": "application/json",
-														"type": "text"
-													}
-												],
-												"body": {
-													"mode": "raw",
-													"raw": "{\r\n  \"prefix\": \"VMEX\",\r\n  \"name\": \"Villa Mexico\"\r\n}",
-													"options": {
-														"raw": {
-															"language": "json"
-														}
-													}
-												},
-												"url": {
-													"raw": "{{url}}/olt-states",
-													"host": [
-														"{{url}}"
-													],
-													"path": [
-														"olt-states"
-													]
-												}
-											},
-											"response": []
-										},
-										{
-											"name": "update olt state ",
-											"protocolProfileBehavior": {
-												"disabledSystemHeaders": {
-													"accept": true
-												}
-											},
-											"request": {
-												"method": "PUT",
-												"header": [
-													{
-														"key": "Accept",
-														"value": "application/json",
-														"type": "text"
-													}
-												],
-												"body": {
-													"mode": "raw",
-													"raw": "{\r\n  \"prefix\": \"VME\",\r\n  \"name\": \"Villa Mexicoo\"\r\n}",
-													"options": {
-														"raw": {
-															"language": "json"
-														}
-													}
-												},
-												"url": {
-													"raw": "{{url}}/olt-states/5",
-													"host": [
-														"{{url}}"
-													],
-													"path": [
-														"olt-states",
-														"5"
-													]
-												}
-											},
-											"response": []
-										},
-										{
-											"name": "delete olt state",
-											"request": {
-												"method": "DELETE",
-												"header": [],
-												"url": {
-													"raw": "{{url}}/olt-states/5",
-													"host": [
-														"{{url}}"
-													],
-													"path": [
-														"olt-states",
-														"5"
-													]
-												}
-											},
-											"response": []
-										}
-									]
-								},
-								{
-									"name": "olt variants",
-									"item": [
-										{
-											"name": "get olt variants",
-											"request": {
-												"method": "GET",
-												"header": [],
-												"url": {
-													"raw": "{{url}}/olt-variants",
-													"host": [
-														"{{url}}"
-													],
-													"path": [
-														"olt-variants"
-													]
-												}
-											},
-											"response": []
-										},
-										{
-											"name": "post olt variant",
-											"protocolProfileBehavior": {
-												"disabledSystemHeaders": {
-													"accept": true
-												}
-											},
-											"request": {
-												"method": "POST",
-												"header": [
-													{
-														"key": "Accept",
-														"value": "application/json",
-														"type": "text"
-													}
-												],
-												"body": {
-													"mode": "raw",
-													"raw": "{\r\n  \"variant_id\": 1,\r\n  \"olt_id\": 2,\r\n  \"amount\": 2.11\r\n}",
-													"options": {
-														"raw": {
-															"language": "json"
-														}
-													}
-												},
-												"url": {
-													"raw": "{{url}}/olt-variants",
-													"host": [
-														"{{url}}"
-													],
-													"path": [
-														"olt-variants"
-													]
-												}
-											},
-											"response": []
-										},
-										{
-											"name": "update olt variant",
-											"protocolProfileBehavior": {
-												"disabledSystemHeaders": {
-													"accept": true
-												}
-											},
-											"request": {
-												"method": "PUT",
-												"header": [
-													{
-														"key": "Accept",
-														"value": "application/json",
-														"type": "text"
-													}
-												],
-												"body": {
-													"mode": "raw",
-													"raw": "{\r\n  \"variant_id\": 2,\r\n  \"olt_id\": 2,\r\n  \"amount\": 2.12\r\n}",
-													"options": {
-														"raw": {
-															"language": "json"
-														}
-													}
-												},
-												"url": {
-													"raw": "{{url}}/olt-variants/1",
-													"host": [
-														"{{url}}"
-													],
-													"path": [
-														"olt-variants",
-														"1"
-													]
-												}
-											},
-											"response": []
-										}
-									]
-								},
-								{
-									"name": "get olts",
-									"request": {
-										"method": "GET",
-										"header": [],
-										"url": {
-											"raw": "{{url}}/olts",
-											"host": [
-												"{{url}}"
-											],
-											"path": [
-												"olts"
-											]
-										}
-									},
-									"response": []
-								},
-								{
-									"name": "post olt",
 									"protocolProfileBehavior": {
 										"disabledSystemHeaders": {
 											"accept": true
@@ -1664,7 +1212,7 @@
 										],
 										"body": {
 											"mode": "raw",
-											"raw": "{\r\n  \"olt\": {\r\n    \"name\":\"Heroinas\",\r\n    \"address\":\"Av Heroinas y Av ayacucho\",\r\n    \"lat\":\"-12.345678\",\r\n    \"lon\":\"-15.123765\",\r\n    \"image\":\"asdfas\",\r\n    \"category_id\": 1,\r\n    \"state_id\": 1,\r\n    \"date_mantenance\":\"2022-03-07 00:00:00\",\r\n    \"lapse_time_in_month\":1\r\n  },\r\n  \"variants\": [\r\n    {\r\n      \"id\": 1,\r\n      \"amount\": 12.11\r\n    }\r\n  ]\r\n}",
+											"raw": "{\r\n  \"prefix\": \"dfaasdffassd\",\r\n  \"name\": \"otro cosa\"\r\n}",
 											"options": {
 												"raw": {
 													"language": "json"
@@ -1672,67 +1220,29 @@
 											}
 										},
 										"url": {
-											"raw": "{{url}}/olts",
+											"raw": "{{url}}/olt-categories",
 											"host": [
 												"{{url}}"
 											],
 											"path": [
-												"olts"
+												"olt-categories"
 											]
 										}
 									},
 									"response": []
 								},
 								{
-									"name": "get olt",
+									"name": "get olt category",
 									"request": {
 										"method": "GET",
 										"header": [],
 										"url": {
-											"raw": "{{url}}/olts/1",
+											"raw": "{{url}}/olt-categories/3",
 											"host": [
 												"{{url}}"
 											],
 											"path": [
-												"olts",
-												"1"
-											]
-										}
-									},
-									"response": []
-								},
-								{
-									"name": "update olt",
-									"protocolProfileBehavior": {
-										"disabledSystemHeaders": {
-											"accept": true
-										}
-									},
-									"request": {
-										"method": "PUT",
-										"header": [
-											{
-												"key": "Accept",
-												"value": "application/json",
-												"type": "text"
-											}
-										],
-										"body": {
-											"mode": "raw",
-											"raw": "{\r\n  \"name\": \"Heroinas\",\r\n  \"address\": \"Av Heroinas y Av ayacucho\",\r\n  \"lat\": \"-12.345677\",\r\n  \"lon\": \"-15.123766\",\r\n  \"image\": \"imagen.png\",\r\n  \"category_id\": 1,\r\n  \"state_id\": 2,\r\n  \"date_mantenance\":\"2022-03-07 00:00:00\",\r\n  \"lapse_time_in_month\":1\r\n}",
-											"options": {
-												"raw": {
-													"language": "json"
-												}
-											}
-										},
-										"url": {
-											"raw": "{{url}}/olts/3",
-											"host": [
-												"{{url}}"
-											],
-											"path": [
-												"olts",
+												"olt-categories",
 												"3"
 											]
 										}
@@ -1740,105 +1250,7 @@
 									"response": []
 								},
 								{
-									"name": "delete olt",
-									"request": {
-										"method": "DELETE",
-										"header": [],
-										"url": {
-											"raw": "{{url}}/olts/1",
-											"host": [
-												"{{url}}"
-											],
-											"path": [
-												"olts",
-												"1"
-											]
-										}
-									},
-									"response": []
-								}
-							]
-						}
-					]
-				},
-				{
-					"name": "work order types",
-					"item": [
-						{
-							"name": "work order types",
-							"request": {
-								"method": "GET",
-								"header": [],
-								"url": {
-									"raw": "{{url}}/external-plant/work-order/types",
-									"host": [
-										"{{url}}"
-									],
-									"path": [
-										"external-plant",
-										"work-order",
-										"types"
-									]
-								}
-							},
-							"response": []
-						}
-					]
-				},
-				{
-					"name": "work order categories",
-					"item": [
-						{
-							"name": "get work order categories",
-							"request": {
-								"method": "GET",
-								"header": [],
-								"url": {
-									"raw": "{{url}}/external-plant/work-order/categories",
-									"host": [
-										"{{url}}"
-									],
-									"path": [
-										"external-plant",
-										"work-order",
-										"categories"
-									]
-								}
-							},
-							"response": []
-						}
-					]
-				}
-			]
-		},
-		{
-			"name": "workspace",
-			"item": [
-				{
-					"name": "users",
-					"item": [
-						{
-							"name": "user roles",
-							"item": [
-								{
-									"name": "get user roles",
-									"request": {
-										"method": "GET",
-										"header": [],
-										"url": {
-											"raw": "{{url}}/user-roles",
-											"host": [
-												"{{url}}"
-											],
-											"path": [
-												"user-roles"
-											]
-										}
-									},
-									"response": []
-								},
-								{
-									"name": "update user role",
+									"name": "update olt category",
 									"protocolProfileBehavior": {
 										"disabledSystemHeaders": {
 											"accept": true
@@ -1855,7 +1267,7 @@
 										],
 										"body": {
 											"mode": "raw",
-											"raw": "{\r\n  \"prefix\": \"SU\",\r\n  \"name\": \"Supervisor\"\r\n}",
+											"raw": "{\r\n  \"prefix\": \"dfaasdfas\",\r\n  \"name\": \"otro muy diferente\"\r\n}",
 											"options": {
 												"raw": {
 													"language": "json"
@@ -1863,12 +1275,242 @@
 											}
 										},
 										"url": {
-											"raw": "{{url}}/user-roles/1",
+											"raw": "{{url}}/olt-categories/3",
 											"host": [
 												"{{url}}"
 											],
 											"path": [
-												"user-roles",
+												"olt-categories",
+												"3"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "delete olt category",
+									"request": {
+										"method": "DELETE",
+										"header": [],
+										"url": {
+											"raw": "{{url}}/olt-categories/3",
+											"host": [
+												"{{url}}"
+											],
+											"path": [
+												"olt-categories",
+												"3"
+											]
+										}
+									},
+									"response": []
+								}
+							]
+						},
+						{
+							"name": "olt states",
+							"item": [
+								{
+									"name": "get olt states",
+									"request": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{url}}/olt-states",
+											"host": [
+												"{{url}}"
+											],
+											"path": [
+												"olt-states"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "post olt states",
+									"protocolProfileBehavior": {
+										"disabledSystemHeaders": {
+											"accept": true
+										}
+									},
+									"request": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "application/json",
+												"type": "text"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n  \"prefix\": \"VMEX\",\r\n  \"name\": \"Villa Mexico\"\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{url}}/olt-states",
+											"host": [
+												"{{url}}"
+											],
+											"path": [
+												"olt-states"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "update olt state ",
+									"protocolProfileBehavior": {
+										"disabledSystemHeaders": {
+											"accept": true
+										}
+									},
+									"request": {
+										"method": "PUT",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "application/json",
+												"type": "text"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n  \"prefix\": \"VME\",\r\n  \"name\": \"Villa Mexicoo\"\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{url}}/olt-states/5",
+											"host": [
+												"{{url}}"
+											],
+											"path": [
+												"olt-states",
+												"5"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "delete olt state",
+									"request": {
+										"method": "DELETE",
+										"header": [],
+										"url": {
+											"raw": "{{url}}/olt-states/5",
+											"host": [
+												"{{url}}"
+											],
+											"path": [
+												"olt-states",
+												"5"
+											]
+										}
+									},
+									"response": []
+								}
+							]
+						},
+						{
+							"name": "olt variants",
+							"item": [
+								{
+									"name": "get olt variants",
+									"request": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{url}}/olt-variants",
+											"host": [
+												"{{url}}"
+											],
+											"path": [
+												"olt-variants"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "post olt variant",
+									"protocolProfileBehavior": {
+										"disabledSystemHeaders": {
+											"accept": true
+										}
+									},
+									"request": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "application/json",
+												"type": "text"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n  \"variant_id\": 1,\r\n  \"olt_id\": 2,\r\n  \"amount\": 2.11\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{url}}/olt-variants",
+											"host": [
+												"{{url}}"
+											],
+											"path": [
+												"olt-variants"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "update olt variant",
+									"protocolProfileBehavior": {
+										"disabledSystemHeaders": {
+											"accept": true
+										}
+									},
+									"request": {
+										"method": "PUT",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "application/json",
+												"type": "text"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n  \"variant_id\": 2,\r\n  \"olt_id\": 2,\r\n  \"amount\": 2.12\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{url}}/olt-variants/1",
+											"host": [
+												"{{url}}"
+											],
+											"path": [
+												"olt-variants",
 												"1"
 											]
 										}
@@ -1878,101 +1520,310 @@
 							]
 						},
 						{
-							"name": "users to group",
-							"item": [
-								{
-									"name": "post user group",
-									"protocolProfileBehavior": {
-										"disabledSystemHeaders": {
-											"accept": true
-										}
-									},
-									"request": {
-										"method": "POST",
-										"header": [
-											{
-												"key": "Accept",
-												"value": "application/json",
-												"type": "text"
-											}
-										],
-										"body": {
-											"mode": "raw",
-											"raw": "{\r\n  \"users_id\": [2, 4],\r\n  \"group_id\": 4\r\n}",
-											"options": {
-												"raw": {
-													"language": "json"
-												}
-											}
-										},
-										"url": {
-											"raw": "{{url}}/user-groups",
-											"host": [
-												"{{url}}"
-											],
-											"path": [
-												"user-groups"
-											]
-										}
-									},
-									"response": []
+							"name": "get olts",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{url}}/olts",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"olts"
+									]
 								}
-							]
+							},
+							"response": []
 						},
 						{
-							"name": "login",
+							"name": "post olt",
+							"protocolProfileBehavior": {
+								"disabledSystemHeaders": {
+									"accept": true
+								}
+							},
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"olt\": {\r\n    \"name\":\"Heroinas\",\r\n    \"address\":\"Av Heroinas y Av ayacucho\",\r\n    \"lat\":\"-12.345678\",\r\n    \"lon\":\"-15.123765\",\r\n    \"image\":\"asdfas\",\r\n    \"category_id\": 1,\r\n    \"state_id\": 1,\r\n    \"date_mantenance\":\"2022-03-07 00:00:00\",\r\n    \"lapse_time_in_month\":1\r\n  },\r\n  \"variants\": [\r\n    {\r\n      \"id\": 1,\r\n      \"amount\": 12.11\r\n    }\r\n  ]\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{url}}/olts",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"olts"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "get olt",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{url}}/olts/1",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"olts",
+										"1"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "update olt",
+							"protocolProfileBehavior": {
+								"disabledSystemHeaders": {
+									"accept": true
+								}
+							},
+							"request": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"name\": \"Heroinas\",\r\n  \"address\": \"Av Heroinas y Av ayacucho\",\r\n  \"lat\": \"-12.345677\",\r\n  \"lon\": \"-15.123766\",\r\n  \"image\": \"imagen.png\",\r\n  \"category_id\": 1,\r\n  \"state_id\": 2,\r\n  \"date_mantenance\":\"2022-03-07 00:00:00\",\r\n  \"lapse_time_in_month\":1\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{url}}/olts/3",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"olts",
+										"3"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "delete olt",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "{{url}}/olts/1",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"olts",
+										"1"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "odns",
+					"item": [
+						{
+							"name": "get odns",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{url}}/odns",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"odns"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "post odn",
+							"protocolProfileBehavior": {
+								"disabledSystemHeaders": {
+									"accept": true
+								}
+							},
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"odns\":[\r\n    {\r\n      \"code\": \"dan123\",\r\n      \"lat\": \"-14.098756\",\r\n      \"lon\": \"-13.123543\",\r\n      \"address\" : \"av patito esq tu ex\",\r\n      \"olt_id\": 1\r\n    },\r\n    {\r\n      \"code\": \"dan890\",\r\n      \"lat\": \"-14.098756\",\r\n      \"lon\": \"-13.123543\",\r\n      \"address\" : \"av patito esq tu ex\",\r\n      \"olt_id\": 1\r\n    }\r\n  ]\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{url}}/odns",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"odns"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "get odn",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{url}}/odns/9",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"odns",
+										"9"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "update odn",
+							"protocolProfileBehavior": {
+								"disabledSystemHeaders": {
+									"accept": true
+								}
+							},
+							"request": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"code\": \"a400f\",\r\n  \"lat\": \"-15.123457\",\r\n  \"lon\": \"-15.098762\",\r\n  \"address\" : \"av patito esq tu\",\r\n  \"olt_id\": 3\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{url}}/odns/9",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"odns",
+										"9"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "delete odn",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "{{url}}/odns/10",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"odns",
+										"10"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "work order",
+					"item": [
+						{
+							"name": "activities",
 							"item": [
 								{
-									"name": "login user",
-									"event": [
-										{
-											"listen": "test",
-											"script": {
-												"exec": [
-													"var data = JSON.parse(responseBody);\r",
-													"postman.setEnvironmentVariable(\"token\", data.data.token)"
-												],
-												"type": "text/javascript"
-											}
-										}
-									],
-									"protocolProfileBehavior": {
-										"disabledSystemHeaders": {
-											"accept": true
-										}
-									},
+									"name": "get activities",
 									"request": {
-										"method": "POST",
-										"header": [
-											{
-												"key": "Accept",
-												"value": "application/json",
-												"type": "text"
-											}
-										],
-										"body": {
-											"mode": "raw",
-											"raw": "{\r\n  \"email\": \"admin@admin.com\",\r\n  \"password\": \"password\"\r\n}",
-											"options": {
-												"raw": {
-													"language": "json"
+										"auth": {
+											"type": "bearer",
+											"bearer": [
+												{
+													"key": "token",
+													"value": "{{token}}",
+													"type": "string"
 												}
-											}
+											]
 										},
+										"method": "GET",
+										"header": [],
 										"url": {
-											"raw": "{{url}}/login",
+											"raw": "{{url}}/external-plant/work-order/activities",
 											"host": [
 												"{{url}}"
 											],
 											"path": [
-												"login"
+												"external-plant",
+												"work-order",
+												"activities"
 											]
 										}
 									},
 									"response": []
 								},
 								{
-									"name": "logout user",
+									"name": "post activities",
+									"protocolProfileBehavior": {
+										"disabledSystemHeaders": {
+											"accept": true
+										}
+									},
 									"request": {
 										"auth": {
 											"type": "bearer",
@@ -1985,14 +1836,52 @@
 											]
 										},
 										"method": "POST",
-										"header": [],
+										"header": [
+											{
+												"key": "Accept",
+												"value": "application/json",
+												"type": "text"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n  \"activity\": {\r\n    \"process\": \"process proceso\", \r\n    \"observation\": \"observacion de una actividad de planta externa\"\r\n  },\r\n  \"images\": [\r\n    {\r\n      \"url\": \"https://imagen.plantaexterna.com\",\r\n      \"date\": \"2022-07-08 00:00:00\"\r\n    },\r\n    {\r\n      \"url\": \"https://imagen.plantaexterna.com\",\r\n      \"date\": \"2022-07-08 00:00:00\"\r\n    }\r\n  ],\r\n  \"blueprint\": {\r\n    \"url\": \"https://mapa.plantaexterna.com\",\r\n    \"date\": \"2022-07-08 00:00:00\"\r\n  } \r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
 										"url": {
-											"raw": "{{url}}/logout",
+											"raw": "{{url}}/external-plant/work-order/1/activities",
 											"host": [
 												"{{url}}"
 											],
 											"path": [
-												"logout"
+												"external-plant",
+												"work-order",
+												"1",
+												"activities"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "get activity",
+									"request": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{url}}/external-plant/work-order/activities/1",
+											"host": [
+												"{{url}}"
+											],
+											"path": [
+												"external-plant",
+												"work-order",
+												"activities",
+												"1"
 											]
 										}
 									},
@@ -2001,160 +1890,399 @@
 							]
 						},
 						{
-							"name": "get users",
-							"request": {
-								"method": "GET",
-								"header": [],
-								"url": {
-									"raw": "{{url}}/users",
-									"host": [
-										"{{url}}"
-									],
-									"path": [
-										"users"
-									]
-								}
-							},
-							"response": []
-						},
-						{
-							"name": "post user",
-							"protocolProfileBehavior": {
-								"disabledSystemHeaders": {
-									"accept": true
-								}
-							},
-							"request": {
-								"method": "POST",
-								"header": [
-									{
-										"key": "Accept",
-										"value": "application/json",
-										"type": "text"
-									}
-								],
-								"body": {
-									"mode": "raw",
-									"raw": "{\r\n  \"name\": \"daniel\",\r\n  \"last_name\": \"uno guzman\",\r\n  \"cell_phone\": \"78453218\",\r\n  \"email\": \"unodaniel0@gmail.com\",\r\n  \"password\": \"daniel1998\",\r\n  \"password_confirmation\": \"daniel1998\",\r\n  \"role_id\": 1,\r\n  \"areas_id\": [1,2],\r\n  \"company_id\": 2,\r\n  \"avatar\": \"\"\r\n}",
-									"options": {
-										"raw": {
-											"language": "json"
-										}
-									}
-								},
-								"url": {
-									"raw": "{{url}}/users",
-									"host": [
-										"{{url}}"
-									],
-									"path": [
-										"users"
-									]
-								}
-							},
-							"response": []
-						},
-						{
-							"name": "update user",
-							"protocolProfileBehavior": {
-								"disabledSystemHeaders": {
-									"accept": true
-								}
-							},
-							"request": {
-								"method": "PUT",
-								"header": [
-									{
-										"key": "Accept",
-										"value": "application/json",
-										"type": "text"
-									}
-								],
-								"body": {
-									"mode": "raw",
-									"raw": "{\r\n  \"name\": \"daniel\",\r\n  \"last_name\": \"uno soto\",\r\n  \"cell_phone\": \"78453218\",\r\n  \"email\": \"unodaniel0@gmail.com\",\r\n  \"password\": \"daniel1998\",\r\n  \"password_confirmation\": \"daniel1998\",\r\n  \"role_id\": 1,\r\n  \"areas_id\": [1,3],\r\n  \"company_id\": 2,\r\n  \"avatar\": \"\"\r\n}",
-									"options": {
-										"raw": {
-											"language": "json"
-										}
-									}
-								},
-								"url": {
-									"raw": "{{url}}/users/3",
-									"host": [
-										"{{url}}"
-									],
-									"path": [
-										"users",
-										"3"
-									]
-								}
-							},
-							"response": []
-						},
-						{
-							"name": "get user",
-							"request": {
-								"method": "GET",
-								"header": [],
-								"url": {
-									"raw": "{{url}}/users/3",
-									"host": [
-										"{{url}}"
-									],
-									"path": [
-										"users",
-										"3"
-									]
-								}
-							},
-							"response": []
-						},
-						{
-							"name": "delete user",
-							"request": {
-								"method": "DELETE",
-								"header": [],
-								"url": {
-									"raw": "{{url}}/users/3",
-									"host": [
-										"{{url}}"
-									],
-									"path": [
-										"users",
-										"3"
-									]
-								}
-							},
-							"response": []
-						}
-					]
-				},
-				{
-					"name": "groups",
-					"item": [
-						{
-							"name": "group items",
+							"name": "certifications",
 							"item": [
 								{
-									"name": "get group items",
+									"name": "certification check",
+									"item": [
+										{
+											"name": "post certifications check",
+											"protocolProfileBehavior": {
+												"disabledSystemHeaders": {
+													"accept": true
+												}
+											},
+											"request": {
+												"method": "POST",
+												"header": [
+													{
+														"key": "Accept",
+														"value": "application/json",
+														"type": "text"
+													}
+												],
+												"body": {
+													"mode": "raw",
+													"raw": "{\r\n  \"certification_id\": 1,\r\n  \"item\": 10.13,\r\n  \"workforce\": 10.11\r\n}",
+													"options": {
+														"raw": {
+															"language": "json"
+														}
+													}
+												},
+												"url": {
+													"raw": "{{url}}/external-plant/work-order/certifications/check",
+													"host": [
+														"{{url}}"
+													],
+													"path": [
+														"external-plant",
+														"work-order",
+														"certifications",
+														"check"
+													]
+												}
+											},
+											"response": []
+										},
+										{
+											"name": "get certification check",
+											"request": {
+												"method": "GET",
+												"header": [],
+												"url": {
+													"raw": "{{url}}/external-plant/work-order/certifications/check/1",
+													"host": [
+														"{{url}}"
+													],
+													"path": [
+														"external-plant",
+														"work-order",
+														"certifications",
+														"check",
+														"1"
+													]
+												}
+											},
+											"response": []
+										},
+										{
+											"name": "update certifications check",
+											"protocolProfileBehavior": {
+												"disabledSystemHeaders": {
+													"accept": true
+												}
+											},
+											"request": {
+												"method": "PUT",
+												"header": [
+													{
+														"key": "Accept",
+														"value": "application/json",
+														"type": "text"
+													}
+												],
+												"body": {
+													"mode": "raw",
+													"raw": "{\r\n  \"certification_id\": 1,\r\n  \"item\": 20,\r\n  \"workforce\": 20\r\n}",
+													"options": {
+														"raw": {
+															"language": "json"
+														}
+													}
+												},
+												"url": {
+													"raw": "{{url}}/external-plant/work-order/certifications/check/1",
+													"host": [
+														"{{url}}"
+													],
+													"path": [
+														"external-plant",
+														"work-order",
+														"certifications",
+														"check",
+														"1"
+													]
+												}
+											},
+											"response": []
+										}
+									]
+								},
+								{
+									"name": "post certification",
+									"protocolProfileBehavior": {
+										"disabledSystemHeaders": {
+											"accept": true
+										}
+									},
 									"request": {
-										"method": "GET",
-										"header": [],
+										"auth": {
+											"type": "bearer",
+											"bearer": [
+												{
+													"key": "token",
+													"value": "{{token}}",
+													"type": "string"
+												}
+											]
+										},
+										"method": "POST",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "application/json",
+												"type": "text"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "[\r\n  {\r\n    \"work_order_id\": 1,\r\n    \"group_item_id\": 1,\r\n    \"action_id\": 1,\r\n    \"material\": {\r\n      \"variant_id\": 1,\r\n      \"no_serie\":\"67a19p8\",\r\n      \"used\": false,\r\n      \"activated\": true\r\n    },\r\n    \"quantity\": {\r\n      \"item\": 12,\r\n      \"workforce\": 12\r\n    }\r\n  },\r\n  {\r\n    \"work_order_id\": 1,\r\n    \"group_item_id\": 1,\r\n    \"action_id\": 1,\r\n    \"material\": {\r\n      \"variant_id\": 1,\r\n      \"no_serie\":\"57aqw8p10\",\r\n      \"used\": false,\r\n      \"activated\": true\r\n    },\r\n    \"quantity\": {\r\n      \"item\": 12.14,\r\n      \"workforce\": 12.39\r\n    }\r\n  }\r\n]",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
 										"url": {
-											"raw": "{{url}}/group-items",
+											"raw": "{{url}}/external-plant/work-order/certifications",
 											"host": [
 												"{{url}}"
 											],
 											"path": [
-												"group-items"
+												"external-plant",
+												"work-order",
+												"certifications"
 											]
 										}
 									},
 									"response": []
 								},
 								{
-									"name": "post group items",
+									"name": "get certification",
+									"protocolProfileBehavior": {
+										"disableBodyPruning": true,
+										"disabledSystemHeaders": {
+											"accept": true
+										}
+									},
+									"request": {
+										"auth": {
+											"type": "bearer",
+											"bearer": [
+												{
+													"key": "token",
+													"value": "{{token}}",
+													"type": "string"
+												}
+											]
+										},
+										"method": "GET",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "application/json",
+												"type": "text",
+												"disabled": true
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{url}}/external-plant/work-order/certifications/89",
+											"host": [
+												"{{url}}"
+											],
+											"path": [
+												"external-plant",
+												"work-order",
+												"certifications",
+												"89"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "update certifications",
+									"protocolProfileBehavior": {
+										"disabledSystemHeaders": {
+											"accept": true
+										}
+									},
+									"request": {
+										"auth": {
+											"type": "bearer",
+											"bearer": [
+												{
+													"key": "token",
+													"value": "{{token}}",
+													"type": "string"
+												}
+											]
+										},
+										"method": "PUT",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "application/json",
+												"type": "text"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n  \"work_order_id\": 1,\r\n  \"group_item_id\": 1,\r\n  \"action_id\": 2,\r\n  \"material\": {\r\n    \"variant_id\": 1,\r\n    \"no_serie\":\"ea28p8\",\r\n    \"used\": true,\r\n    \"activated\": true\r\n  },\r\n  \"quantity\": {\r\n    \"item\": 11,\r\n    \"workforce\": 20\r\n  }\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{url}}/external-plant/work-order/certifications/1",
+											"host": [
+												"{{url}}"
+											],
+											"path": [
+												"external-plant",
+												"work-order",
+												"certifications",
+												"1"
+											]
+										}
+									},
+									"response": []
+								}
+							]
+						},
+						{
+							"name": "withdrawn materials",
+							"item": [
+								{
+									"name": "withdrawn checks",
+									"item": [
+										{
+											"name": "get withdrawn check",
+											"request": {
+												"method": "GET",
+												"header": [],
+												"url": {
+													"raw": "{{url}}/external-plant/work-order/withdrawn-materials/checks/1",
+													"host": [
+														"{{url}}"
+													],
+													"path": [
+														"external-plant",
+														"work-order",
+														"withdrawn-materials",
+														"checks",
+														"1"
+													]
+												}
+											},
+											"response": []
+										},
+										{
+											"name": "post withdrawn check",
+											"protocolProfileBehavior": {
+												"disabledSystemHeaders": {
+													"accept": true
+												}
+											},
+											"request": {
+												"method": "POST",
+												"header": [
+													{
+														"key": "Accept",
+														"value": "application/json",
+														"type": "text"
+													}
+												],
+												"body": {
+													"mode": "raw",
+													"raw": "{\r\n  \"material_id\": 1,\r\n  \"received\": 12.34\r\n}",
+													"options": {
+														"raw": {
+															"language": "json"
+														}
+													}
+												},
+												"url": {
+													"raw": "{{url}}/external-plant/work-order/withdrawn-materials/checks",
+													"host": [
+														"{{url}}"
+													],
+													"path": [
+														"external-plant",
+														"work-order",
+														"withdrawn-materials",
+														"checks"
+													]
+												}
+											},
+											"response": []
+										},
+										{
+											"name": "update withdrawn check",
+											"protocolProfileBehavior": {
+												"disabledSystemHeaders": {
+													"accept": true
+												}
+											},
+											"request": {
+												"method": "PUT",
+												"header": [
+													{
+														"key": "Accept",
+														"value": "application/json",
+														"type": "text"
+													}
+												],
+												"body": {
+													"mode": "raw",
+													"raw": "{\r\n  \"material_id\": 1,\r\n  \"received\": 12.35\r\n}",
+													"options": {
+														"raw": {
+															"language": "json"
+														}
+													}
+												},
+												"url": {
+													"raw": "{{url}}/external-plant/work-order/withdrawn-materials/checks/1",
+													"host": [
+														"{{url}}"
+													],
+													"path": [
+														"external-plant",
+														"work-order",
+														"withdrawn-materials",
+														"checks",
+														"1"
+													]
+												}
+											},
+											"response": []
+										}
+									]
+								},
+								{
+									"name": "get withdrawn materials",
+									"request": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{url}}/external-plant/work-order/withdrawn-materials",
+											"host": [
+												"{{url}}"
+											],
+											"path": [
+												"external-plant",
+												"work-order",
+												"withdrawn-materials"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "post withdrawn materials",
 									"protocolProfileBehavior": {
 										"disabledSystemHeaders": {
 											"accept": true
@@ -2171,7 +2299,7 @@
 										],
 										"body": {
 											"mode": "raw",
-											"raw": "{\r\n  \"group_items\": [\r\n    {\r\n      \"group_id\": 1,\r\n      \"quantity_variant_id\": 1,\r\n      \"incoming\": 1.34,\r\n      \"date_incoming\": \"2022-05-14 00:00:00\"\r\n    },\r\n    {\r\n      \"group_id\": 1,\r\n      \"quantity_variant_id\": 1,\r\n      \"incoming\": 1.12,\r\n      \"date_incoming\": \"2022-05-14 00:00:00\"\r\n    }\r\n  ]\r\n}",
+											"raw": "[\r\n  {\r\n    \"work_order_id\": 1,\r\n    \"variant_id\": 1,\r\n    \"no_serie\": \"asdf123ad\",\r\n    \"reported\": 12.11\r\n  },\r\n  {\r\n    \"work_order_id\": 1,\r\n    \"variant_id\": 1,\r\n    \"no_serie\": \"a43df123ad\",\r\n    \"reported\": 10.12\r\n  }\r\n]",
 											"options": {
 												"raw": {
 													"language": "json"
@@ -2179,29 +2307,33 @@
 											}
 										},
 										"url": {
-											"raw": "{{url}}/group-items",
+											"raw": "{{url}}/external-plant/work-order/withdrawn-materials",
 											"host": [
 												"{{url}}"
 											],
 											"path": [
-												"group-items"
+												"external-plant",
+												"work-order",
+												"withdrawn-materials"
 											]
 										}
 									},
 									"response": []
 								},
 								{
-									"name": "get group item",
+									"name": "get withdrawn material",
 									"request": {
 										"method": "GET",
 										"header": [],
 										"url": {
-											"raw": "{{url}}/group-items/1",
+											"raw": "{{url}}/external-plant/work-order/withdrawn-materials/1",
 											"host": [
 												"{{url}}"
 											],
 											"path": [
-												"group-items",
+												"external-plant",
+												"work-order",
+												"withdrawn-materials",
 												"1"
 											]
 										}
@@ -2209,7 +2341,7 @@
 									"response": []
 								},
 								{
-									"name": "update group item",
+									"name": "update withdrawn material",
 									"protocolProfileBehavior": {
 										"disabledSystemHeaders": {
 											"accept": true
@@ -2226,7 +2358,7 @@
 										],
 										"body": {
 											"mode": "raw",
-											"raw": "{\r\n  \"group_id\": 1,\r\n  \"quantity_variant_id\": 1,\r\n  \"incoming\": 50,\r\n  \"date_incoming\": \"2022-05-14 00:00:00\"\r\n}",
+											"raw": "{\r\n  \"work_order_id\": 1,\r\n  \"variant_id\": 1,\r\n  \"no_serie\": \"asdf123ad\",\r\n  \"reported\": 14\r\n}\r\n",
 											"options": {
 												"raw": {
 													"language": "json"
@@ -2234,30 +2366,14 @@
 											}
 										},
 										"url": {
-											"raw": "{{url}}/group-items/1",
+											"raw": "{{url}}/external-plant/work-order/withdrawn-materials/1",
 											"host": [
 												"{{url}}"
 											],
 											"path": [
-												"group-items",
-												"1"
-											]
-										}
-									},
-									"response": []
-								},
-								{
-									"name": "delete group item",
-									"request": {
-										"method": "DELETE",
-										"header": [],
-										"url": {
-											"raw": "{{url}}/group-items/1",
-											"host": [
-												"{{url}}"
-											],
-											"path": [
-												"group-items",
+												"external-plant",
+												"work-order",
+												"withdrawn-materials",
 												"1"
 											]
 										}
@@ -2267,24 +2383,176 @@
 							]
 						},
 						{
-							"name": "get groups",
+							"name": "interventions",
+							"item": [
+								{
+									"name": "post intervention",
+									"protocolProfileBehavior": {
+										"disabledSystemHeaders": {
+											"accept": true
+										}
+									},
+									"request": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "application/json",
+												"type": "text"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n  \"work_order_id\": 1,\r\n  \"used_material\": true,\r\n  \"personal_presentation\": \"Buena\",\r\n  \"repair_quality\": \"Mala\",\r\n  \"diferences\": true,\r\n  \"current_report\": true,\r\n  \"used_report\": true\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{url}}/external-plant/work-order/quality-interventions",
+											"host": [
+												"{{url}}"
+											],
+											"path": [
+												"external-plant",
+												"work-order",
+												"quality-interventions"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "get intervention",
+									"request": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{url}}/external-plant/work-order/quality-interventions",
+											"host": [
+												"{{url}}"
+											],
+											"path": [
+												"external-plant",
+												"work-order",
+												"quality-interventions"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "update intervention",
+									"protocolProfileBehavior": {
+										"disabledSystemHeaders": {
+											"accept": true
+										}
+									},
+									"request": {
+										"method": "PUT",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "application/json",
+												"type": "text"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n  \"work_order_id\": 1,\r\n  \"used_material\": true,\r\n  \"personal_presentation\": \"Muy Buena\",\r\n  \"repair_quality\": \"Mala\",\r\n  \"diferences\": false,\r\n  \"current_report\": true,\r\n  \"used_report\": true\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{url}}/external-plant/work-order/quality-interventions/1",
+											"host": [
+												"{{url}}"
+											],
+											"path": [
+												"external-plant",
+												"work-order",
+												"quality-interventions",
+												"1"
+											]
+										}
+									},
+									"response": []
+								}
+							]
+						},
+						{
+							"name": "work order types",
+							"item": [
+								{
+									"name": "work order types",
+									"request": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{url}}/external-plant/work-order/types",
+											"host": [
+												"{{url}}"
+											],
+											"path": [
+												"external-plant",
+												"work-order",
+												"types"
+											]
+										}
+									},
+									"response": []
+								}
+							]
+						},
+						{
+							"name": "work order categories",
+							"item": [
+								{
+									"name": "get work order categories",
+									"request": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{url}}/external-plant/work-order/categories",
+											"host": [
+												"{{url}}"
+											],
+											"path": [
+												"external-plant",
+												"work-order",
+												"categories"
+											]
+										}
+									},
+									"response": []
+								}
+							]
+						},
+						{
+							"name": "get work orders",
 							"request": {
 								"method": "GET",
 								"header": [],
 								"url": {
-									"raw": "{{url}}/groups",
+									"raw": "{{url}}/external-plant/work-orders",
 									"host": [
 										"{{url}}"
 									],
 									"path": [
-										"groups"
+										"external-plant",
+										"work-orders"
 									]
 								}
 							},
 							"response": []
 						},
 						{
-							"name": "post group",
+							"name": "post work order",
 							"protocolProfileBehavior": {
 								"disabledSystemHeaders": {
 									"accept": true
@@ -2301,7 +2569,7 @@
 								],
 								"body": {
 									"mode": "raw",
-									"raw": "{\r\n  \"prefix\": \"PEX-84\",\r\n  \"areas_id\": [1],\r\n  \"users_id\": [1,2]\r\n}",
+									"raw": "{\r\n  \"work_order\": {\r\n    \"odn_id\" : 1,\r\n    \"description\": \"mantenimiento por polvo\",\r\n    \"affected_customers\" : 20,\r\n    \"company_id\" : 2,\r\n    \"category_id\" : 3,\r\n    \"type_id\" : 2,\r\n    \"typology_id\": 1,\r\n    \"supervisor_id\": 1\r\n  },\r\n  \"estimated_date\" : {\r\n    \"start\": \"2022-07-25 00:00:00\",\r\n    \"finish\": \"2022-07-25 00:00:00\"\r\n  },\r\n  \"tags\": {\r\n    \"clasification_id\" : 6,\r\n    \"status_id\" : 1\r\n  },\r\n  \"groups\" : [{\"id\": 1, \"mandated\": true},{\"id\": 2, \"mandated\": false}]\r\n}",
 									"options": {
 										"raw": {
 											"language": "json"
@@ -2309,29 +2577,31 @@
 									}
 								},
 								"url": {
-									"raw": "{{url}}/groups",
+									"raw": "{{url}}/external-plant/work-orders",
 									"host": [
 										"{{url}}"
 									],
 									"path": [
-										"groups"
+										"external-plant",
+										"work-orders"
 									]
 								}
 							},
 							"response": []
 						},
 						{
-							"name": "get group",
+							"name": "get work order",
 							"request": {
 								"method": "GET",
 								"header": [],
 								"url": {
-									"raw": "{{url}}/groups/1",
+									"raw": "{{url}}/external-plant/work-orders/1",
 									"host": [
 										"{{url}}"
 									],
 									"path": [
-										"groups",
+										"external-plant",
+										"work-orders",
 										"1"
 									]
 								}
@@ -2339,7 +2609,7 @@
 							"response": []
 						},
 						{
-							"name": "update group",
+							"name": "update work order",
 							"protocolProfileBehavior": {
 								"disabledSystemHeaders": {
 									"accept": true
@@ -2356,7 +2626,7 @@
 								],
 								"body": {
 									"mode": "raw",
-									"raw": "{\r\n  \"prefix\": \"PEX-34\",\r\n  \"areas_id\": [2,3],\r\n  \"users_id\": [2]\r\n}",
+									"raw": "{\r\n  \"work_order\": {\r\n    \"odn_id\" : 1,\r\n    \"description\": \"se tiene que hacer mantenimiento por dano\",\r\n    \"affected_customers\" : 15,\r\n    \"category_id\" : 2,\r\n    \"type_id\" : 1,\r\n    \"typology_id\": 1,\r\n    \"company_id\" : 2,\r\n    \"supervisor_id\": 1\r\n  },\r\n\r\n  \"tags\": {\r\n    \"clasification_id\" : 6,\r\n    \"status_id\" : 2\r\n  },\r\n  \"groups\" : [{\"id\": 1, \"mandated\": true},{\"id\": 2, \"mandated\": false}]\r\n}",
 									"options": {
 										"raw": {
 											"language": "json"
@@ -2364,153 +2634,33 @@
 									}
 								},
 								"url": {
-									"raw": "{{url}}/groups/3",
+									"raw": "{{url}}/external-plant/work-orders/1",
 									"host": [
 										"{{url}}"
 									],
 									"path": [
-										"groups",
-										"3"
+										"external-plant",
+										"work-orders",
+										"1"
 									]
 								}
 							},
 							"response": []
 						},
 						{
-							"name": "delete group",
+							"name": "delete work order",
 							"request": {
 								"method": "DELETE",
 								"header": [],
 								"url": {
-									"raw": "{{url}}/groups/3",
+									"raw": "{{url}}/external-plant/work-orders/3",
 									"host": [
 										"{{url}}"
 									],
 									"path": [
-										"groups",
+										"external-plant",
+										"work-orders",
 										"3"
-									]
-								}
-							},
-							"response": []
-						},
-						{
-							"name": "get create group",
-							"request": {
-								"method": "GET",
-								"header": [],
-								"url": {
-									"raw": "{{url}}/groups/create",
-									"host": [
-										"{{url}}"
-									],
-									"path": [
-										"groups",
-										"create"
-									]
-								}
-							},
-							"response": []
-						}
-					]
-				},
-				{
-					"name": "areas",
-					"item": [
-						{
-							"name": "get areas",
-							"request": {
-								"method": "GET",
-								"header": [],
-								"url": {
-									"raw": "{{url}}/areas",
-									"host": [
-										"{{url}}"
-									],
-									"path": [
-										"areas"
-									]
-								}
-							},
-							"response": []
-						}
-					]
-				},
-				{
-					"name": "companies",
-					"item": [
-						{
-							"name": "get companies",
-							"request": {
-								"method": "GET",
-								"header": [],
-								"url": {
-									"raw": "{{url}}/companies",
-									"host": [
-										"{{url}}"
-									],
-									"path": [
-										"companies"
-									]
-								}
-							},
-							"response": []
-						}
-					]
-				},
-				{
-					"name": "tags",
-					"item": [
-						{
-							"name": "get tags",
-							"request": {
-								"method": "GET",
-								"header": [],
-								"url": {
-									"raw": "{{url}}/tags",
-									"host": [
-										"{{url}}"
-									],
-									"path": [
-										"tags"
-									]
-								}
-							},
-							"response": []
-						},
-						{
-							"name": "update tag",
-							"protocolProfileBehavior": {
-								"disabledSystemHeaders": {
-									"accept": true
-								}
-							},
-							"request": {
-								"method": "PUT",
-								"header": [
-									{
-										"key": "Accept",
-										"value": "application/json",
-										"type": "text"
-									}
-								],
-								"body": {
-									"mode": "raw",
-									"raw": "{\r\n  \"prefix\": \"NA\",\r\n  \"name\": \"No asignadas\",\r\n  \"color\": \"#BA1B1B\",\r\n  \"type\": \"FILL\",\r\n  \"category_id\": 2\r\n}",
-									"options": {
-										"raw": {
-											"language": "json"
-										}
-									}
-								},
-								"url": {
-									"raw": "{{url}}/tags/1",
-									"host": [
-										"{{url}}"
-									],
-									"path": [
-										"tags",
-										"1"
 									]
 								}
 							},
@@ -3825,7 +3975,7 @@
 								],
 								"body": {
 									"mode": "raw",
-									"raw": "{\r\n  \"subcategory_id\": 1,\r\n  \"item_category_id\": 1,\r\n  \"name\":\"cable FO\",\r\n  \"description\":\"cable FO bien chido \",\r\n  \"unit_id\": 3,\r\n  \"image\": \"asdfadf\",\r\n  \"company_id\": 1,\r\n  \"stock\": {\r\n    \"incoming\": 81,\r\n    \"minimum\": 223,\r\n    \"date_incoming\": \"2022-05-14 00:00:00\"\r\n  },\r\n  \"price\": {\r\n    \"material\": 23.1,\r\n    \"workforce\": 23.1\r\n  }\r\n}",
+									"raw": "{\r\n  \"subcategory_id\": 1,\r\n  \"item_category_id\": 1,\r\n  \"name\":\"modem\",\r\n  \"description\":\"descripcion del modem\",\r\n  \"unit_id\": 3,\r\n  \"image\": \"asdfadf\",\r\n  \"company_id\": 1,\r\n  \"stock\": {\r\n    \"incoming\": 1000,\r\n    \"minimum\": 200,\r\n    \"date_incoming\": \"2022-05-14 00:00:00\"\r\n  },\r\n  \"price\": {\r\n    \"material\": 50.1,\r\n    \"workforce\": 40.1\r\n  }\r\n}",
 									"options": {
 										"raw": {
 											"language": "json"
@@ -3876,6 +4026,715 @@
 									],
 									"path": [
 										"variants",
+										"1"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "workspace",
+			"item": [
+				{
+					"name": "users",
+					"item": [
+						{
+							"name": "user roles",
+							"item": [
+								{
+									"name": "get user roles",
+									"request": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{url}}/user-roles",
+											"host": [
+												"{{url}}"
+											],
+											"path": [
+												"user-roles"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "update user role",
+									"protocolProfileBehavior": {
+										"disabledSystemHeaders": {
+											"accept": true
+										}
+									},
+									"request": {
+										"method": "PUT",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "application/json",
+												"type": "text"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n  \"prefix\": \"SU\",\r\n  \"name\": \"Supervisor\"\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{url}}/user-roles/1",
+											"host": [
+												"{{url}}"
+											],
+											"path": [
+												"user-roles",
+												"1"
+											]
+										}
+									},
+									"response": []
+								}
+							]
+						},
+						{
+							"name": "users to group",
+							"item": [
+								{
+									"name": "post user group",
+									"protocolProfileBehavior": {
+										"disabledSystemHeaders": {
+											"accept": true
+										}
+									},
+									"request": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "application/json",
+												"type": "text"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n  \"users_id\": [2, 4],\r\n  \"group_id\": 4\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{url}}/user-groups",
+											"host": [
+												"{{url}}"
+											],
+											"path": [
+												"user-groups"
+											]
+										}
+									},
+									"response": []
+								}
+							]
+						},
+						{
+							"name": "login",
+							"item": [
+								{
+									"name": "login user",
+									"event": [
+										{
+											"listen": "test",
+											"script": {
+												"exec": [
+													"var data = JSON.parse(responseBody);\r",
+													"postman.setEnvironmentVariable(\"token\", data.data.token)"
+												],
+												"type": "text/javascript"
+											}
+										}
+									],
+									"protocolProfileBehavior": {
+										"disabledSystemHeaders": {
+											"accept": true
+										}
+									},
+									"request": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "application/json",
+												"type": "text"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n  \"email\": \"admin@admin.com\",\r\n  \"password\": \"password\"\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{url}}/login",
+											"host": [
+												"{{url}}"
+											],
+											"path": [
+												"login"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "logout user",
+									"request": {
+										"auth": {
+											"type": "bearer",
+											"bearer": [
+												{
+													"key": "token",
+													"value": "{{token}}",
+													"type": "string"
+												}
+											]
+										},
+										"method": "POST",
+										"header": [],
+										"url": {
+											"raw": "{{url}}/logout",
+											"host": [
+												"{{url}}"
+											],
+											"path": [
+												"logout"
+											]
+										}
+									},
+									"response": []
+								}
+							]
+						},
+						{
+							"name": "get users",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{url}}/users",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"users"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "post user",
+							"protocolProfileBehavior": {
+								"disabledSystemHeaders": {
+									"accept": true
+								}
+							},
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"name\": \"daniel\",\r\n  \"last_name\": \"uno guzman\",\r\n  \"cell_phone\": \"78453218\",\r\n  \"email\": \"unodaniel0@gmail.com\",\r\n  \"password\": \"daniel1998\",\r\n  \"password_confirmation\": \"daniel1998\",\r\n  \"role_id\": 1,\r\n  \"areas_id\": [1,2],\r\n  \"company_id\": 2,\r\n  \"avatar\": \"\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{url}}/users",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"users"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "update user",
+							"protocolProfileBehavior": {
+								"disabledSystemHeaders": {
+									"accept": true
+								}
+							},
+							"request": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"name\": \"daniel\",\r\n  \"last_name\": \"uno soto\",\r\n  \"cell_phone\": \"78453218\",\r\n  \"email\": \"unodaniel0@gmail.com\",\r\n  \"password\": \"daniel1998\",\r\n  \"password_confirmation\": \"daniel1998\",\r\n  \"role_id\": 1,\r\n  \"areas_id\": [1,3],\r\n  \"company_id\": 2,\r\n  \"avatar\": \"\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{url}}/users/3",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"users",
+										"3"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "get user",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{url}}/users/3",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"users",
+										"3"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "delete user",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "{{url}}/users/3",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"users",
+										"3"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "groups",
+					"item": [
+						{
+							"name": "group items",
+							"item": [
+								{
+									"name": "get group items",
+									"request": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{url}}/group-items",
+											"host": [
+												"{{url}}"
+											],
+											"path": [
+												"group-items"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "post group items",
+									"protocolProfileBehavior": {
+										"disabledSystemHeaders": {
+											"accept": true
+										}
+									},
+									"request": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "application/json",
+												"type": "text"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n  \"group_items\": [\r\n    {\r\n      \"group_id\": 1,\r\n      \"quantity_variant_id\": 2,\r\n      \"incoming\": 10.34,\r\n      \"date_incoming\": \"2022-05-14 00:00:00\"\r\n    },\r\n    {\r\n      \"group_id\": 1,\r\n      \"quantity_variant_id\": 2,\r\n      \"incoming\": 20.12,\r\n      \"date_incoming\": \"2022-05-14 00:00:00\"\r\n    }\r\n  ]\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{url}}/group-items",
+											"host": [
+												"{{url}}"
+											],
+											"path": [
+												"group-items"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "get group item",
+									"request": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{url}}/group-items/1",
+											"host": [
+												"{{url}}"
+											],
+											"path": [
+												"group-items",
+												"1"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "update group item",
+									"protocolProfileBehavior": {
+										"disabledSystemHeaders": {
+											"accept": true
+										}
+									},
+									"request": {
+										"method": "PUT",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "application/json",
+												"type": "text"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n  \"group_id\": 1,\r\n  \"quantity_variant_id\": 1,\r\n  \"incoming\": 50,\r\n  \"date_incoming\": \"2022-05-14 00:00:00\"\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{url}}/group-items/1",
+											"host": [
+												"{{url}}"
+											],
+											"path": [
+												"group-items",
+												"1"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "delete group item",
+									"request": {
+										"method": "DELETE",
+										"header": [],
+										"url": {
+											"raw": "{{url}}/group-items/1",
+											"host": [
+												"{{url}}"
+											],
+											"path": [
+												"group-items",
+												"1"
+											]
+										}
+									},
+									"response": []
+								}
+							]
+						},
+						{
+							"name": "get groups",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{url}}/groups",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"groups"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "post group",
+							"protocolProfileBehavior": {
+								"disabledSystemHeaders": {
+									"accept": true
+								}
+							},
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"prefix\": \"PEX-12\",\r\n  \"areas_id\": [1],\r\n  \"users_id\": [1,2]\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{url}}/groups",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"groups"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "get group",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{url}}/groups/1",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"groups",
+										"1"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "update group",
+							"protocolProfileBehavior": {
+								"disabledSystemHeaders": {
+									"accept": true
+								}
+							},
+							"request": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"prefix\": \"PEX-34\",\r\n  \"areas_id\": [2,3],\r\n  \"users_id\": [2]\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{url}}/groups/3",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"groups",
+										"3"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "delete group",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "{{url}}/groups/3",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"groups",
+										"3"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "get create group",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{url}}/groups/create",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"groups",
+										"create"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "areas",
+					"item": [
+						{
+							"name": "get areas",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{url}}/areas",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"areas"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "companies",
+					"item": [
+						{
+							"name": "get companies",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{url}}/companies",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"companies"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "tags",
+					"item": [
+						{
+							"name": "get tags",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{url}}/tags",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"tags"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "update tag",
+							"protocolProfileBehavior": {
+								"disabledSystemHeaders": {
+									"accept": true
+								}
+							},
+							"request": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"prefix\": \"NA\",\r\n  \"name\": \"No asignadas\",\r\n  \"color\": \"#BA1B1B\",\r\n  \"type\": \"FILL\",\r\n  \"category_id\": 2\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{url}}/tags/1",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"tags",
 										"1"
 									]
 								}
