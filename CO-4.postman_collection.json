@@ -68,7 +68,7 @@
 								],
 								"body": {
 									"mode": "raw",
-									"raw": "{\r\n  \"client\": {\r\n    \"code\": \"aqwe1wbx3v\",\r\n    \"name\": \"daniel\",\r\n    \"last_name\": \"gomez bolanos\",\r\n    \"phones\": [\"4678897\", \"78910334\",\"78235412\"],\r\n    \"category_id\": 1\r\n  },\r\n  \"addresses\": [\r\n    {\r\n      \"place_id\": \"zxc456\",\r\n      \"lat\": \"12.1\",\r\n      \"lon\": \"23.1\",\r\n      \"location\": \"cercado\",\r\n      \"city\": \"cochabamba\",\r\n      \"direction\":\"av aroma\"\r\n    },\r\n    {\r\n      \"place_id\": \"zxc956\",\r\n      \"lat\": \"98.3\",\r\n      \"lon\": \"34.6\",\r\n      \"location\": \"sacaba\",\r\n      \"city\": \"cochabamba\",\r\n      \"direction\":\"av patito\"\r\n    }\r\n  ]\r\n}",
+									"raw": "{\r\n  \"client\": {\r\n    \"code\": \"aqwe1wbx3v\",\r\n    \"name\": \"daniel\",\r\n    \"last_name\": \"gomez chavez\",\r\n    \"phones\": [\"4678897\", \"78910334\",\"78235412\"],\r\n    \"category_id\": 1\r\n  },\r\n  \"addresses\": [\r\n    {\r\n      \"place_id\": \"zxc456\",\r\n      \"lat\": \"12.1\",\r\n      \"lon\": \"23.1\",\r\n      \"location\": \"cercado\",\r\n      \"city\": \"cochabamba\",\r\n      \"direction\":\"av aroma\"\r\n    },\r\n    {\r\n      \"place_id\": \"zxc956\",\r\n      \"lat\": \"98.3\",\r\n      \"lon\": \"34.6\",\r\n      \"location\": \"sacaba\",\r\n      \"city\": \"cochabamba\",\r\n      \"direction\":\"av heroinas\"\r\n    }\r\n  ]\r\n}",
 									"options": {
 										"raw": {
 											"language": "json"
@@ -1109,6 +1109,162 @@
 							]
 						},
 						{
+							"name": "certifications",
+							"item": [
+								{
+									"name": "certification check",
+									"item": [
+										{
+											"name": "post certification check",
+											"protocolProfileBehavior": {
+												"disabledSystemHeaders": {
+													"accept": true
+												}
+											},
+											"request": {
+												"method": "POST",
+												"header": [
+													{
+														"key": "Accept",
+														"value": "application/json",
+														"type": "text"
+													}
+												],
+												"body": {
+													"mode": "raw",
+													"raw": "{\r\n  \"certification_id\": 6,\r\n  \"item\": 10.13,\r\n  \"workforce\": 10.11\r\n}",
+													"options": {
+														"raw": {
+															"language": "json"
+														}
+													}
+												},
+												"url": {
+													"raw": "{{url}}/faults/work-orders/certifications/check",
+													"host": [
+														"{{url}}"
+													],
+													"path": [
+														"faults",
+														"work-orders",
+														"certifications",
+														"check"
+													]
+												}
+											},
+											"response": []
+										},
+										{
+											"name": "get certifications check",
+											"request": {
+												"method": "GET",
+												"header": [],
+												"url": {
+													"raw": "{{url}}/faults/work-orders/certifications/check/1",
+													"host": [
+														"{{url}}"
+													],
+													"path": [
+														"faults",
+														"work-orders",
+														"certifications",
+														"check",
+														"1"
+													]
+												}
+											},
+											"response": []
+										}
+									]
+								},
+								{
+									"name": "post certifications",
+									"protocolProfileBehavior": {
+										"disabledSystemHeaders": {
+											"accept": true
+										}
+									},
+									"request": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "application/json",
+												"type": "text"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "[\r\n  {\r\n    \"group_item_id\": 1,\r\n    \"action_id\": 1,\r\n    \"material_id\": 2,\r\n    \"quantity\": {\r\n      \"item\": 12,\r\n      \"workforce\": 12\r\n    }\r\n  },\r\n  {\r\n    \"group_item_id\": 1,\r\n    \"action_id\": 1,\r\n    \"material_id\": 1,\r\n    \"quantity\": {\r\n      \"item\": 12.14,\r\n      \"workforce\": 12.39\r\n    }\r\n  }\r\n]",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{url}}/faults/work-orders/1/certifications",
+											"host": [
+												"{{url}}"
+											],
+											"path": [
+												"faults",
+												"work-orders",
+												"1",
+												"certifications"
+											]
+										}
+									},
+									"response": []
+								}
+							]
+						},
+						{
+							"name": "withdrawn materials",
+							"item": [
+								{
+									"name": "post withdrawn materials",
+									"protocolProfileBehavior": {
+										"disabledSystemHeaders": {
+											"accept": true
+										}
+									},
+									"request": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "application/json",
+												"type": "text"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "[\r\n  {\r\n    \"variant_id\": 1,\r\n    \"no_serie\": \"asdf123ad\",\r\n    \"reported\": 12.11\r\n  },\r\n  {\r\n    \"variant_id\": 1,\r\n    \"no_serie\": \"a43df123ad\",\r\n    \"reported\": 10.12\r\n  }\r\n]",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{url}}/faults/work-order/1/withdrawn-materials",
+											"host": [
+												"{{url}}"
+											],
+											"path": [
+												"faults",
+												"work-order",
+												"1",
+												"withdrawn-materials"
+											]
+										}
+									},
+									"response": []
+								}
+							]
+						},
+						{
 							"name": "post work order",
 							"protocolProfileBehavior": {
 								"disabledSystemHeaders": {
@@ -1126,7 +1282,7 @@
 								],
 								"body": {
 									"mode": "raw",
-									"raw": "{\r\n  \"work_order\": {\r\n    \"service_id\": 1,\r\n    \"observation\": \"observation\",\r\n    \"claim_date\": \"2022-07-18 00:00:00\",\r\n    \"date\": \"2022-07-18 00:00:00\"\r\n  },\r\n  \"estimated_date\" : {\r\n    \"start\": \"2022-07-18 00:00:00\",\r\n    \"finish\": \"2022-07-18 00:00:00\"\r\n  },\r\n  \"tags\": {\r\n    \"clasification_id\" : 6,\r\n    \"status_id\" : 1\r\n  },\r\n  \"groups\" : [{\"id\": 1, \"mandated\": true},{\"id\": 2, \"mandated\": false}]\r\n}",
+									"raw": "{\r\n  \"work_order\": {\r\n    \"service_id\": 1,\r\n    \"observation\": \"observation\",\r\n    \"claim_date\": \"2022-07-26 00:00:00\",\r\n    \"date\": \"2022-07-26 00:00:00\"\r\n  },\r\n  \"estimated_date\" : {\r\n    \"start\": \"2022-07-26 00:00:00\",\r\n    \"finish\": \"2022-07-26 00:00:00\"\r\n  },\r\n  \"tags\": {\r\n    \"clasification_id\" : 6,\r\n    \"status_id\" : 1\r\n  },\r\n  \"groups\" : [{\"id\": 1, \"mandated\": true},{\"id\": 2, \"mandated\": false}]\r\n}",
 									"options": {
 										"raw": {
 											"language": "json"
@@ -1687,7 +1843,7 @@
 								],
 								"body": {
 									"mode": "raw",
-									"raw": "{\r\n  \"odns\":[\r\n    {\r\n      \"code\": \"dan123\",\r\n      \"lat\": \"-14.098756\",\r\n      \"lon\": \"-13.123543\",\r\n      \"address\" : \"av patito esq tu ex\",\r\n      \"olt_id\": 1\r\n    },\r\n    {\r\n      \"code\": \"dan890\",\r\n      \"lat\": \"-14.098756\",\r\n      \"lon\": \"-13.123543\",\r\n      \"address\" : \"av patito esq tu ex\",\r\n      \"olt_id\": 1\r\n    }\r\n  ]\r\n}",
+									"raw": "{\r\n  \"odns\":[\r\n    {\r\n      \"code\": \"dan123\",\r\n      \"lat\": \"-14.098756\",\r\n      \"lon\": \"-13.123543\",\r\n      \"address\" : \"Av juan de la rosa No 567\",\r\n      \"olt_id\": 1\r\n    },\r\n    {\r\n      \"code\": \"dan890\",\r\n      \"lat\": \"-14.098756\",\r\n      \"lon\": \"-13.123543\",\r\n      \"address\" : \"Av america esq Libertador\",\r\n      \"olt_id\": 1\r\n    }\r\n  ]\r\n}",
 									"options": {
 										"raw": {
 											"language": "json"
@@ -1913,7 +2069,7 @@
 												],
 												"body": {
 													"mode": "raw",
-													"raw": "{\r\n  \"certification_id\": 1,\r\n  \"item\": 10.13,\r\n  \"workforce\": 10.11\r\n}",
+													"raw": "{\r\n  \"certification_id\": 8,\r\n  \"item\": 10.13,\r\n  \"workforce\": 10.11\r\n}",
 													"options": {
 														"raw": {
 															"language": "json"
@@ -1941,7 +2097,7 @@
 												"method": "GET",
 												"header": [],
 												"url": {
-													"raw": "{{url}}/external-plant/work-order/certifications/check/1",
+													"raw": "{{url}}/external-plant/work-order/certifications/check",
 													"host": [
 														"{{url}}"
 													],
@@ -1949,8 +2105,7 @@
 														"external-plant",
 														"work-order",
 														"certifications",
-														"check",
-														"1"
+														"check"
 													]
 												}
 											},
@@ -2027,7 +2182,7 @@
 										],
 										"body": {
 											"mode": "raw",
-											"raw": "[\r\n  {\r\n    \"work_order_id\": 1,\r\n    \"group_item_id\": 1,\r\n    \"action_id\": 1,\r\n    \"material\": {\r\n      \"variant_id\": 1,\r\n      \"no_serie\":\"67a19p8\",\r\n      \"used\": false,\r\n      \"activated\": true\r\n    },\r\n    \"quantity\": {\r\n      \"item\": 12,\r\n      \"workforce\": 12\r\n    }\r\n  },\r\n  {\r\n    \"work_order_id\": 1,\r\n    \"group_item_id\": 1,\r\n    \"action_id\": 1,\r\n    \"material\": {\r\n      \"variant_id\": 1,\r\n      \"no_serie\":\"57aqw8p10\",\r\n      \"used\": false,\r\n      \"activated\": true\r\n    },\r\n    \"quantity\": {\r\n      \"item\": 12.14,\r\n      \"workforce\": 12.39\r\n    }\r\n  }\r\n]",
+											"raw": "[\r\n  {\r\n    \"work_order_id\": 1,\r\n    \"group_item_id\": 1,\r\n    \"action_id\": 1,\r\n    \"material_id\": 4,\r\n    \"quantity\": {\r\n      \"item\": 2,\r\n      \"workforce\": 2\r\n    }\r\n  },\r\n  {\r\n    \"work_order_id\": 1,\r\n    \"group_item_id\": 1,\r\n    \"action_id\": 1,\r\n    \"material_id\": 3,\r\n    \"quantity\": {\r\n      \"item\": 5,\r\n      \"workforce\": 6\r\n    }\r\n  }\r\n]",
 											"options": {
 												"raw": {
 													"language": "json"
@@ -2035,13 +2190,14 @@
 											}
 										},
 										"url": {
-											"raw": "{{url}}/external-plant/work-order/certifications",
+											"raw": "{{url}}/external-plant/work-order/1/certifications",
 											"host": [
 												"{{url}}"
 											],
 											"path": [
 												"external-plant",
 												"work-order",
+												"1",
 												"certifications"
 											]
 										}
@@ -2086,15 +2242,14 @@
 											}
 										},
 										"url": {
-											"raw": "{{url}}/external-plant/work-order/certifications/89",
+											"raw": "{{url}}/external-plant/work-order/certifications",
 											"host": [
 												"{{url}}"
 											],
 											"path": [
 												"external-plant",
 												"work-order",
-												"certifications",
-												"89"
+												"certifications"
 											]
 										}
 									},
@@ -2128,7 +2283,7 @@
 										],
 										"body": {
 											"mode": "raw",
-											"raw": "{\r\n  \"work_order_id\": 1,\r\n  \"group_item_id\": 1,\r\n  \"action_id\": 2,\r\n  \"material\": {\r\n    \"variant_id\": 1,\r\n    \"no_serie\":\"ea28p8\",\r\n    \"used\": true,\r\n    \"activated\": true\r\n  },\r\n  \"quantity\": {\r\n    \"item\": 11,\r\n    \"workforce\": 20\r\n  }\r\n}",
+											"raw": "{\r\n  \"work_order_id\": 1,\r\n  \"group_item_id\": 1,\r\n  \"action_id\": 1,\r\n  \"material_id\": 1,\r\n  \"quantity\": {\r\n    \"item\": 11,\r\n    \"workforce\": 20\r\n  }\r\n}",
 											"options": {
 												"raw": {
 													"language": "json"
@@ -2307,13 +2462,14 @@
 											}
 										},
 										"url": {
-											"raw": "{{url}}/external-plant/work-order/withdrawn-materials",
+											"raw": "{{url}}/external-plant/work-order/1/withdrawn-materials",
 											"host": [
 												"{{url}}"
 											],
 											"path": [
 												"external-plant",
 												"work-order",
+												"1",
 												"withdrawn-materials"
 											]
 										}
@@ -2569,7 +2725,7 @@
 								],
 								"body": {
 									"mode": "raw",
-									"raw": "{\r\n  \"work_order\": {\r\n    \"odn_id\" : 1,\r\n    \"description\": \"mantenimiento por polvo\",\r\n    \"affected_customers\" : 20,\r\n    \"company_id\" : 2,\r\n    \"category_id\" : 3,\r\n    \"type_id\" : 2,\r\n    \"typology_id\": 1,\r\n    \"supervisor_id\": 1\r\n  },\r\n  \"estimated_date\" : {\r\n    \"start\": \"2022-07-25 00:00:00\",\r\n    \"finish\": \"2022-07-25 00:00:00\"\r\n  },\r\n  \"tags\": {\r\n    \"clasification_id\" : 6,\r\n    \"status_id\" : 1\r\n  },\r\n  \"groups\" : [{\"id\": 1, \"mandated\": true},{\"id\": 2, \"mandated\": false}]\r\n}",
+									"raw": "{\r\n  \"work_order\": {\r\n    \"odn_id\" : 1,\r\n    \"description\": \"mantenimiento por polvo\",\r\n    \"affected_customers\" : 20,\r\n    \"company_id\" : 2,\r\n    \"category_id\" : 3,\r\n    \"type_id\" : 2,\r\n    \"typology_id\": 1,\r\n    \"supervisor_id\": 1\r\n  },\r\n  \"estimated_date\" : {\r\n    \"start\": \"2022-07-27 00:00:00\",\r\n    \"finish\": \"2022-07-27 00:00:00\"\r\n  },\r\n  \"tags\": {\r\n    \"clasification_id\" : 6,\r\n    \"status_id\" : 1\r\n  },\r\n  \"groups\" : [{\"id\": 1, \"mandated\": true},{\"id\": 2, \"mandated\": false}]\r\n}",
 									"options": {
 										"raw": {
 											"language": "json"
@@ -2792,6 +2948,23 @@
 					"name": "materials",
 					"item": [
 						{
+							"name": "get materials",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{url}}/materials",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"materials"
+									]
+								}
+							},
+							"response": []
+						},
+						{
 							"name": "post material",
 							"protocolProfileBehavior": {
 								"disabledSystemHeaders": {
@@ -2809,30 +2982,13 @@
 								],
 								"body": {
 									"mode": "raw",
-									"raw": "{\r\n  \"materials\": [\r\n    {\r\n      \"variant_id\": 1,\r\n      \"no_serie\":\"ead8p\"\r\n    },\r\n    {\r\n      \"variant_id\": 1,\r\n      \"no_serie\":\"qasdfwe\"\r\n    }\r\n  ]\r\n}",
+									"raw": "{\r\n  \"materials\": [\r\n    {\r\n      \"variant_id\": 1,\r\n      \"no_serie\":\"123abc\"\r\n    },\r\n    {\r\n      \"variant_id\": 1,\r\n      \"no_serie\":\"456def\"\r\n    }\r\n  ]\r\n}",
 									"options": {
 										"raw": {
 											"language": "json"
 										}
 									}
 								},
-								"url": {
-									"raw": "{{url}}/materials",
-									"host": [
-										"{{url}}"
-									],
-									"path": [
-										"materials"
-									]
-								}
-							},
-							"response": []
-						},
-						{
-							"name": "get materials",
-							"request": {
-								"method": "GET",
-								"header": [],
 								"url": {
 									"raw": "{{url}}/materials",
 									"host": [
@@ -3555,7 +3711,7 @@
 										],
 										"body": {
 											"mode": "raw",
-											"raw": "{\r\n  \"variant_id\": 1,\r\n  \"incoming\": 10,\r\n  \"date_incoming\": \"2022-05-14 00:00:00\",\r\n  \"price\": {\r\n    \"material\": 50.12,\r\n    \"workforce\": 100.10\r\n  }\r\n}",
+											"raw": "{\r\n  \"variant_id\": 1,\r\n  \"incoming\": 100,\r\n  \"date_incoming\": \"2022-05-14 00:00:00\",\r\n  \"price\": {\r\n    \"material\": 50.12,\r\n    \"workforce\": 100.10\r\n  }\r\n}",
 											"options": {
 												"raw": {
 													"language": "json"
@@ -4396,7 +4552,7 @@
 										],
 										"body": {
 											"mode": "raw",
-											"raw": "{\r\n  \"group_items\": [\r\n    {\r\n      \"group_id\": 1,\r\n      \"quantity_variant_id\": 2,\r\n      \"incoming\": 10.34,\r\n      \"date_incoming\": \"2022-05-14 00:00:00\"\r\n    },\r\n    {\r\n      \"group_id\": 1,\r\n      \"quantity_variant_id\": 2,\r\n      \"incoming\": 20.12,\r\n      \"date_incoming\": \"2022-05-14 00:00:00\"\r\n    }\r\n  ]\r\n}",
+											"raw": "{\r\n  \"group_items\": [\r\n    {\r\n      \"group_id\": 1,\r\n      \"quantity_variant_id\": 1,\r\n      \"incoming\": 10.34,\r\n      \"date_incoming\": \"2022-05-14 00:00:00\"\r\n    },\r\n    {\r\n      \"group_id\": 1,\r\n      \"quantity_variant_id\": 1,\r\n      \"incoming\": 20.12,\r\n      \"date_incoming\": \"2022-05-14 00:00:00\"\r\n    }\r\n  ]\r\n}",
 											"options": {
 												"raw": {
 													"language": "json"
@@ -4526,7 +4682,7 @@
 								],
 								"body": {
 									"mode": "raw",
-									"raw": "{\r\n  \"prefix\": \"PEX-12\",\r\n  \"areas_id\": [1],\r\n  \"users_id\": [1,2]\r\n}",
+									"raw": "{\r\n  \"prefix\": \"PEX-13\",\r\n  \"areas_id\": [1],\r\n  \"users_id\": [1,2]\r\n}",
 									"options": {
 										"raw": {
 											"language": "json"
