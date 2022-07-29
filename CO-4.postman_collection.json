@@ -34,6 +34,79 @@
 							]
 						},
 						{
+							"name": "addresses",
+							"item": [
+								{
+									"name": "post addresses",
+									"protocolProfileBehavior": {
+										"disabledSystemHeaders": {
+											"accept": true
+										}
+									},
+									"request": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "application/json",
+												"type": "text"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "[\r\n  {\r\n    \"place_id\": \"zxc456\",\r\n    \"lat\": \"12.1\",\r\n    \"lon\": \"23.1\",\r\n    \"location\": \"cercado\",\r\n    \"city\": \"cochabamba\",\r\n    \"direction\":\"av aroma\"\r\n  },\r\n  {\r\n    \"place_id\": \"zx1456\",\r\n    \"lat\": \"12.1\",\r\n    \"lon\": \"24.1\",\r\n    \"location\": \"cercado\",\r\n    \"city\": \"cochabamba\",\r\n    \"direction\":\"av heroinas\"\r\n  }\r\n]",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{url}}/clients/2/addresses",
+											"host": [
+												"{{url}}"
+											],
+											"path": [
+												"clients",
+												"2",
+												"addresses"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "update addresses",
+									"request": {
+										"method": "PUT",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n  \"place_id\": \"uio890\",\r\n  \"lat\": \"10.1\",\r\n  \"lon\": \"-92.1\",\r\n  \"location\": \"quillacollo\",\r\n  \"city\": \"cochabamba\",\r\n  \"direction\":\"plaza bolivar\"\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{url}}/clients/2/addresses/1",
+											"host": [
+												"{{url}}"
+											],
+											"path": [
+												"clients",
+												"2",
+												"addresses",
+												"1"
+											]
+										}
+									},
+									"response": []
+								}
+							]
+						},
+						{
 							"name": "get clients",
 							"request": {
 								"method": "GET",
@@ -68,7 +141,7 @@
 								],
 								"body": {
 									"mode": "raw",
-									"raw": "{\r\n  \"client\": {\r\n    \"code\": \"aqwe1wbx3v\",\r\n    \"name\": \"daniel\",\r\n    \"last_name\": \"gomez chavez\",\r\n    \"phones\": [\"4678897\", \"78910334\",\"78235412\"],\r\n    \"category_id\": 1\r\n  },\r\n  \"addresses\": [\r\n    {\r\n      \"place_id\": \"zxc456\",\r\n      \"lat\": \"12.1\",\r\n      \"lon\": \"23.1\",\r\n      \"location\": \"cercado\",\r\n      \"city\": \"cochabamba\",\r\n      \"direction\":\"av aroma\"\r\n    },\r\n    {\r\n      \"place_id\": \"zxc956\",\r\n      \"lat\": \"98.3\",\r\n      \"lon\": \"34.6\",\r\n      \"location\": \"sacaba\",\r\n      \"city\": \"cochabamba\",\r\n      \"direction\":\"av heroinas\"\r\n    }\r\n  ]\r\n}",
+									"raw": "{\r\n  \"code\": \"123QWE456TYU\",\r\n  \"name\": \"jorge\",\r\n  \"last_name\": \"choque chavez\",\r\n  \"phones\": [\"4678897\", \"78910334\",\"78235412\"],\r\n  \"category_id\": 1  \r\n}",
 									"options": {
 										"raw": {
 											"language": "json"
@@ -123,7 +196,7 @@
 								],
 								"body": {
 									"mode": "raw",
-									"raw": "{\r\n  \"client\": {\r\n    \"code\": \"asddanie91bxqv\",\r\n    \"name\": \"juan\",\r\n    \"last_name\": \"flores soto\",\r\n    \"phones\": [\"61608275\", \"72210334\",\"78235467\"],\r\n    \"category_id\": 1\r\n  },\r\n  \"addresses\": [\r\n    {\r\n      \"place_id\": \"98gsdfg1324\",\r\n      \"lat\": \"11.1\",\r\n      \"lon\": \"23.1\",\r\n      \"location\": \"cercado\",\r\n      \"city\": \"cochabamba\",\r\n      \"direction\":\"av siglo xx\"\r\n    },\r\n    {\r\n      \"place_id\": \"sagsdyui71324\",\r\n      \"lat\": \"98.3\",\r\n      \"lon\": \"34.6\",\r\n      \"location\": \"sacaba\",\r\n      \"city\": \"cochabamba\",\r\n      \"direction\":\"av aroma\"\r\n    }\r\n  ]\r\n}",
+									"raw": "{\r\n  \"code\": \"asddanie91bxqv\",\r\n  \"name\": \"juan\",\r\n  \"last_name\": \"flores soto\",\r\n  \"phones\": [\"61608275\", \"72210334\",\"78235467\"],\r\n  \"category_id\": 2\r\n}",
 									"options": {
 										"raw": {
 											"language": "json"
