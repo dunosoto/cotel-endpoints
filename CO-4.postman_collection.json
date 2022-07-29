@@ -1296,6 +1296,113 @@
 							"name": "withdrawn materials",
 							"item": [
 								{
+									"name": "withdrawn checks",
+									"item": [
+										{
+											"name": "post withdrawn check",
+											"protocolProfileBehavior": {
+												"disabledSystemHeaders": {
+													"accept": true
+												}
+											},
+											"request": {
+												"method": "POST",
+												"header": [
+													{
+														"key": "Accept",
+														"value": "application/json",
+														"type": "text"
+													}
+												],
+												"body": {
+													"mode": "raw",
+													"raw": "{\r\n  \"material_id\": 1,\r\n  \"received\": 12.11\r\n}",
+													"options": {
+														"raw": {
+															"language": "json"
+														}
+													}
+												},
+												"url": {
+													"raw": "{{url}}/faults/work-orders/withdrawn-materials/checks",
+													"host": [
+														"{{url}}"
+													],
+													"path": [
+														"faults",
+														"work-orders",
+														"withdrawn-materials",
+														"checks"
+													]
+												}
+											},
+											"response": []
+										},
+										{
+											"name": "get withdrawn check",
+											"request": {
+												"method": "GET",
+												"header": [],
+												"url": {
+													"raw": "{{url}}/faults/work-orders/withdrawn-materials/checks/1",
+													"host": [
+														"{{url}}"
+													],
+													"path": [
+														"faults",
+														"work-orders",
+														"withdrawn-materials",
+														"checks",
+														"1"
+													]
+												}
+											},
+											"response": []
+										},
+										{
+											"name": "update withdrawn check",
+											"protocolProfileBehavior": {
+												"disabledSystemHeaders": {
+													"accept": true
+												}
+											},
+											"request": {
+												"method": "PUT",
+												"header": [
+													{
+														"key": "Accept",
+														"value": "application/json",
+														"type": "text"
+													}
+												],
+												"body": {
+													"mode": "raw",
+													"raw": "{\r\n  \"material_id\": 1,\r\n  \"received\": 12.35\r\n}",
+													"options": {
+														"raw": {
+															"language": "json"
+														}
+													}
+												},
+												"url": {
+													"raw": "{{url}}/faults/work-orders/withdrawn-materials/checks/1",
+													"host": [
+														"{{url}}"
+													],
+													"path": [
+														"faults",
+														"work-orders",
+														"withdrawn-materials",
+														"checks",
+														"1"
+													]
+												}
+											},
+											"response": []
+										}
+									]
+								},
+								{
 									"name": "post withdrawn materials",
 									"protocolProfileBehavior": {
 										"disabledSystemHeaders": {
@@ -1321,13 +1428,13 @@
 											}
 										},
 										"url": {
-											"raw": "{{url}}/faults/work-order/1/withdrawn-materials",
+											"raw": "{{url}}/faults/work-orders/1/withdrawn-materials",
 											"host": [
 												"{{url}}"
 											],
 											"path": [
 												"faults",
-												"work-order",
+												"work-orders",
 												"1",
 												"withdrawn-materials"
 											]
@@ -2527,7 +2634,7 @@
 										],
 										"body": {
 											"mode": "raw",
-											"raw": "[\r\n  {\r\n    \"work_order_id\": 1,\r\n    \"variant_id\": 1,\r\n    \"no_serie\": \"asdf123ad\",\r\n    \"reported\": 12.11\r\n  },\r\n  {\r\n    \"work_order_id\": 1,\r\n    \"variant_id\": 1,\r\n    \"no_serie\": \"a43df123ad\",\r\n    \"reported\": 10.12\r\n  }\r\n]",
+											"raw": "[\r\n  {\r\n    \"variant_id\": 1,\r\n    \"no_serie\": \"asdf123ad\",\r\n    \"reported\": 12.11\r\n  },\r\n  {\r\n    \"variant_id\": 1,\r\n    \"no_serie\": \"a43df123ad\",\r\n    \"reported\": 10.12\r\n  }\r\n]",
 											"options": {
 												"raw": {
 													"language": "json"
