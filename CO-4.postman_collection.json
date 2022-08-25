@@ -54,7 +54,7 @@
 										],
 										"body": {
 											"mode": "raw",
-											"raw": "[\r\n  {\r\n    \"place_id\": \"zxc456\",\r\n    \"lat\": \"12.1\",\r\n    \"lon\": \"23.1\",\r\n    \"location\": \"cercado\",\r\n    \"city\": \"cochabamba\",\r\n    \"direction\":\"av aroma\"\r\n  },\r\n  {\r\n    \"place_id\": \"zx1456\",\r\n    \"lat\": \"12.1\",\r\n    \"lon\": \"24.1\",\r\n    \"location\": \"cercado\",\r\n    \"city\": \"cochabamba\",\r\n    \"direction\":\"av heroinas\"\r\n  }\r\n]",
+											"raw": "[\r\n  {\r\n    \"place_id\": \"abc6788\",\r\n    \"lat\": \"11.1\",\r\n    \"lon\": \"29.2\",\r\n    \"location\": \"cercado\",\r\n    \"city\": \"cochabamba\",\r\n    \"direction\":\"calle obrajes esq. nor cinti\"\r\n  },\r\n  {\r\n    \"place_id\": \"zx1456\",\r\n    \"lat\": \"12.1\",\r\n    \"lon\": \"24.1\",\r\n    \"location\": \"cercado\",\r\n    \"city\": \"cochabamba\",\r\n    \"direction\":\"av heroinas\"\r\n  }\r\n]",
 											"options": {
 												"raw": {
 													"language": "json"
@@ -141,7 +141,7 @@
 								],
 								"body": {
 									"mode": "raw",
-									"raw": "{\r\n  \"code\": \"123QWE456TYU\",\r\n  \"name\": \"jorge\",\r\n  \"last_name\": \"choque chavez\",\r\n  \"phones\": [\"4678897\", \"78910334\",\"78235412\"],\r\n  \"category_id\": 1  \r\n}",
+									"raw": "{\r\n  \"code\": \"123QWE456TYq\",\r\n  \"name\": \"daniel\",\r\n  \"last_name\": \"uno soto\",\r\n  \"phones\": [\"61608275\", \"4756025\",\"72210334\"],\r\n  \"category_id\": 1\r\n}",
 									"options": {
 										"raw": {
 											"language": "json"
@@ -348,7 +348,7 @@
 								],
 								"body": {
 									"mode": "raw",
-									"raw": "{\r\n  \"instance\": \"112223\",\r\n  \"address_id\": 1,\r\n  \"type_id\": 1,\r\n  \"access_id\": 2,\r\n  \"connections\": [1,2],\r\n  \"technical_datas\": {\r\n    \"central_port\": \"123qwe\",\r\n    \"link_pair\": \"123qwe\",\r\n    \"peer_node\": \"123qwe\",\r\n    \"box_pair\": \"123qwe\",\r\n    \"observation\": \"observation\"\r\n  }\r\n}",
+									"raw": "{\r\n  \"instance\": \"112623\",\r\n  \"client\": {\r\n    \"id\": 2,\r\n    \"address_id\": 3\r\n  },\r\n  \"type_id\": 1,\r\n  \"access_id\": 2,\r\n  \"connections\": [1,2],\r\n  \"technical_datas\": {\r\n    \"central_port\": \"123qwe\",\r\n    \"link_pair\": \"123qwe\",\r\n    \"peer_node\": \"123qwe\",\r\n    \"box_pair\": \"123qwe\",\r\n    \"observation\": \"observation\"\r\n  }\r\n}",
 									"options": {
 										"raw": {
 											"language": "json"
@@ -1462,7 +1462,7 @@
 								],
 								"body": {
 									"mode": "raw",
-									"raw": "{\r\n  \"work_order\": {\r\n    \"service_id\": 1,\r\n    \"observation\": \"observacion en spanish\",\r\n    \"claim_date\": \"2022-08-14 00:00:00\",\r\n    \"date\": \"2022-08-14 00:00:00\"\r\n  },\r\n  \"estimated_date\" : {\r\n    \"start\": \"2022-08-14 00:00:00\",\r\n    \"finish\": \"2022-08-14 00:00:00\"\r\n  },\r\n  \"tags\": {\r\n    \"clasification_id\" : 6,\r\n    \"status_id\" : 1\r\n  },\r\n  \"groups\" : [{\"id\": 1, \"mandated\": true},{\"id\": 2, \"mandated\": false}]\r\n}",
+									"raw": "{\r\n  \"work_order\": {\r\n    \"service_id\": 1,\r\n    \"observation\": \"observacion en spanish\",\r\n    \"claim_date\": \"2022-08-17 00:00:00\",\r\n    \"date\": \"2022-08-17 00:00:00\"\r\n  },\r\n  \"estimated_date\" : {\r\n    \"start\": \"2022-08-17 00:00:00\",\r\n    \"finish\": \"2022-08-17 00:00:00\"\r\n  },\r\n  \"tags\": {\r\n    \"clasification_id\" : 6,\r\n    \"status_id\" : 1\r\n  },\r\n  \"groups\" : [{\"id\": 1, \"mandated\": true},{\"id\": 2, \"mandated\": false}]\r\n}",
 									"options": {
 										"raw": {
 											"language": "json"
@@ -2023,7 +2023,7 @@
 								],
 								"body": {
 									"mode": "raw",
-									"raw": "{\r\n  \"odns\":[\r\n    {\r\n      \"code\": \"dan123\",\r\n      \"lat\": \"-14.098756\",\r\n      \"lon\": \"-13.123543\",\r\n      \"address\" : \"Av juan de la rosa No 567\",\r\n      \"olt_id\": 1\r\n    },\r\n    {\r\n      \"code\": \"dan890\",\r\n      \"lat\": \"-14.098756\",\r\n      \"lon\": \"-13.123543\",\r\n      \"address\" : \"Av america esq Libertador\",\r\n      \"olt_id\": 1\r\n    }\r\n  ]\r\n}",
+									"raw": "{\r\n  \"odns\":[\r\n    {\r\n      \"id\": 200,\r\n      \"code\": \"dan123\",\r\n      \"lat\": \"-14.098756\",\r\n      \"lon\": \"-13.123543\",\r\n      \"address\" : \"Av juan de la rosa No 567\",\r\n      \"olt_id\": 1\r\n    },\r\n    {\r\n      \"id\": 201,\r\n      \"code\": \"dan890\",\r\n      \"lat\": \"-14.098756\",\r\n      \"lon\": \"-13.123543\",\r\n      \"address\" : \"Av america esq Libertador\",\r\n      \"olt_id\": 1\r\n    }\r\n  ]\r\n}",
 									"options": {
 										"raw": {
 											"language": "json"
@@ -3018,12 +3018,18 @@
 								"method": "GET",
 								"header": [],
 								"url": {
-									"raw": "{{url}}/equipments",
+									"raw": "{{url}}/equipments?quantity=1",
 									"host": [
 										"{{url}}"
 									],
 									"path": [
 										"equipments"
+									],
+									"query": [
+										{
+											"key": "quantity",
+											"value": "1"
+										}
 									]
 								}
 							},
@@ -3047,7 +3053,7 @@
 								],
 								"body": {
 									"mode": "raw",
-									"raw": "{\r\n  \"equipments\": [\r\n    {\r\n      \"no_serie\": \"asdf123\",\r\n      \"variant_id\": 1\r\n    },\r\n    {\r\n      \"no_serie\": \"345ert\",\r\n      \"variant_id\": 1\r\n    }\r\n  ]\r\n}",
+									"raw": "{\r\n  \"equipments\": [\r\n    {\r\n      \"no_serie\": \"asdf123\",\r\n      \"quantity_id\": 1\r\n    },\r\n    {\r\n      \"no_serie\": \"345ert\",\r\n      \"quantity_id\": 1\r\n    }\r\n  ]\r\n}",
 									"options": {
 										"raw": {
 											"language": "json"
@@ -3102,7 +3108,7 @@
 								],
 								"body": {
 									"mode": "raw",
-									"raw": "{\r\n  \"no_serie\": \"345er2\",\r\n  \"variant_id\": 2\r\n}\r\n",
+									"raw": "{\r\n  \"no_serie\": \"345er2\",\r\n  \"quantity_id\": 1\r\n}\r\n",
 									"options": {
 										"raw": {
 											"language": "json"
@@ -3162,7 +3168,7 @@
 								],
 								"body": {
 									"mode": "raw",
-									"raw": "{\r\n  \"materials\": [\r\n    {\r\n      \"variant_id\": 1,\r\n      \"no_serie\":\"123abc\"\r\n    },\r\n    {\r\n      \"variant_id\": 1,\r\n      \"no_serie\":\"456def\"\r\n    }\r\n  ]\r\n}",
+									"raw": "{\r\n  \"materials\": [\r\n    {\r\n      \"quantity_id\": 4,\r\n      \"no_serie\":\"123ybc\"\r\n    },\r\n    {\r\n      \"quantity_id\": 4,\r\n      \"no_serie\":\"45ydef\"\r\n    }\r\n  ]\r\n}",
 									"options": {
 										"raw": {
 											"language": "json"
@@ -3217,7 +3223,7 @@
 								],
 								"body": {
 									"mode": "raw",
-									"raw": "{\r\n  \"variant_id\": 1,\r\n  \"no_serie\":\"ap5e8p\"\r\n}",
+									"raw": "{\r\n  \"quantity_id\": 1,\r\n  \"no_serie\":\"ap5e8p\"\r\n}",
 									"options": {
 										"raw": {
 											"language": "json"
@@ -3312,7 +3318,7 @@
 								],
 								"body": {
 									"mode": "raw",
-									"raw": "{\r\n  \"tools\": [\r\n    {\r\n      \"variant_id\": 1,\r\n      \"no_serie\": \"123812\"\r\n    },\r\n    {\r\n      \"variant_id\": 1,\r\n      \"no_serie\":\"ap5e8p\"\r\n    }\r\n  ]\r\n}",
+									"raw": "{\r\n  \"tools\": [\r\n    {\r\n      \"quantity_id\": 1,\r\n      \"no_serie\": \"123812\"\r\n    },\r\n    {\r\n      \"quantity_id\": 1,\r\n      \"no_serie\":\"ap5e8p\"\r\n    }\r\n  ]\r\n}",
 									"options": {
 										"raw": {
 											"language": "json"
@@ -3367,7 +3373,7 @@
 								],
 								"body": {
 									"mode": "raw",
-									"raw": "{\r\n  \"variant_id\": 1,\r\n  \"no_serie\": \"123816\"\r\n}",
+									"raw": "{\r\n  \"quantity_id\": 1,\r\n  \"no_serie\": \"123816\"\r\n}",
 									"options": {
 										"raw": {
 											"language": "json"
@@ -3445,7 +3451,7 @@
 								],
 								"body": {
 									"mode": "raw",
-									"raw": "{\r\n  \"cleaning_materials\": [\r\n    {\r\n      \"variant_id\": 1,\r\n      \"no_serie\": \"123812\"\r\n    },\r\n    {\r\n      \"variant_id\": 1,\r\n      \"no_serie\":\"ap5e8p\"\r\n    }\r\n  ]\r\n}",
+									"raw": "{\r\n  \"cleaning_materials\": [\r\n    {\r\n      \"quantity_id\": 1,\r\n      \"no_serie\": \"123812\"\r\n    },\r\n    {\r\n      \"quantity_id\": 1,\r\n      \"no_serie\":\"ap5e8p\"\r\n    }\r\n  ]\r\n}",
 									"options": {
 										"raw": {
 											"language": "json"
@@ -3500,7 +3506,7 @@
 								],
 								"body": {
 									"mode": "raw",
-									"raw": "{\r\n  \"variant_id\": 1,\r\n  \"no_serie\":\"ape8p\"\r\n}",
+									"raw": "{\r\n  \"quantity_id\": 1,\r\n  \"no_serie\":\"ape8p\"\r\n}",
 									"options": {
 										"raw": {
 											"language": "json"
@@ -3578,7 +3584,7 @@
 								],
 								"body": {
 									"mode": "raw",
-									"raw": "{\r\n  \"vehicles\": [\r\n    {\r\n      \"chassis\": \"asdf\",\r\n      \"license_plate\": \"aweq\",\r\n      \"variant_id\": 1\r\n    },\r\n    {\r\n      \"chassis\": \"asvfsdf\",\r\n      \"license_plate\": \"asdzxref\",\r\n      \"variant_id\": 1\r\n    }\r\n  ]\r\n}",
+									"raw": "{\r\n  \"vehicles\": [\r\n    {\r\n      \"chassis\": \"asdf\",\r\n      \"license_plate\": \"aweq\",\r\n      \"quantity_id\": 1\r\n    },\r\n    {\r\n      \"chassis\": \"asvfsdf\",\r\n      \"license_plate\": \"asdzxref\",\r\n      \"quantity_id\": 1\r\n    }\r\n  ]\r\n}",
 									"options": {
 										"raw": {
 											"language": "json"
@@ -3633,7 +3639,7 @@
 								],
 								"body": {
 									"mode": "raw",
-									"raw": "{\r\n  \"chassis\": \"123de46\",\r\n  \"license_plate\": \"2308edk\",\r\n  \"variant_id\": 1\r\n}",
+									"raw": "{\r\n  \"chassis\": \"123de46\",\r\n  \"license_plate\": \"2308edk\",\r\n  \"quantity_id\": 1\r\n}",
 									"options": {
 										"raw": {
 											"language": "json"
@@ -3891,7 +3897,7 @@
 										],
 										"body": {
 											"mode": "raw",
-											"raw": "{\r\n  \"variant_id\": 1,\r\n  \"incoming\": 100,\r\n  \"date_incoming\": \"2022-05-14 00:00:00\",\r\n  \"price\": {\r\n    \"material\": 50.12,\r\n    \"workforce\": 100.10\r\n  }\r\n}",
+											"raw": "{\r\n  \"variant_id\": 1,\r\n  \"incoming\": 300,\r\n  \"date_incoming\": \"2022-05-14 00:00:00\",\r\n  \"price\": {\r\n    \"material\": 50.12\r\n    // \"workforce\": 100.10\r\n  }\r\n}",
 											"options": {
 												"raw": {
 													"language": "json"
@@ -3905,6 +3911,30 @@
 											],
 											"path": [
 												"variants-quantities"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "get quantities by type",
+									"request": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{url}}/variants-quantities/1?type=vehicle",
+											"host": [
+												"{{url}}"
+											],
+											"path": [
+												"variants-quantities",
+												"1"
+											],
+											"query": [
+												{
+													"key": "type",
+													"value": "vehicle"
+												}
 											]
 										}
 									},
@@ -4311,7 +4341,7 @@
 								],
 								"body": {
 									"mode": "raw",
-									"raw": "{\r\n  \"subcategory_id\": 1,\r\n  \"item_category_id\": 1,\r\n  \"name\":\"modem\",\r\n  \"description\":\"descripcion del modem\",\r\n  \"unit_id\": 3,\r\n  \"image\": \"asdfadf\",\r\n  \"company_id\": 1,\r\n  \"stock\": {\r\n    \"incoming\": 1000,\r\n    \"minimum\": 200,\r\n    \"date_incoming\": \"2022-05-14 00:00:00\"\r\n  },\r\n  \"price\": {\r\n    \"material\": 50.1,\r\n    \"workforce\": 40.1\r\n  }\r\n}",
+									"raw": "{\r\n  \"subcategory_id\": 1,\r\n  \"item_category_id\": 1,\r\n  \"name\":\"modem\",\r\n  \"description\":\"descripcion de otro modem\",\r\n  \"unit_id\": 3,\r\n  \"image\": \"asdfadf\",\r\n  \"company_id\": 1,\r\n  \"stock\": {\r\n    \"incoming\": 10000,\r\n    \"minimum\": 200,\r\n    \"date_incoming\": \"2022-05-14 00:00:00\"\r\n  },\r\n  \"price\": {\r\n    \"material\": 50.1\r\n  }\r\n}",
 									"options": {
 										"raw": {
 											"language": "json"
@@ -4596,7 +4626,7 @@
 								],
 								"body": {
 									"mode": "raw",
-									"raw": "{\r\n  \"name\": \"raul\",\r\n  \"last_name\": \"gonzales sanchez\",\r\n  \"cell_phone\": \"72210334\",\r\n  \"email\": \"danielunosoto@gmail.com\",\r\n  \"password\": \"daniel1998\",\r\n  \"password_confirmation\": \"daniel1998\",\r\n  \"role_id\": 1,\r\n  \"areas_id\": [1,2],\r\n  \"company_id\": 2,\r\n  \"avatar\": \"\"\r\n}",
+									"raw": "{\r\n  \"name\": \"jimi\",\r\n  \"last_name\": \"torrico peredo\",\r\n  \"cell_phone\": \"72210334\",\r\n  \"email\": \"tano777864@gmail.com\",\r\n  \"password\": \"daniel1998\",\r\n  \"password_confirmation\": \"daniel1998\",\r\n  \"role_id\": 1,\r\n  \"areas_id\": [1,2],\r\n  \"company_id\": 2,\r\n  \"avatar\": \"\"\r\n}",
 									"options": {
 										"raw": {
 											"language": "json"
@@ -4862,7 +4892,7 @@
 								],
 								"body": {
 									"mode": "raw",
-									"raw": "{\r\n  \"prefix\": \"PEX-13\",\r\n  \"areas_id\": [1],\r\n  \"users_id\": [1,2]\r\n}",
+									"raw": "{\r\n  \"prefix\": \"PEX-14\",\r\n  \"areas_id\": [1],\r\n  \"users_id\": [1,2]\r\n}",
 									"options": {
 										"raw": {
 											"language": "json"
@@ -5002,9 +5032,66 @@
 					"item": [
 						{
 							"name": "get companies",
+							"protocolProfileBehavior": {
+								"disabledSystemHeaders": {
+									"accept": true
+								}
+							},
 							"request": {
-								"method": "GET",
-								"header": [],
+								"method": "POST",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"olt\": {\r\n    \"name\":\"Heroinas\",\r\n    \"address\":\"Av Heroinas y Av ayacucho\",\r\n    \"lat\":\"-12.345678\",\r\n    \"lon\":\"-15.123765\",\r\n    \"image\":\"asdfas\",\r\n    \"category_id\": 1,\r\n    \"state_id\": 1,\r\n    \"date_mantenance\":\"2022-03-07 00:00:00\",\r\n    \"lapse_time_in_month\":1\r\n  },\r\n  \"variants\": [\r\n    {\r\n      \"id\": 1,\r\n      \"amount\": 12.11\r\n    }\r\n  ]\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{url}}/olts",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"olts"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "post company",
+							"protocolProfileBehavior": {
+								"disabledSystemHeaders": {
+									"accept": true
+								}
+							},
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"name\": \"AXS S.A.\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
 								"url": {
 									"raw": "{{url}}/companies",
 									"host": [
@@ -5046,7 +5133,7 @@
 								"method": "GET",
 								"header": [],
 								"url": {
-									"raw": "{{url}}/tags/work-orders?area=2",
+									"raw": "{{url}}/tags/work-orders?area=1",
 									"host": [
 										"{{url}}"
 									],
@@ -5057,7 +5144,7 @@
 									"query": [
 										{
 											"key": "area",
-											"value": "2"
+											"value": "1"
 										}
 									]
 								}
