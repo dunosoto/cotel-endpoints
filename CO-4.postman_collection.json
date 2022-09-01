@@ -2,7 +2,8 @@
 	"info": {
 		"_postman_id": "cfb95f83-17a4-4735-a220-7a07d0d99111",
 		"name": "CO-4",
-		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "17400934"
 	},
 	"item": [
 		{
@@ -3168,7 +3169,7 @@
 								],
 								"body": {
 									"mode": "raw",
-									"raw": "{\r\n  \"materials\": [\r\n    {\r\n      \"quantity_id\": 4,\r\n      \"no_serie\":\"123ybc\"\r\n    },\r\n    {\r\n      \"quantity_id\": 4,\r\n      \"no_serie\":\"45ydef\"\r\n    }\r\n  ]\r\n}",
+									"raw": "{\r\n  \"materials\": [\r\n    {\r\n      \"quantity_id\": 2,\r\n      \"no_serie\":\"890iop\"\r\n    },\r\n    {\r\n      \"quantity_id\": 2,\r\n      \"no_serie\":\"67bnm\"\r\n    }\r\n  ]\r\n}",
 									"options": {
 										"raw": {
 											"language": "json"
@@ -3720,7 +3721,7 @@
 										],
 										"body": {
 											"mode": "raw",
-											"raw": "{\r\n  \"item_id\": 1,\r\n  \"code\": \"FTX\",\r\n  \"name\": \"FTX-100\"\r\n}",
+											"raw": "{\r\n  \"item_id\": 1,\r\n  \"code\": \"01\",\r\n  \"name\": \"insecticidas\"\r\n}",
 											"options": {
 												"raw": {
 													"language": "json"
@@ -3814,7 +3815,7 @@
 								],
 								"body": {
 									"mode": "raw",
-									"raw": "{\r\n  \"code\": \"CA\",\r\n  \"name\": \"Cable\",\r\n  \"type_id\": 1\r\n}",
+									"raw": "{\r\n  \"code\": \"206\",\r\n  \"name\": \"Materiales de limpieza\"\r\n}",
 									"options": {
 										"raw": {
 											"language": "json"
@@ -3897,7 +3898,7 @@
 										],
 										"body": {
 											"mode": "raw",
-											"raw": "{\r\n  \"variant_id\": 1,\r\n  \"incoming\": 300,\r\n  \"date_incoming\": \"2022-05-14 00:00:00\",\r\n  \"price\": {\r\n    \"material\": 50.12\r\n    // \"workforce\": 100.10\r\n  }\r\n}",
+											"raw": "{\r\n  \"variant_id\": 1,\r\n  \"incoming\": 100,\r\n  \"date_incoming\": \"2022-05-14 00:00:00\",\r\n  \"cost\": 50.12\r\n}",
 											"options": {
 												"raw": {
 													"language": "json"
@@ -3922,18 +3923,19 @@
 										"method": "GET",
 										"header": [],
 										"url": {
-											"raw": "{{url}}/variants-quantities/1?type=vehicle",
+											"raw": "{{url}}/variants-quantities/2",
 											"host": [
 												"{{url}}"
 											],
 											"path": [
 												"variants-quantities",
-												"1"
+												"2"
 											],
 											"query": [
 												{
 													"key": "type",
-													"value": "vehicle"
+													"value": "vehicle",
+													"disabled": true
 												}
 											]
 										}
@@ -4248,65 +4250,6 @@
 							]
 						},
 						{
-							"name": "article types",
-							"item": [
-								{
-									"name": "get article types",
-									"request": {
-										"method": "GET",
-										"header": [],
-										"url": {
-											"raw": "{{url}}/article-types",
-											"host": [
-												"{{url}}"
-											],
-											"path": [
-												"article-types"
-											]
-										}
-									},
-									"response": []
-								},
-								{
-									"name": "post article type",
-									"protocolProfileBehavior": {
-										"disabledSystemHeaders": {
-											"accept": true
-										}
-									},
-									"request": {
-										"method": "POST",
-										"header": [
-											{
-												"key": "Accept",
-												"value": "application/json",
-												"type": "text"
-											}
-										],
-										"body": {
-											"mode": "raw",
-											"raw": "{\r\n  \"name\": \"EQUIPOS\"\r\n}",
-											"options": {
-												"raw": {
-													"language": "json"
-												}
-											}
-										},
-										"url": {
-											"raw": "{{url}}/article-types",
-											"host": [
-												"{{url}}"
-											],
-											"path": [
-												"article-types"
-											]
-										}
-									},
-									"response": []
-								}
-							]
-						},
-						{
 							"name": "get variants",
 							"request": {
 								"method": "GET",
@@ -4341,7 +4284,7 @@
 								],
 								"body": {
 									"mode": "raw",
-									"raw": "{\r\n  \"subcategory_id\": 1,\r\n  \"item_category_id\": 1,\r\n  \"name\":\"modem\",\r\n  \"description\":\"descripcion de otro modem\",\r\n  \"unit_id\": 3,\r\n  \"image\": \"asdfadf\",\r\n  \"company_id\": 1,\r\n  \"stock\": {\r\n    \"incoming\": 10000,\r\n    \"minimum\": 200,\r\n    \"date_incoming\": \"2022-05-14 00:00:00\"\r\n  },\r\n  \"price\": {\r\n    \"material\": 50.1\r\n  }\r\n}",
+									"raw": "{\r\n  \"item_category_id\": 1,\r\n  \"name\":\"VENENO PARA HORMIGAS Y ZEPES\",\r\n  \"code\": \"08\",\r\n  \"description\": \"VENENO PARA HORMIGAS Y ZEPES 1/2 KG\",\r\n  \"unit_id\": 3,\r\n  \"image\": \"asdfadf\",\r\n  \"company_id\": 1,\r\n  \"stock\": {\r\n    \"incoming\": 100,\r\n    \"minimum\": 20,\r\n    \"cost\": 12.4,\r\n    \"date_incoming\": \"2022-05-14 00:00:00\"\r\n  }\r\n}",
 									"options": {
 										"raw": {
 											"language": "json"
@@ -4762,7 +4705,7 @@
 										],
 										"body": {
 											"mode": "raw",
-											"raw": "{\r\n  \"group_items\": [\r\n    {\r\n      \"group_id\": 1,\r\n      \"quantity_variant_id\": 1,\r\n      \"incoming\": 10.34,\r\n      \"date_incoming\": \"2022-05-14 00:00:00\"\r\n    },\r\n    {\r\n      \"group_id\": 1,\r\n      \"quantity_variant_id\": 1,\r\n      \"incoming\": 20.12,\r\n      \"date_incoming\": \"2022-05-14 00:00:00\"\r\n    }\r\n  ]\r\n}",
+											"raw": "{\r\n  \"group_items\": [\r\n    {\r\n      \"group_id\": 1,\r\n      \"quantity_variant_id\": 1,\r\n      \"incoming\": 10.34,\r\n      \"date_incoming\": \"2022-05-14 00:00:00\"\r\n    },\r\n    {\r\n      \"group_id\": 1,\r\n      \"quantity_variant_id\": 2,\r\n      \"incoming\": 20.12,\r\n      \"date_incoming\": \"2022-05-14 00:00:00\"\r\n    }\r\n  ]\r\n}",
 											"options": {
 												"raw": {
 													"language": "json"
@@ -4892,7 +4835,7 @@
 								],
 								"body": {
 									"mode": "raw",
-									"raw": "{\r\n  \"prefix\": \"PEX-14\",\r\n  \"areas_id\": [1],\r\n  \"users_id\": [1,2]\r\n}",
+									"raw": "{\r\n  \"prefix\": \"PEX-01\",\r\n  \"areas_id\": [1],\r\n  \"users_id\": [1,2]\r\n}",
 									"options": {
 										"raw": {
 											"language": "json"
@@ -5035,10 +4978,11 @@
 							"protocolProfileBehavior": {
 								"disabledSystemHeaders": {
 									"accept": true
-								}
+								},
+								"disableBodyPruning": true
 							},
 							"request": {
-								"method": "POST",
+								"method": "GET",
 								"header": [
 									{
 										"key": "Accept",
@@ -5056,12 +5000,12 @@
 									}
 								},
 								"url": {
-									"raw": "{{url}}/olts",
+									"raw": "{{url}}/companies",
 									"host": [
 										"{{url}}"
 									],
 									"path": [
-										"olts"
+										"companies"
 									]
 								}
 							},
