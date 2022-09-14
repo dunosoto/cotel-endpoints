@@ -2363,7 +2363,7 @@
 										],
 										"body": {
 											"mode": "raw",
-											"raw": "[\r\n  {\r\n    \"work_order_id\": 1,\r\n    \"group_item_id\": 1,\r\n    \"action_id\": 1,\r\n    \"material_id\": 4,\r\n    \"quantity\": {\r\n      \"item\": 2,\r\n      \"workforce\": 2\r\n    }\r\n  },\r\n  {\r\n    \"work_order_id\": 1,\r\n    \"group_item_id\": 1,\r\n    \"action_id\": 1,\r\n    \"material_id\": 3,\r\n    \"quantity\": {\r\n      \"item\": 5,\r\n      \"workforce\": 6\r\n    }\r\n  }\r\n]",
+											"raw": "[\r\n  {\r\n    \"work_order_id\": 1,\r\n    \"group_item_id\": 1,\r\n    \"action_id\": 1,\r\n    \"material_id\": 1,\r\n    \"quantity\": {\r\n      \"item\": 2,\r\n      \"workforce\": 2\r\n    }\r\n  },\r\n  {\r\n    \"work_order_id\": 1,\r\n    \"group_item_id\": 2,\r\n    \"action_id\": 1,\r\n    \"material_id\": 2,\r\n    \"quantity\": {\r\n      \"item\": 5,\r\n      \"workforce\": 6\r\n    }\r\n  }\r\n]",
 											"options": {
 												"raw": {
 													"language": "json"
@@ -2906,7 +2906,7 @@
 								],
 								"body": {
 									"mode": "raw",
-									"raw": "{\r\n  \"work_order\": {\r\n    \"odn_id\" : 2,\r\n    \"description\": \"mantenimiento preventivo\",\r\n    \"affected_customers\" : 20,\r\n    \"company_id\" : 2,\r\n    \"category_id\" : 3,\r\n    \"type_id\" : 2,\r\n    \"supervisor_id\": 2\r\n  },\r\n  \"estimated_date\" : {\r\n    \"start\": \"2022-09-04 00:00:00\",\r\n    \"finish\": \"2022-09-04 00:00:00\"\r\n  },\r\n  \"tags\": {\r\n    \"clasification_id\" : 6,\r\n    \"status_id\" : 4\r\n  },\r\n  \"groups\" : [{\"id\": 1, \"mandated\": true}]\r\n}",
+									"raw": "{\r\n  \"work_order\": {\r\n    \"odn_id\" : 2,\r\n    \"description\": \"mantenimiento preventivo  no programado\",\r\n    \"affected_customers\" : 20,\r\n    \"company_id\" : 2,\r\n    \"category_id\" : 3,\r\n    \"type_id\" : 2,\r\n    \"supervisor_id\": 2\r\n  },\r\n  \"estimated_date\" : {\r\n    \"start\": \"2022-09-07 00:00:00\",\r\n    \"finish\": \"2022-09-07 00:00:00\"\r\n  },\r\n  \"tags\": {\r\n    \"clasification_id\" : 6,\r\n    \"status_id\" : 4\r\n  },\r\n  \"groups\" : [{\"id\": 1, \"mandated\": true}]\r\n}",
 									"options": {
 										"raw": {
 											"language": "json"
@@ -3779,14 +3779,15 @@
 									"response": []
 								},
 								{
-									"name": "update item category Copy",
+									"name": "get item category",
 									"protocolProfileBehavior": {
+										"disableBodyPruning": true,
 										"disabledSystemHeaders": {
 											"accept": true
 										}
 									},
 									"request": {
-										"method": "PUT",
+										"method": "GET",
 										"header": [
 											{
 												"key": "Accept",
@@ -3796,7 +3797,7 @@
 										],
 										"body": {
 											"mode": "raw",
-											"raw": "{\r\n  \"item_id\": 1,\r\n  \"code\": \"FTX\",\r\n  \"name\": \"FTX-102\"\r\n}",
+											"raw": "",
 											"options": {
 												"raw": {
 													"language": "json"
@@ -3804,13 +3805,13 @@
 											}
 										},
 										"url": {
-											"raw": "{{url}}/items-categories/1",
+											"raw": "{{url}}/items-categories/208.31",
 											"host": [
 												"{{url}}"
 											],
 											"path": [
 												"items-categories",
-												"1"
+												"208.31"
 											]
 										}
 									},
@@ -4573,6 +4574,30 @@
 							]
 						},
 						{
+							"name": "items",
+							"item": [
+								{
+									"name": "get items to user",
+									"request": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{url}}/user/1/materials",
+											"host": [
+												"{{url}}"
+											],
+											"path": [
+												"user",
+												"1",
+												"materials"
+											]
+										}
+									},
+									"response": []
+								}
+							]
+						},
+						{
 							"name": "get users",
 							"request": {
 								"method": "GET",
@@ -4743,7 +4768,7 @@
 										],
 										"body": {
 											"mode": "raw",
-											"raw": "{\r\n  \"group_items\": [\r\n    {\r\n      \"group_id\": 1,\r\n      \"quantity_variant_id\": 1,\r\n      \"incoming\": 10.34,\r\n      \"date_incoming\": \"2022-05-14 00:00:00\"\r\n    },\r\n    {\r\n      \"group_id\": 1,\r\n      \"quantity_variant_id\": 2,\r\n      \"incoming\": 20.12,\r\n      \"date_incoming\": \"2022-05-14 00:00:00\"\r\n    }\r\n  ]\r\n}",
+											"raw": "{\r\n  \"group_items\": [\r\n    {\r\n      \"group_id\": 1,\r\n      \"quantity_variant_id\": 1,\r\n      \"incoming\": 10.34,\r\n      \"date_incoming\": \"2022-05-14 00:00:00\"\r\n    },\r\n    {\r\n      \"group_id\": 1,\r\n      \"quantity_variant_id\": 1,\r\n      \"incoming\": 20.12,\r\n      \"date_incoming\": \"2022-05-14 00:00:00\"\r\n    }\r\n  ]\r\n}",
 											"options": {
 												"raw": {
 													"language": "json"
@@ -4866,12 +4891,13 @@
 										"method": "GET",
 										"header": [],
 										"url": {
-											"raw": "{{url}}/groups/work-orders/faults",
+											"raw": "{{url}}/groups/1/work-orders/faults",
 											"host": [
 												"{{url}}"
 											],
 											"path": [
 												"groups",
+												"1",
 												"work-orders",
 												"faults"
 											]
@@ -4916,7 +4942,7 @@
 								],
 								"body": {
 									"mode": "raw",
-									"raw": "{\r\n  \"prefix\": \"PEX-01\",\r\n  \"areas_id\": [1],\r\n  \"users_id\": [1]\r\n}",
+									"raw": "{\r\n  \"prefix\": \"PEX-02\",\r\n  \"areas_id\": [1],\r\n  \"users_id\": [1]\r\n}",
 									"options": {
 										"raw": {
 											"language": "json"
