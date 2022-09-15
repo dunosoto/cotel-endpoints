@@ -3777,45 +3777,6 @@
 										}
 									},
 									"response": []
-								},
-								{
-									"name": "get item category",
-									"protocolProfileBehavior": {
-										"disableBodyPruning": true,
-										"disabledSystemHeaders": {
-											"accept": true
-										}
-									},
-									"request": {
-										"method": "GET",
-										"header": [
-											{
-												"key": "Accept",
-												"value": "application/json",
-												"type": "text"
-											}
-										],
-										"body": {
-											"mode": "raw",
-											"raw": "",
-											"options": {
-												"raw": {
-													"language": "json"
-												}
-											}
-										},
-										"url": {
-											"raw": "{{url}}/items-categories/208.31",
-											"host": [
-												"{{url}}"
-											],
-											"path": [
-												"items-categories",
-												"208.31"
-											]
-										}
-									},
-									"response": []
 								}
 							]
 						},
@@ -4375,6 +4336,46 @@
 									"path": [
 										"variants",
 										"1"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "valdiate variant code",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true,
+								"disabledSystemHeaders": {
+									"accept": true
+								}
+							},
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{url}}/variants/validate-code/30101.02",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"variants",
+										"validate-code",
+										"30101.02"
 									]
 								}
 							},
