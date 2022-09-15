@@ -288,7 +288,84 @@
 						},
 						{
 							"name": "technical datas",
-							"item": []
+							"item": [
+								{
+									"name": "post wired acess",
+									"protocolProfileBehavior": {
+										"disabledSystemHeaders": {
+											"accept": true
+										}
+									},
+									"request": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "application/json",
+												"type": "text"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n  \"service_id\": 3,\r\n  \"box\": \"1234\",\r\n  \"pair\": \"1234\",\r\n  \"node\": \"1234\",\r\n  \"descent\": \"1234\",\r\n  \"primary\": \"1234\",\r\n  \"observation\": \"this is a observation\"\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{url}}/faults/wired-accesses",
+											"host": [
+												"{{url}}"
+											],
+											"path": [
+												"faults",
+												"wired-accesses"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "post ftt acess",
+									"protocolProfileBehavior": {
+										"disabledSystemHeaders": {
+											"accept": true
+										}
+									},
+									"request": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "application/json",
+												"type": "text"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n  \"service_id\": 3,\r\n  \"olt\": \"123\",\r\n  \"nap\": \"123\",\r\n  \"port\": \"123\",\r\n  \"observation\": \"observation\"\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{url}}/faults/ftt-accesses",
+											"host": [
+												"{{url}}"
+											],
+											"path": [
+												"faults",
+												"ftt-accesses"
+											]
+										}
+									},
+									"response": []
+								}
+							]
 						},
 						{
 							"name": "service access",
@@ -349,7 +426,7 @@
 								],
 								"body": {
 									"mode": "raw",
-									"raw": "{\r\n  \"instance\": \"112623\",\r\n  \"client\": {\r\n    \"id\": 1,\r\n    \"address_id\": 2\r\n  },\r\n  \"type_id\": 1,\r\n  \"access_id\": 2,\r\n  \"connections\": [1,2],\r\n  \"technical_datas\": {\r\n    \"central_port\": \"123qwe\",\r\n    \"link_pair\": \"123qwe\",\r\n    \"peer_node\": \"123qwe\",\r\n    \"box_pair\": \"123qwe\",\r\n    \"observation\": \"observation\"\r\n  }\r\n}",
+									"raw": "{\r\n  \"instance\": \"1126219\",\r\n  \"client\": {\r\n    \"id\": 1,\r\n    \"address_id\": 2\r\n  },\r\n  \"type_id\": 3,\r\n  \"access_id\": 1,\r\n  \"connections\": [1,2]\r\n}",
 									"options": {
 										"raw": {
 											"language": "json"
