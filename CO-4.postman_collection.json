@@ -3246,7 +3246,7 @@
 								],
 								"body": {
 									"mode": "raw",
-									"raw": "{\r\n  \"materials\": [\r\n    {\r\n      \"quantity_id\": 1,\r\n      \"no_serie\":\"890iop\"\r\n    },\r\n    {\r\n      \"quantity_id\": 1,\r\n      \"no_serie\":\"67bnm\"\r\n    }\r\n  ]\r\n}",
+									"raw": "{\r\n  \"materials\": [\r\n    {\r\n      \"quantity_id\": 1,\r\n      \"no_serie\":\"870io7\"\r\n    },\r\n    {\r\n      \"quantity_id\": 1,\r\n      \"no_serie\":\"62bn0\"\r\n    }\r\n  ]\r\n}",
 									"options": {
 										"raw": {
 											"language": "json"
@@ -4934,6 +4934,50 @@
 											"path": [
 												"group-items",
 												"1"
+											]
+										}
+									},
+									"response": []
+								}
+							]
+						},
+						{
+							"name": "group materials",
+							"item": [
+								{
+									"name": "assign material to group",
+									"protocolProfileBehavior": {
+										"disabledSystemHeaders": {
+											"accept": true
+										}
+									},
+									"request": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "application/json",
+												"type": "text"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n  \"materials\": [1,6,2]\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{url}}/groups/1/materials",
+											"host": [
+												"{{url}}"
+											],
+											"path": [
+												"groups",
+												"1",
+												"materials"
 											]
 										}
 									},
