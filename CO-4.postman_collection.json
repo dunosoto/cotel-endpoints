@@ -2644,7 +2644,7 @@
 							]
 						},
 						{
-							"name": "withdrawn materials",
+							"name": "withdrawn materials quantities",
 							"item": [
 								{
 									"name": "withdrawn checks",
@@ -2754,6 +2754,73 @@
 									]
 								},
 								{
+									"name": "withdrawn material details",
+									"item": [
+										{
+											"name": "post material to withdrawn quantity",
+											"protocolProfileBehavior": {
+												"disabledSystemHeaders": {
+													"accept": true
+												}
+											},
+											"request": {
+												"method": "POST",
+												"header": [
+													{
+														"key": "Accept",
+														"value": "application/json",
+														"type": "text"
+													}
+												],
+												"body": {
+													"mode": "raw",
+													"raw": "[\r\n  {\r\n    \"no_serie\":\"uisd123ery\",\r\n    \"observation\":\"observation 1\"\r\n  },\r\n  {\r\n    \"no_serie\":\"bnd123ery\",\r\n    \"observation\":\"observation 2\"\r\n  }\r\n]",
+													"options": {
+														"raw": {
+															"language": "json"
+														}
+													}
+												},
+												"url": {
+													"raw": "{{url}}/external-plant/work-order/withdrawn-materials/1/materials-details",
+													"host": [
+														"{{url}}"
+													],
+													"path": [
+														"external-plant",
+														"work-order",
+														"withdrawn-materials",
+														"1",
+														"materials-details"
+													]
+												}
+											},
+											"response": []
+										},
+										{
+											"name": "delete material to withdrawn quantity",
+											"request": {
+												"method": "DELETE",
+												"header": [],
+												"url": {
+													"raw": "{{url}}/external-plant/work-order/withdrawn-materials/materials-details/7",
+													"host": [
+														"{{url}}"
+													],
+													"path": [
+														"external-plant",
+														"work-order",
+														"withdrawn-materials",
+														"materials-details",
+														"7"
+													]
+												}
+											},
+											"response": []
+										}
+									]
+								},
+								{
 									"name": "get withdrawn materials",
 									"request": {
 										"method": "GET",
@@ -2790,7 +2857,7 @@
 										],
 										"body": {
 											"mode": "raw",
-											"raw": "[\r\n  {\r\n    \"variant_id\": 1,\r\n    \"no_serie\": \"asdf123ad\",\r\n    \"reported\": 12.11\r\n  },\r\n  {\r\n    \"variant_id\": 1,\r\n    \"no_serie\": \"a43df123ad\",\r\n    \"reported\": 10.12\r\n  }\r\n]",
+											"raw": "[\r\n  {\r\n    \"variant_id\": 1,\r\n    \"reported\": 12.11,\r\n    \"reusable_amount\": 12.00,\r\n    \"date_reported\": \"2022-09-23 00:00:00\",\r\n    \"materials\": [\r\n      {\r\n        \"no_serie\":\"asd1qweery\",\r\n        \"observation\":\"observation\"\r\n      }\r\n    ]\r\n  },\r\n  {\r\n    \"variant_id\": 1,\r\n    \"reported\": 10.12,\r\n    \"reusable_amount\": 12.00,\r\n    \"date_reported\": \"2022-09-23 00:00:00\",\r\n    \"materials\": [\r\n      {\r\n        \"no_serie\":\"asdop3ery\",\r\n        \"observation\":\"observation material\"\r\n      }\r\n    ]\r\n  }\r\n]",
 											"options": {
 												"raw": {
 													"language": "json"
@@ -2850,7 +2917,7 @@
 										],
 										"body": {
 											"mode": "raw",
-											"raw": "{\r\n  \"work_order_id\": 1,\r\n  \"variant_id\": 1,\r\n  \"no_serie\": \"asdf123ad\",\r\n  \"reported\": 14\r\n}\r\n",
+											"raw": "{\r\n  \"variant_id\": 1,\r\n  \"reported\": 12.11,\r\n  \"reusable_amount\": 12.12,\r\n  \"date_reported\": \"2022-09-29 00:00:00\"\r\n}\r\n",
 											"options": {
 												"raw": {
 													"language": "json"
@@ -3061,7 +3128,7 @@
 								],
 								"body": {
 									"mode": "raw",
-									"raw": "{\r\n  \"work_order\": {\r\n    \"odn_id\" : 1,\r\n    \"description\": \"mantenimiento no preventivo programado\",\r\n    \"affected_customers\" : 20,\r\n    \"company_id\" : 2,\r\n    \"category_id\" : 3,\r\n    \"type_id\" : 2,\r\n    \"supervisor_id\": 2\r\n  },\r\n  \"estimated_date\" : {\r\n    \"start\": \"2022-09-23 00:00:00\",\r\n    \"finish\": \"2022-09-23 00:00:00\"\r\n  },\r\n  \"tags\": {\r\n    \"clasification_id\" : 6,\r\n    \"status_id\" : 4\r\n  },\r\n  \"groups\" : [{\"id\": 1, \"mandated\": true}]\r\n}",
+									"raw": "{\r\n  \"work_order\": {\r\n    \"odn_id\" : 1,\r\n    \"description\": \"mantenimiento no preventivo programado\",\r\n    \"affected_customers\" : 20,\r\n    \"company_id\" : 2,\r\n    \"category_id\" : 3,\r\n    \"type_id\" : 2,\r\n    \"supervisor_id\": 2\r\n  },\r\n  \"estimated_date\" : {\r\n    \"start\": \"2022-09-29 00:00:00\",\r\n    \"finish\": \"2022-09-29 00:00:00\"\r\n  },\r\n  \"tags\": {\r\n    \"clasification_id\" : 6,\r\n    \"status_id\" : 4\r\n  },\r\n  \"groups\" : [{\"id\": 1, \"mandated\": true}]\r\n}",
 									"options": {
 										"raw": {
 											"language": "json"
@@ -3295,7 +3362,7 @@
 								"method": "GET",
 								"header": [],
 								"url": {
-									"raw": "{{url}}/materials",
+									"raw": "{{url}}/materials?assigned=1",
 									"host": [
 										"{{url}}"
 									],
@@ -3305,8 +3372,7 @@
 									"query": [
 										{
 											"key": "assigned",
-											"value": "1",
-											"disabled": true
+											"value": "1"
 										}
 									]
 								}
@@ -4688,7 +4754,7 @@
 										],
 										"body": {
 											"mode": "raw",
-											"raw": "{\r\n  \"email\": \"admin@admin.com\",\r\n  \"password\": \"password\"\r\n}",
+											"raw": "{\r\n  \"email\": \"cibib13948@bongcs.com\",\r\n  \"password\": \"daniel1998\"\r\n}",
 											"options": {
 												"raw": {
 													"language": "json"
@@ -4795,7 +4861,7 @@
 								],
 								"body": {
 									"mode": "raw",
-									"raw": "{\r\n  \"name\": \"daniel\",\r\n  \"last_name\": \"unos soto\",\r\n  \"cell_phone\": \"72210334\",\r\n  \"email\": \"danielunosoto@gmail.com\",\r\n  \"password\": \"daniel1998\",\r\n  \"password_confirmation\": \"daniel1998\",\r\n  \"role_id\": 2,\r\n  \"areas_id\": [1,2],\r\n  \"company_id\": 2,\r\n  \"avatar\": \"\"\r\n}",
+									"raw": "{\r\n  \"name\": \"ariel\",\r\n  \"last_name\": \"unos soto\",\r\n  \"cell_phone\": \"72210334\",\r\n  \"email\": \"cibib13948@bongcs.com\",\r\n  \"password\": \"daniel1998\",\r\n  \"password_confirmation\": \"daniel1998\",\r\n  \"role_id\": 2,\r\n  \"areas_id\": [1,2],\r\n  \"company_id\": 2,\r\n  \"avatar\": \"\"\r\n}",
 									"options": {
 										"raw": {
 											"language": "json"
