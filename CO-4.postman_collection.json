@@ -2203,6 +2203,180 @@
 							"name": "activities",
 							"item": [
 								{
+									"name": "images",
+									"item": [
+										{
+											"name": "post image activity",
+											"protocolProfileBehavior": {
+												"disabledSystemHeaders": {
+													"accept": true
+												}
+											},
+											"request": {
+												"method": "POST",
+												"header": [
+													{
+														"key": "Accept",
+														"value": "application/json",
+														"type": "text"
+													}
+												],
+												"body": {
+													"mode": "raw",
+													"raw": "{\r\n  \"url\": \"http://imagen3.com/imagen3\"\r\n}",
+													"options": {
+														"raw": {
+															"language": "json"
+														}
+													}
+												},
+												"url": {
+													"raw": "{{url}}/external-plant/work-order/activities/2/images",
+													"host": [
+														"{{url}}"
+													],
+													"path": [
+														"external-plant",
+														"work-order",
+														"activities",
+														"2",
+														"images"
+													]
+												}
+											},
+											"response": []
+										},
+										{
+											"name": "update image activity",
+											"protocolProfileBehavior": {
+												"disabledSystemHeaders": {
+													"accept": true
+												}
+											},
+											"request": {
+												"method": "PUT",
+												"header": [
+													{
+														"key": "Accept",
+														"value": "application/json",
+														"type": "text"
+													}
+												],
+												"body": {
+													"mode": "raw",
+													"raw": "{\r\n  \"url\": \"http://imagen.com/imagen-update\"\r\n}",
+													"options": {
+														"raw": {
+															"language": "json"
+														}
+													}
+												},
+												"url": {
+													"raw": "{{url}}/external-plant/work-order/activities/images/4",
+													"host": [
+														"{{url}}"
+													],
+													"path": [
+														"external-plant",
+														"work-order",
+														"activities",
+														"images",
+														"4"
+													]
+												}
+											},
+											"response": []
+										}
+									]
+								},
+								{
+									"name": "blueprints",
+									"item": [
+										{
+											"name": "post blueprint activity",
+											"protocolProfileBehavior": {
+												"disabledSystemHeaders": {
+													"accept": true
+												}
+											},
+											"request": {
+												"method": "POST",
+												"header": [
+													{
+														"key": "Accept",
+														"value": "application/json",
+														"type": "text"
+													}
+												],
+												"body": {
+													"mode": "raw",
+													"raw": "{\r\n  \"url\": \"http://blueprint.com/blueprint\"\r\n}",
+													"options": {
+														"raw": {
+															"language": "json"
+														}
+													}
+												},
+												"url": {
+													"raw": "{{url}}/external-plant/work-order/activities/2/blueprints",
+													"host": [
+														"{{url}}"
+													],
+													"path": [
+														"external-plant",
+														"work-order",
+														"activities",
+														"2",
+														"blueprints"
+													]
+												}
+											},
+											"response": []
+										},
+										{
+											"name": "update blueprint activity",
+											"protocolProfileBehavior": {
+												"disabledSystemHeaders": {
+													"accept": true
+												}
+											},
+											"request": {
+												"method": "PUT",
+												"header": [
+													{
+														"key": "Accept",
+														"value": "application/json",
+														"type": "text"
+													}
+												],
+												"body": {
+													"mode": "raw",
+													"raw": "{\r\n  \"url\": \"http://blueprint-update2.com/blueprint-update2.png\"\r\n}",
+													"options": {
+														"raw": {
+															"language": "json"
+														}
+													}
+												},
+												"url": {
+													"raw": "{{url}}/external-plant/work-order/activities/blueprints/2",
+													"host": [
+														"{{url}}"
+													],
+													"path": [
+														"external-plant",
+														"work-order",
+														"activities",
+														"blueprints",
+														"2"
+													]
+												}
+											},
+											"response": []
+										}
+									]
+								},
+								{
 									"name": "get activities",
 									"request": {
 										"auth": {
@@ -2259,7 +2433,7 @@
 										],
 										"body": {
 											"mode": "raw",
-											"raw": "{\r\n  \"activity\": {\r\n    \"process\": \"process proceso\", \r\n    \"observation\": \"observacion de una actividad de planta externa\"\r\n  },\r\n  \"images\": [\r\n    {\r\n      \"url\": \"https://imagen.plantaexterna.com\",\r\n      \"date\": \"2022-07-08 00:00:00\"\r\n    },\r\n    {\r\n      \"url\": \"https://imagen.plantaexterna.com\",\r\n      \"date\": \"2022-07-08 00:00:00\"\r\n    }\r\n  ],\r\n  \"blueprint\": {\r\n    \"url\": \"https://mapa.plantaexterna.com\",\r\n    \"date\": \"2022-07-08 00:00:00\"\r\n  } \r\n}",
+											"raw": "{\r\n  \"process\": \"\", \r\n  \"observation\": \"\"\r\n}",
 											"options": {
 												"raw": {
 													"language": "json"
@@ -2267,15 +2441,65 @@
 											}
 										},
 										"url": {
-											"raw": "{{url}}/external-plant/work-order/1/activities",
+											"raw": "{{url}}/external-plant/work-order/2/activities",
 											"host": [
 												"{{url}}"
 											],
 											"path": [
 												"external-plant",
 												"work-order",
-												"1",
+												"2",
 												"activities"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "update activity",
+									"protocolProfileBehavior": {
+										"disabledSystemHeaders": {
+											"accept": true
+										}
+									},
+									"request": {
+										"auth": {
+											"type": "bearer",
+											"bearer": [
+												{
+													"key": "token",
+													"value": "{{token}}",
+													"type": "string"
+												}
+											]
+										},
+										"method": "PUT",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "application/json",
+												"type": "text"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n  \"process\": \"proceso\", \r\n  \"observation\": \"observacion\"\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{url}}/external-plant/work-order/activities/1",
+											"host": [
+												"{{url}}"
+											],
+											"path": [
+												"external-plant",
+												"work-order",
+												"activities",
+												"1"
 											]
 										}
 									},
@@ -2287,7 +2511,7 @@
 										"method": "GET",
 										"header": [],
 										"url": {
-											"raw": "{{url}}/external-plant/work-order/activities/1",
+											"raw": "{{url}}/external-plant/work-order/activities/2",
 											"host": [
 												"{{url}}"
 											],
@@ -2295,7 +2519,7 @@
 												"external-plant",
 												"work-order",
 												"activities",
-												"1"
+												"2"
 											]
 										}
 									},
@@ -3128,7 +3352,7 @@
 								],
 								"body": {
 									"mode": "raw",
-									"raw": "{\r\n  \"work_order\": {\r\n    \"odn_id\" : 1,\r\n    \"description\": \"mantenimiento no preventivo programado\",\r\n    \"affected_customers\" : 20,\r\n    \"company_id\" : 2,\r\n    \"category_id\" : 3,\r\n    \"type_id\" : 2,\r\n    \"supervisor_id\": 2\r\n  },\r\n  \"estimated_date\" : {\r\n    \"start\": \"2022-09-29 00:00:00\",\r\n    \"finish\": \"2022-09-29 00:00:00\"\r\n  },\r\n  \"tags\": {\r\n    \"clasification_id\" : 6,\r\n    \"status_id\" : 4\r\n  },\r\n  \"groups\" : [{\"id\": 1, \"mandated\": true}]\r\n}",
+									"raw": "{\r\n  \"work_order\": {\r\n    \"odn_id\" : 1,\r\n    \"description\": \"mantenimiento no preventivo programado\",\r\n    \"affected_customers\" : 20,\r\n    \"company_id\" : 2,\r\n    \"category_id\" : 3,\r\n    \"type_id\" : 2,\r\n    \"supervisor_id\": 2\r\n  },\r\n  \"estimated_date\" : {\r\n    \"start\": \"2022-10-04 00:00:00\",\r\n    \"finish\": \"2022-10-04 00:00:00\"\r\n  },\r\n  \"tags\": {\r\n    \"clasification_id\" : 6,\r\n    \"status_id\" : 4\r\n  },\r\n  \"groups\" : [{\"id\": 1, \"mandated\": true}]\r\n}",
 									"options": {
 										"raw": {
 											"language": "json"
@@ -3154,14 +3378,14 @@
 								"method": "GET",
 								"header": [],
 								"url": {
-									"raw": "{{url}}/external-plant/work-orders/1",
+									"raw": "{{url}}/external-plant/work-orders/2",
 									"host": [
 										"{{url}}"
 									],
 									"path": [
 										"external-plant",
 										"work-orders",
-										"1"
+										"2"
 									]
 								}
 							},
@@ -4754,7 +4978,7 @@
 										],
 										"body": {
 											"mode": "raw",
-											"raw": "{\r\n  \"email\": \"cibib13948@bongcs.com\",\r\n  \"password\": \"daniel1998\"\r\n}",
+											"raw": "{\r\n  \"email\": \"admin@admin.com\",\r\n  \"password\": \"password\"\r\n}",
 											"options": {
 												"raw": {
 													"language": "json"
