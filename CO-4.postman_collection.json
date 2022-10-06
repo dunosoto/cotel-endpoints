@@ -2441,14 +2441,14 @@
 											}
 										},
 										"url": {
-											"raw": "{{url}}/external-plant/work-order/2/activities",
+											"raw": "{{url}}/external-plant/work-order/3/activities",
 											"host": [
 												"{{url}}"
 											],
 											"path": [
 												"external-plant",
 												"work-order",
-												"2",
+												"3",
 												"activities"
 											]
 										}
@@ -2483,7 +2483,7 @@
 										],
 										"body": {
 											"mode": "raw",
-											"raw": "{\r\n  \"process\": \"proceso\", \r\n  \"observation\": \"observacion\"\r\n}",
+											"raw": "{\r\n  \"process\": \"proces azasdfasdfafo\", \r\n  \"observation\": \"tuvimos sdfasdf\"\r\n}",
 											"options": {
 												"raw": {
 													"language": "json"
@@ -2491,7 +2491,7 @@
 											}
 										},
 										"url": {
-											"raw": "{{url}}/external-plant/work-order/activities/1",
+											"raw": "{{url}}/external-plant/work-order/activities/5",
 											"host": [
 												"{{url}}"
 											],
@@ -2499,7 +2499,7 @@
 												"external-plant",
 												"work-order",
 												"activities",
-												"1"
+												"5"
 											]
 										}
 									},
@@ -2707,6 +2707,30 @@
 														"certifications",
 														"materials-details",
 														"3"
+													]
+												}
+											},
+											"response": []
+										}
+									]
+								},
+								{
+									"name": "certification actions",
+									"item": [
+										{
+											"name": "getvcertification actions",
+											"request": {
+												"method": "GET",
+												"header": [],
+												"url": {
+													"raw": "{{url}}/external-plant/work-order/certifications-actions",
+													"host": [
+														"{{url}}"
+													],
+													"path": [
+														"external-plant",
+														"work-order",
+														"certifications-actions"
 													]
 												}
 											},
@@ -3352,7 +3376,7 @@
 								],
 								"body": {
 									"mode": "raw",
-									"raw": "{\r\n  \"work_order\": {\r\n    \"odn_id\" : 1,\r\n    \"description\": \"mantenimiento no preventivo programado\",\r\n    \"affected_customers\" : 20,\r\n    \"company_id\" : 2,\r\n    \"category_id\" : 3,\r\n    \"type_id\" : 2,\r\n    \"supervisor_id\": 2\r\n  },\r\n  \"estimated_date\" : {\r\n    \"start\": \"2022-10-04 00:00:00\",\r\n    \"finish\": \"2022-10-04 00:00:00\"\r\n  },\r\n  \"tags\": {\r\n    \"clasification_id\" : 6,\r\n    \"status_id\" : 4\r\n  },\r\n  \"groups\" : [{\"id\": 1, \"mandated\": true}]\r\n}",
+									"raw": "{\r\n  \"work_order\": {\r\n    \"odn_id\" : 1,\r\n    \"description\": \"mantenimiento no preventivo programado\",\r\n    \"affected_customers\" : 20,\r\n    \"company_id\" : 2,\r\n    \"category_id\" : 3,\r\n    \"type_id\" : 2,\r\n    \"supervisor_id\": 2\r\n  },\r\n  \"estimated_date\" : {\r\n    \"start\": \"2022-10-05 00:00:00\",\r\n    \"finish\": \"2022-10-05 00:00:00\"\r\n  },\r\n  \"tags\": {\r\n    \"clasification_id\" : 6,\r\n    \"status_id\" : 2\r\n  },\r\n  \"groups\" : [{\"id\": 1, \"mandated\": true}]\r\n}",
 									"options": {
 										"raw": {
 											"language": "json"
@@ -3378,14 +3402,14 @@
 								"method": "GET",
 								"header": [],
 								"url": {
-									"raw": "{{url}}/external-plant/work-orders/2",
+									"raw": "{{url}}/external-plant/work-orders/3",
 									"host": [
 										"{{url}}"
 									],
 									"path": [
 										"external-plant",
 										"work-orders",
-										"2"
+										"3"
 									]
 								}
 							},
@@ -5198,6 +5222,18 @@
 											],
 											"path": [
 												"group-items"
+											],
+											"query": [
+												{
+													"key": "groupId",
+													"value": "2",
+													"disabled": true
+												},
+												{
+													"key": "quantityId",
+													"value": "2",
+													"disabled": true
+												}
 											]
 										}
 									},
@@ -5235,6 +5271,18 @@
 											],
 											"path": [
 												"group-items"
+											],
+											"query": [
+												{
+													"key": "",
+													"value": "",
+													"disabled": true
+												},
+												{
+													"key": "",
+													"value": "",
+													"disabled": true
+												}
 											]
 										}
 									},
