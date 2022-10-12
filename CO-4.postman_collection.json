@@ -2551,7 +2551,7 @@
 												],
 												"body": {
 													"mode": "raw",
-													"raw": "{\r\n  \"certification_id\": 8,\r\n  \"item\": 10.13,\r\n  \"workforce\": 10.11\r\n}",
+													"raw": "{\r\n  \"quantity\": 10.11,\r\n  \"workforce\": 10.13\r\n}",
 													"options": {
 														"raw": {
 															"language": "json"
@@ -2559,7 +2559,7 @@
 													}
 												},
 												"url": {
-													"raw": "{{url}}/external-plant/work-order/certifications/check",
+													"raw": "{{url}}/external-plant/work-order/certifications/90/check",
 													"host": [
 														"{{url}}"
 													],
@@ -2567,6 +2567,7 @@
 														"external-plant",
 														"work-order",
 														"certifications",
+														"90",
 														"check"
 													]
 												}
@@ -2579,7 +2580,7 @@
 												"method": "GET",
 												"header": [],
 												"url": {
-													"raw": "{{url}}/external-plant/work-order/certifications/check",
+													"raw": "{{url}}/external-plant/work-order/certifications/check/1",
 													"host": [
 														"{{url}}"
 													],
@@ -2587,7 +2588,8 @@
 														"external-plant",
 														"work-order",
 														"certifications",
-														"check"
+														"check",
+														"1"
 													]
 												}
 											},
@@ -2611,7 +2613,7 @@
 												],
 												"body": {
 													"mode": "raw",
-													"raw": "{\r\n  \"certification_id\": 1,\r\n  \"item\": 20,\r\n  \"workforce\": 20\r\n}",
+													"raw": "{\r\n  \"quantity\": 11.11,\r\n  \"workforce\": 11.13\r\n}",
 													"options": {
 														"raw": {
 															"language": "json"
@@ -2904,7 +2906,7 @@
 												"method": "GET",
 												"header": [],
 												"url": {
-													"raw": "{{url}}/external-plant/work-order/withdrawn-materials/checks/1",
+													"raw": "{{url}}/external-plant/work-order/withdrawn-materials/check/1",
 													"host": [
 														"{{url}}"
 													],
@@ -2912,7 +2914,7 @@
 														"external-plant",
 														"work-order",
 														"withdrawn-materials",
-														"checks",
+														"check",
 														"1"
 													]
 												}
@@ -2937,7 +2939,7 @@
 												],
 												"body": {
 													"mode": "raw",
-													"raw": "{\r\n  \"material_id\": 1,\r\n  \"received\": 12.34\r\n}",
+													"raw": "{\r\n  \"received\": 12.34\r\n}",
 													"options": {
 														"raw": {
 															"language": "json"
@@ -2945,7 +2947,7 @@
 													}
 												},
 												"url": {
-													"raw": "{{url}}/external-plant/work-order/withdrawn-materials/checks",
+													"raw": "{{url}}/external-plant/work-order/withdrawn-materials/1/check",
 													"host": [
 														"{{url}}"
 													],
@@ -2953,7 +2955,8 @@
 														"external-plant",
 														"work-order",
 														"withdrawn-materials",
-														"checks"
+														"1",
+														"check"
 													]
 												}
 											},
@@ -2977,7 +2980,7 @@
 												],
 												"body": {
 													"mode": "raw",
-													"raw": "{\r\n  \"material_id\": 1,\r\n  \"received\": 12.35\r\n}",
+													"raw": "{\r\n  \"received\": 20.34\r\n}",
 													"options": {
 														"raw": {
 															"language": "json"
@@ -2985,7 +2988,7 @@
 													}
 												},
 												"url": {
-													"raw": "{{url}}/external-plant/work-order/withdrawn-materials/checks/1",
+													"raw": "{{url}}/external-plant/work-order/withdrawn-materials/check/1",
 													"host": [
 														"{{url}}"
 													],
@@ -2993,7 +2996,7 @@
 														"external-plant",
 														"work-order",
 														"withdrawn-materials",
-														"checks",
+														"check",
 														"1"
 													]
 												}
