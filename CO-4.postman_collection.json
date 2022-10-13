@@ -2506,6 +2506,48 @@
 									"response": []
 								},
 								{
+									"name": "post activity finish date",
+									"protocolProfileBehavior": {
+										"disabledSystemHeaders": {
+											"accept": true
+										}
+									},
+									"request": {
+										"auth": {
+											"type": "bearer",
+											"bearer": [
+												{
+													"key": "token",
+													"value": "{{token}}",
+													"type": "string"
+												}
+											]
+										},
+										"method": "POST",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "application/json",
+												"type": "text"
+											}
+										],
+										"url": {
+											"raw": "{{url}}/external-plant/work-order/activities/3/finish",
+											"host": [
+												"{{url}}"
+											],
+											"path": [
+												"external-plant",
+												"work-order",
+												"activities",
+												"3",
+												"finish"
+											]
+										}
+									},
+									"response": []
+								},
+								{
 									"name": "get activity",
 									"request": {
 										"method": "GET",
@@ -2551,7 +2593,7 @@
 												],
 												"body": {
 													"mode": "raw",
-													"raw": "{\r\n  \"quantity\": 10.11,\r\n  \"workforce\": 10.13\r\n}",
+													"raw": "{\r\n  \"quantity\": 10.00,\r\n  \"workforce\": 10.00\r\n}",
 													"options": {
 														"raw": {
 															"language": "json"
@@ -2559,7 +2601,7 @@
 													}
 												},
 												"url": {
-													"raw": "{{url}}/external-plant/work-order/certifications/90/check",
+													"raw": "{{url}}/external-plant/work-order/certifications/6/check",
 													"host": [
 														"{{url}}"
 													],
@@ -2567,7 +2609,7 @@
 														"external-plant",
 														"work-order",
 														"certifications",
-														"90",
+														"6",
 														"check"
 													]
 												}
@@ -2580,7 +2622,7 @@
 												"method": "GET",
 												"header": [],
 												"url": {
-													"raw": "{{url}}/external-plant/work-order/certifications/check/1",
+													"raw": "{{url}}/external-plant/work-order/certifications/check/5",
 													"host": [
 														"{{url}}"
 													],
@@ -2589,7 +2631,7 @@
 														"work-order",
 														"certifications",
 														"check",
-														"1"
+														"5"
 													]
 												}
 											},
@@ -2613,7 +2655,7 @@
 												],
 												"body": {
 													"mode": "raw",
-													"raw": "{\r\n  \"quantity\": 11.11,\r\n  \"workforce\": 11.13\r\n}",
+													"raw": "{\r\n  \"quantity\": 40.00,\r\n  \"workforce\": 40.00\r\n}",
 													"options": {
 														"raw": {
 															"language": "json"
@@ -2621,7 +2663,7 @@
 													}
 												},
 												"url": {
-													"raw": "{{url}}/external-plant/work-order/certifications/check/1",
+													"raw": "{{url}}/external-plant/work-order/certifications/check/6",
 													"host": [
 														"{{url}}"
 													],
@@ -2630,7 +2672,7 @@
 														"work-order",
 														"certifications",
 														"check",
-														"1"
+														"6"
 													]
 												}
 											},
@@ -2768,7 +2810,7 @@
 										],
 										"body": {
 											"mode": "raw",
-											"raw": "[\r\n  {\r\n    \"action_id\": 2,\r\n    \"group_item_id\": 1,\r\n    \"quantity\": 1.12\r\n  },\r\n  {\r\n    \"action_id\": 2,\r\n    \"group_item_id\": 1,\r\n    \"quantity\": 3.12\r\n  }\r\n]",
+											"raw": "[\r\n  {\r\n    \"action_id\": 2,\r\n    \"group_item_id\": 1,\r\n    \"quantity\": 1.12\r\n  }\r\n]",
 											"options": {
 												"raw": {
 													"language": "json"
@@ -3406,14 +3448,14 @@
 								"method": "GET",
 								"header": [],
 								"url": {
-									"raw": "{{url}}/external-plant/work-orders/1",
+									"raw": "{{url}}/external-plant/work-orders/3",
 									"host": [
 										"{{url}}"
 									],
 									"path": [
 										"external-plant",
 										"work-orders",
-										"1"
+										"3"
 									]
 								}
 							},
