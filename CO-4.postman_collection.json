@@ -307,7 +307,7 @@
 										],
 										"body": {
 											"mode": "raw",
-											"raw": "{\r\n  \"service_id\": 1,\r\n  \"box\": \"1234\",\r\n  \"pair\": \"1234\",\r\n  \"node\": \"1234\",\r\n  \"descent\": \"1234\",\r\n  \"primary\": \"1234\",\r\n  \"observation\": \"this is a observation\"\r\n}",
+											"raw": "{\r\n  \"service_id\": 1,\r\n  \"box\": \"1234\",\r\n  \"pair\": \"1234\",\r\n  \"node\": \"1234\",\r\n  \"descent\": \"1234\",\r\n  \"primary\": \"1234\",\r\n  \"observation\": \"this is a observation\",\r\n  \r\n  \"primary_borne\": \"1234\",\r\n  \"wardrobe\": \"1234\",\r\n  \"borne\": \"1234\",\r\n  \"second_borne\": \"1234\",\r\n  \"ring\": \"1234\",\r\n  \"adm_node\": \"1234\",\r\n  \"flow\": \"1234\",\r\n  \"time_slote\": \"1234\"\r\n}",
 											"options": {
 												"raw": {
 													"language": "json"
@@ -345,7 +345,7 @@
 										],
 										"body": {
 											"mode": "raw",
-											"raw": "{\r\n  \"service_id\": 4,\r\n  \"olt\": \"123\",\r\n  \"nap\": \"123\",\r\n  \"port\": \"123\",\r\n  \"observation\": \"observation\"\r\n}",
+											"raw": "{\r\n  \"service_id\": 1,\r\n  \"olt\": \"123\",\r\n  \"nap\": \"123\",\r\n  \"port\": \"123\",\r\n  \"observation\": \"observation\",\r\n  \r\n  \"power_strip\": \"1234\",\r\n  \"frame\": \"1234\",\r\n  \"gpon_port\": \"1234\",\r\n  \"borne_link\": \"1234\",\r\n  \"ring\": \"1234\",\r\n  \"adm_node\": \"1234\",\r\n  \"flow\": \"1234\",\r\n  \"time_slote\": \"1234\"\r\n}",
 											"options": {
 												"raw": {
 													"language": "json"
@@ -403,6 +403,25 @@
 									"path": [
 										"faults",
 										"services"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "get  a service",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{url}}/faults/services/1",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"faults",
+										"services",
+										"1"
 									]
 								}
 							},
@@ -1540,7 +1559,7 @@
 								],
 								"body": {
 									"mode": "raw",
-									"raw": "{\r\n  \"work_order\": {\r\n    \"service_id\": 1,\r\n    \"observation\": \"observacion de prueba el martes\",\r\n    \"claim_date\": \"2022-09-20 00:00:00\",\r\n    \"date\": \"2022-09-20 00:00:00\",\r\n    \"supervisor_id\": 2\r\n  },\r\n  \"estimated_date\" : {\r\n    \"start\": \"2022-09-20 00:00:00\",\r\n    \"finish\": \"2022-09-20 00:00:00\"\r\n  },\r\n  \"tags\": {\r\n    \"clasification_id\" : 6,\r\n    \"status_id\" : 1\r\n  },\r\n  \"groups\" : [{\"id\": 1, \"mandated\": true}]\r\n}",
+									"raw": "{\r\n  \"work_order\": {\r\n    \"service_id\": 1,\r\n    \"observation\": \"observacion\",\r\n    \"claim_date\": \"2022-10-18 00:00:00\",\r\n    \"date\": \"2022-10-18 00:00:00\",\r\n    \"odeco_date\": \"2022-10-17 00:00:00\",\r\n    \"supervisor_id\": 2\r\n  },\r\n  \"estimated_date\" : {\r\n    \"start\": \"2022-10-18 00:00:00\",\r\n    \"finish\": \"2022-10-18 00:00:00\"\r\n  },\r\n  \"tags\": {\r\n    \"clasification_id\" : 6,\r\n    \"status_id\" : 1\r\n  },\r\n  \"groups\" : [{\"id\": 1, \"mandated\": true}]\r\n}",
 									"options": {
 										"raw": {
 											"language": "json"
@@ -2441,14 +2460,14 @@
 											}
 										},
 										"url": {
-											"raw": "{{url}}/external-plant/work-order/3/activities",
+											"raw": "{{url}}/external-plant/work-order/6/activities",
 											"host": [
 												"{{url}}"
 											],
 											"path": [
 												"external-plant",
 												"work-order",
-												"3",
+												"6",
 												"activities"
 											]
 										}
@@ -2532,7 +2551,7 @@
 											}
 										],
 										"url": {
-											"raw": "{{url}}/external-plant/work-order/activities/3/finish",
+											"raw": "{{url}}/external-plant/work-order/activities/7/finish",
 											"host": [
 												"{{url}}"
 											],
@@ -2540,7 +2559,7 @@
 												"external-plant",
 												"work-order",
 												"activities",
-												"3",
+												"7",
 												"finish"
 											]
 										}
@@ -2553,7 +2572,7 @@
 										"method": "GET",
 										"header": [],
 										"url": {
-											"raw": "{{url}}/external-plant/work-order/activities/2",
+											"raw": "{{url}}/external-plant/work-order/activities/6",
 											"host": [
 												"{{url}}"
 											],
@@ -2561,7 +2580,7 @@
 												"external-plant",
 												"work-order",
 												"activities",
-												"2"
+												"6"
 											]
 										}
 									},
@@ -3151,7 +3170,7 @@
 										],
 										"body": {
 											"mode": "raw",
-											"raw": "[\r\n  {\r\n    \"variant_id\": 1,\r\n    \"reported\": 12.11,\r\n    \"reusable_amount\": 12.00,\r\n    \"date_reported\": \"2022-09-23 00:00:00\",\r\n    \"materials\": [\r\n      {\r\n        \"no_serie\":\"asd1qweery\",\r\n        \"observation\":\"observation\"\r\n      }\r\n    ]\r\n  },\r\n  {\r\n    \"variant_id\": 1,\r\n    \"reported\": 10.12,\r\n    \"reusable_amount\": 12.00,\r\n    \"date_reported\": \"2022-09-23 00:00:00\",\r\n    \"materials\": [\r\n      {\r\n        \"no_serie\":\"asdop3ery\",\r\n        \"observation\":\"observation material\"\r\n      }\r\n    ]\r\n  }\r\n]",
+											"raw": "[\r\n  {\r\n    \"variant_id\": 1,\r\n    \"reported\": 12.11\r\n  },\r\n  {\r\n    \"variant_id\": 1,\r\n    \"reported\": 10.12\r\n  }\r\n]",
 											"options": {
 												"raw": {
 													"language": "json"
@@ -3179,7 +3198,7 @@
 										"method": "GET",
 										"header": [],
 										"url": {
-											"raw": "{{url}}/external-plant/work-order/withdrawn-materials/1",
+											"raw": "{{url}}/external-plant/work-order/withdrawn-materials/4",
 											"host": [
 												"{{url}}"
 											],
@@ -3187,7 +3206,7 @@
 												"external-plant",
 												"work-order",
 												"withdrawn-materials",
-												"1"
+												"4"
 											]
 										}
 									},
@@ -3211,7 +3230,7 @@
 										],
 										"body": {
 											"mode": "raw",
-											"raw": "{\r\n  \"variant_id\": 1,\r\n  \"reported\": 12.11,\r\n  \"reusable_amount\": 12.12,\r\n  \"date_reported\": \"2022-09-29 00:00:00\"\r\n}\r\n",
+											"raw": "{\r\n  \"variant_id\": 1,\r\n  \"reported\": 12.11,\r\n  \"reusable_amount\": 12.12\r\n}\r\n",
 											"options": {
 												"raw": {
 													"language": "json"
@@ -3219,7 +3238,7 @@
 											}
 										},
 										"url": {
-											"raw": "{{url}}/external-plant/work-order/withdrawn-materials/1",
+											"raw": "{{url}}/external-plant/work-order/withdrawn-materials/4",
 											"host": [
 												"{{url}}"
 											],
@@ -3227,7 +3246,7 @@
 												"external-plant",
 												"work-order",
 												"withdrawn-materials",
-												"1"
+												"4"
 											]
 										}
 									},
@@ -3256,7 +3275,7 @@
 										],
 										"body": {
 											"mode": "raw",
-											"raw": "{\r\n  \"work_order_id\": 1,\r\n  \"used_material\": true,\r\n  \"personal_presentation\": \"Buena\",\r\n  \"repair_quality\": \"Mala\",\r\n  \"diferences\": true,\r\n  \"current_report\": true,\r\n  \"used_report\": true\r\n}",
+											"raw": "{\r\n  \"work_order_id\": 2,\r\n  \"used_material\": true,\r\n  \"personal_presentation\": \"Buena\",\r\n  \"repair_quality\": \"Mala\",\r\n  \"diferences\": true,\r\n  \"current_report\": true,\r\n  \"used_report\": true\r\n}",
 											"options": {
 												"raw": {
 													"language": "json"
@@ -3448,14 +3467,14 @@
 								"method": "GET",
 								"header": [],
 								"url": {
-									"raw": "{{url}}/external-plant/work-orders/3",
+									"raw": "{{url}}/external-plant/work-orders/2",
 									"host": [
 										"{{url}}"
 									],
 									"path": [
 										"external-plant",
 										"work-orders",
-										"3"
+										"2"
 									]
 								}
 							},
@@ -3479,7 +3498,7 @@
 								],
 								"body": {
 									"mode": "raw",
-									"raw": "{\r\n  \"work_order\": {\r\n    \"odn_id\" : 1,\r\n    \"description\": \"se tiene que hacer mantenimiento por dano\",\r\n    \"affected_customers\" : 15,\r\n    \"category_id\" : 2,\r\n    \"type_id\" : 1,\r\n    \"typology_id\": 1,\r\n    \"company_id\" : 2,\r\n    \"supervisor_id\": 1\r\n  },\r\n\r\n  \"tags\": {\r\n    \"clasification_id\" : 6,\r\n    \"status_id\" : 2\r\n  },\r\n  \"groups\" : [{\"id\": 1, \"mandated\": true},{\"id\": 2, \"mandated\": false}]\r\n}",
+									"raw": "{\r\n  \"work_order\": {\r\n    \"odn_id\" : 1,\r\n    \"description\": \"se tiene que hacer mantenimiento por dano\",\r\n    \"affected_customers\" : 15,\r\n    \"category_id\" : 2,\r\n    \"type_id\" : 1,\r\n    \"typology_id\": 1,\r\n    \"company_id\" : 2,\r\n    \"supervisor_id\": 1\r\n  },\r\n\r\n  \"estimated_date\" : {\r\n    \"start\": \"2022-10-05 00:00:00\",\r\n    \"finish\": \"2022-10-05 00:00:00\"\r\n  },\r\n\r\n  \"tags\": {\r\n    \"clasification_id\" : 6,\r\n    \"status_id\" : 2\r\n  },\r\n  \"groups\" : [{\"id\": 1, \"mandated\": true},{\"id\": 2, \"mandated\": false}]\r\n}",
 									"options": {
 										"raw": {
 											"language": "json"
@@ -4517,6 +4536,23 @@
 											"path": [
 												"units",
 												"36"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "New Request",
+									"request": {
+										"method": "POST",
+										"header": [],
+										"url": {
+											"raw": "{{url}}/units",
+											"host": [
+												"{{url}}"
+											],
+											"path": [
+												"units"
 											]
 										}
 									},
