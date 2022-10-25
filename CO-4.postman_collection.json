@@ -3220,122 +3220,32 @@
 							]
 						},
 						{
-							"name": "certifications",
+							"name": "withdrawn materials quantities",
 							"item": [
 								{
-									"name": "certification check",
+									"name": "withdrawn checks",
 									"item": [
 										{
-											"name": "post certification check",
-											"protocolProfileBehavior": {
-												"disabledSystemHeaders": {
-													"accept": true
-												}
-											},
-											"request": {
-												"method": "POST",
-												"header": [
-													{
-														"key": "Accept",
-														"value": "application/json",
-														"type": "text"
-													}
-												],
-												"body": {
-													"mode": "raw",
-													"raw": "{\r\n  \"certification_id\": 6,\r\n  \"item\": 10.13,\r\n  \"workforce\": 10.11\r\n}",
-													"options": {
-														"raw": {
-															"language": "json"
-														}
-													}
-												},
-												"url": {
-													"raw": "{{url}}/faults/work-orders/certifications/check",
-													"host": [
-														"{{url}}"
-													],
-													"path": [
-														"faults",
-														"work-orders",
-														"certifications",
-														"check"
-													]
-												}
-											},
-											"response": []
-										},
-										{
-											"name": "get certifications check",
+											"name": "get withdrawn check",
 											"request": {
 												"method": "GET",
 												"header": [],
 												"url": {
-													"raw": "{{url}}/faults/work-orders/certifications/check/1",
+													"raw": "{{url}}/faults/work-orders/withdrawn-materials/checks/1",
 													"host": [
 														"{{url}}"
 													],
 													"path": [
 														"faults",
 														"work-orders",
-														"certifications",
-														"check",
+														"withdrawn-materials",
+														"checks",
 														"1"
 													]
 												}
 											},
 											"response": []
-										}
-									]
-								},
-								{
-									"name": "post certifications",
-									"protocolProfileBehavior": {
-										"disabledSystemHeaders": {
-											"accept": true
-										}
-									},
-									"request": {
-										"method": "POST",
-										"header": [
-											{
-												"key": "Accept",
-												"value": "application/json",
-												"type": "text"
-											}
-										],
-										"body": {
-											"mode": "raw",
-											"raw": "[\r\n  {\r\n    \"group_item_id\": 1,\r\n    \"action_id\": 1,\r\n    \"material_id\": 2,\r\n    \"quantity\": {\r\n      \"item\": 12,\r\n      \"workforce\": 12\r\n    }\r\n  },\r\n  {\r\n    \"group_item_id\": 1,\r\n    \"action_id\": 1,\r\n    \"material_id\": 1,\r\n    \"quantity\": {\r\n      \"item\": 12.14,\r\n      \"workforce\": 12.39\r\n    }\r\n  }\r\n]",
-											"options": {
-												"raw": {
-													"language": "json"
-												}
-											}
 										},
-										"url": {
-											"raw": "{{url}}/faults/work-orders/1/certifications",
-											"host": [
-												"{{url}}"
-											],
-											"path": [
-												"faults",
-												"work-orders",
-												"1",
-												"certifications"
-											]
-										}
-									},
-									"response": []
-								}
-							]
-						},
-						{
-							"name": "withdrawn materials",
-							"item": [
-								{
-									"name": "withdrawn checks",
-									"item": [
 										{
 											"name": "post withdrawn check",
 											"protocolProfileBehavior": {
@@ -3354,7 +3264,7 @@
 												],
 												"body": {
 													"mode": "raw",
-													"raw": "{\r\n  \"material_id\": 1,\r\n  \"received\": 12.11\r\n}",
+													"raw": "{\r\n  \"received\": 12.79\r\n}",
 													"options": {
 														"raw": {
 															"language": "json"
@@ -3362,7 +3272,7 @@
 													}
 												},
 												"url": {
-													"raw": "{{url}}/faults/work-orders/withdrawn-materials/checks",
+													"raw": "{{url}}/faults/work-orders/withdrawn-materials/6/checks",
 													"host": [
 														"{{url}}"
 													],
@@ -3370,28 +3280,8 @@
 														"faults",
 														"work-orders",
 														"withdrawn-materials",
+														"6",
 														"checks"
-													]
-												}
-											},
-											"response": []
-										},
-										{
-											"name": "get withdrawn check",
-											"request": {
-												"method": "GET",
-												"header": [],
-												"url": {
-													"raw": "{{url}}/faults/work-orders/withdrawn-materials/checks/1",
-													"host": [
-														"{{url}}"
-													],
-													"path": [
-														"faults",
-														"work-orders",
-														"withdrawn-materials",
-														"checks",
-														"1"
 													]
 												}
 											},
@@ -3415,7 +3305,7 @@
 												],
 												"body": {
 													"mode": "raw",
-													"raw": "{\r\n  \"material_id\": 1,\r\n  \"received\": 12.35\r\n}",
+													"raw": "{\r\n  \"received\": 20.34\r\n}",
 													"options": {
 														"raw": {
 															"language": "json"
@@ -3432,6 +3322,73 @@
 														"work-orders",
 														"withdrawn-materials",
 														"checks",
+														"1"
+													]
+												}
+											},
+											"response": []
+										}
+									]
+								},
+								{
+									"name": "withdrawn material details",
+									"item": [
+										{
+											"name": "post material to withdrawn quantity",
+											"protocolProfileBehavior": {
+												"disabledSystemHeaders": {
+													"accept": true
+												}
+											},
+											"request": {
+												"method": "POST",
+												"header": [
+													{
+														"key": "Accept",
+														"value": "application/json",
+														"type": "text"
+													}
+												],
+												"body": {
+													"mode": "raw",
+													"raw": "[\r\n  {\r\n    \"no_serie\":\"uisd123ery\",\r\n    \"observation\":\"observation 1\"\r\n  },\r\n  {\r\n    \"no_serie\":\"bnd123ery\",\r\n    \"observation\":\"observation 2\"\r\n  }\r\n]",
+													"options": {
+														"raw": {
+															"language": "json"
+														}
+													}
+												},
+												"url": {
+													"raw": "{{url}}/faults/work-orders/withdrawn-materials/7/material-details",
+													"host": [
+														"{{url}}"
+													],
+													"path": [
+														"faults",
+														"work-orders",
+														"withdrawn-materials",
+														"7",
+														"material-details"
+													]
+												}
+											},
+											"response": []
+										},
+										{
+											"name": "delete material to withdrawn quantity",
+											"request": {
+												"method": "DELETE",
+												"header": [],
+												"url": {
+													"raw": "{{url}}/faults/work-orders/withdrawn-materials/material-details/1",
+													"host": [
+														"{{url}}"
+													],
+													"path": [
+														"faults",
+														"work-orders",
+														"withdrawn-materials",
+														"material-details",
 														"1"
 													]
 												}
@@ -3458,7 +3415,7 @@
 										],
 										"body": {
 											"mode": "raw",
-											"raw": "[\r\n  {\r\n    \"variant_id\": 1,\r\n    \"no_serie\": \"asdf123ad\",\r\n    \"reported\": 12.11\r\n  },\r\n  {\r\n    \"variant_id\": 1,\r\n    \"no_serie\": \"a43df123ad\",\r\n    \"reported\": 10.12\r\n  }\r\n]",
+											"raw": "[\r\n  {\r\n    \"variant_id\": 1,\r\n    \"reported\": 13.11,\r\n    \"reusable_amount\": 11.1,\r\n    \"materials\": [\r\n      {\r\n        \"no_serie\": \"112ws\",\r\n        \"observation\": \"observacion\"\r\n      }\r\n    ]\r\n  }\r\n]",
 											"options": {
 												"raw": {
 													"language": "json"
@@ -3475,6 +3432,66 @@
 												"work-orders",
 												"1",
 												"withdrawn-materials"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "get withdrawn material",
+									"request": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{url}}/faults/work-orders/withdrawn-materials/7",
+											"host": [
+												"{{url}}"
+											],
+											"path": [
+												"faults",
+												"work-orders",
+												"withdrawn-materials",
+												"7"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "update withdrawn material",
+									"protocolProfileBehavior": {
+										"disabledSystemHeaders": {
+											"accept": true
+										}
+									},
+									"request": {
+										"method": "PUT",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "application/json",
+												"type": "text"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n  \"variant_id\": 1,\r\n  \"reported\": 12.11,\r\n  \"reusable_amount\": 12.12\r\n}\r\n",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{url}}/faults/work-orders/withdrawn-materials/4",
+											"host": [
+												"{{url}}"
+											],
+											"path": [
+												"faults",
+												"work-orders",
+												"withdrawn-materials",
+												"4"
 											]
 										}
 									},
@@ -4755,6 +4772,43 @@
 									"request": {
 										"method": "GET",
 										"header": [],
+										"url": {
+											"raw": "{{url}}/units",
+											"host": [
+												"{{url}}"
+											],
+											"path": [
+												"units"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "post unit",
+									"protocolProfileBehavior": {
+										"disabledSystemHeaders": {
+											"accept": true
+										}
+									},
+									"request": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "application/json",
+												"type": "text"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n  \"code\": \"LT\",\r\n  \"description\": \"Litros\"\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
 										"url": {
 											"raw": "{{url}}/units",
 											"host": [
