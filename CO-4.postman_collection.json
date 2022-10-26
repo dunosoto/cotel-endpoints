@@ -2451,6 +2451,281 @@
 					"name": "work order",
 					"item": [
 						{
+							"name": "activities Copy",
+							"item": [
+								{
+									"name": "images",
+									"item": [
+										{
+											"name": "post image activity",
+											"protocolProfileBehavior": {
+												"disabledSystemHeaders": {
+													"accept": true
+												}
+											},
+											"request": {
+												"method": "POST",
+												"header": [
+													{
+														"key": "Accept",
+														"value": "application/json",
+														"type": "text"
+													}
+												],
+												"body": {
+													"mode": "raw",
+													"raw": "{\r\n  \"url\": \"http://imagen3.com/imagen3\"\r\n}",
+													"options": {
+														"raw": {
+															"language": "json"
+														}
+													}
+												},
+												"url": {
+													"raw": "{{url}}/faults/work-orders/activities/1/images",
+													"host": [
+														"{{url}}"
+													],
+													"path": [
+														"faults",
+														"work-orders",
+														"activities",
+														"1",
+														"images"
+													]
+												}
+											},
+											"response": []
+										},
+										{
+											"name": "update image activity",
+											"protocolProfileBehavior": {
+												"disabledSystemHeaders": {
+													"accept": true
+												}
+											},
+											"request": {
+												"method": "PUT",
+												"header": [
+													{
+														"key": "Accept",
+														"value": "application/json",
+														"type": "text"
+													}
+												],
+												"body": {
+													"mode": "raw",
+													"raw": "{\r\n  \"url\": \"http://imagen.com/imagen-upgrade\"\r\n}",
+													"options": {
+														"raw": {
+															"language": "json"
+														}
+													}
+												},
+												"url": {
+													"raw": "{{url}}/faults/work-orders/activities/images/1",
+													"host": [
+														"{{url}}"
+													],
+													"path": [
+														"faults",
+														"work-orders",
+														"activities",
+														"images",
+														"1"
+													]
+												}
+											},
+											"response": []
+										}
+									]
+								},
+								{
+									"name": "post activities",
+									"protocolProfileBehavior": {
+										"disabledSystemHeaders": {
+											"accept": true
+										}
+									},
+									"request": {
+										"auth": {
+											"type": "bearer",
+											"bearer": [
+												{
+													"key": "token",
+													"value": "{{token}}",
+													"type": "string"
+												}
+											]
+										},
+										"method": "POST",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "application/json",
+												"type": "text"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n  \"process\": \"\", \r\n  \"observation\": \"\"\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{url}}/faults/work-orders/1/activities",
+											"host": [
+												"{{url}}"
+											],
+											"path": [
+												"faults",
+												"work-orders",
+												"1",
+												"activities"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "update activity",
+									"protocolProfileBehavior": {
+										"disabledSystemHeaders": {
+											"accept": true
+										}
+									},
+									"request": {
+										"auth": {
+											"type": "bearer",
+											"bearer": [
+												{
+													"key": "token",
+													"value": "{{token}}",
+													"type": "string"
+												}
+											]
+										},
+										"method": "PUT",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "application/json",
+												"type": "text"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n  \"process\": \"proces azasdfasdfafo\", \r\n  \"observation\": \"tuvimos problemas pero nada serio\"\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{url}}/faults/work-orders/activities/1",
+											"host": [
+												"{{url}}"
+											],
+											"path": [
+												"faults",
+												"work-orders",
+												"activities",
+												"1"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "get an activity",
+									"protocolProfileBehavior": {
+										"disabledSystemHeaders": {
+											"accept": true
+										}
+									},
+									"request": {
+										"auth": {
+											"type": "bearer",
+											"bearer": [
+												{
+													"key": "token",
+													"value": "{{token}}",
+													"type": "string"
+												}
+											]
+										},
+										"method": "GET",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "application/json",
+												"type": "text"
+											}
+										],
+										"url": {
+											"raw": "{{url}}/faults/work-orders/activities/1",
+											"host": [
+												"{{url}}"
+											],
+											"path": [
+												"faults",
+												"work-orders",
+												"activities",
+												"1"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "post activity finish date",
+									"protocolProfileBehavior": {
+										"disabledSystemHeaders": {
+											"accept": true
+										}
+									},
+									"request": {
+										"auth": {
+											"type": "bearer",
+											"bearer": [
+												{
+													"key": "token",
+													"value": "{{token}}",
+													"type": "string"
+												}
+											]
+										},
+										"method": "POST",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "application/json",
+												"type": "text"
+											}
+										],
+										"url": {
+											"raw": "{{url}}/faults/work-orders/activities/1/finish",
+											"host": [
+												"{{url}}"
+											],
+											"path": [
+												"faults",
+												"work-orders",
+												"activities",
+												"1",
+												"finish"
+											]
+										}
+									},
+									"response": []
+								}
+							]
+						},
+						{
 							"name": "activities",
 							"item": [
 								{
@@ -2895,7 +3170,7 @@
 										],
 										"body": {
 											"mode": "raw",
-											"raw": "{\r\n  \"activity\": {\r\n    \"process\": \" descripcion del proceso\",\r\n    \"observation\": \"observacion de una actividad de fallas\"\r\n  },\r\n  \"images\": [\r\n    {\r\n      \"url\": \"https://imagen.com\",\r\n      \"date\": \"2022-07-08 00:00:00\"\r\n    },\r\n    {\r\n      \"url\": \"https://imagen.com\",\r\n      \"date\": \"2022-07-08 00:00:00\"\r\n    }\r\n  ],\r\n  \"blueprint\": {\r\n    \"url\": \"https://imagen.com\",\r\n    \"date\": \"2022-07-08 00:00:00\"\r\n  } \r\n}",
+											"raw": "{\r\n    \"process\": \" descripcion del proceso\",\r\n    \"observation\": \"observacion de una actividad de fallas\"\r\n  \r\n  \"images\": [\r\n    {\r\n      \"url\": \"https://imagen.com\",\r\n      \"date\": \"2022-07-08 00:00:00\"\r\n    },\r\n    {\r\n      \"url\": \"https://imagen.com\",\r\n      \"date\": \"2022-07-08 00:00:00\"\r\n    } \r\n}",
 											"options": {
 												"raw": {
 													"language": "json"
