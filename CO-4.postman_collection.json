@@ -40,6 +40,25 @@
 								}
 							},
 							"response": []
+						},
+						{
+							"name": "work order Copy",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{url}}/external-plant/dashboard/elements",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"external-plant",
+										"dashboard",
+										"elements"
+									]
+								}
+							},
+							"response": []
 						}
 					]
 				},
