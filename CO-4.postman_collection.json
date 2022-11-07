@@ -4297,7 +4297,7 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n  \"service_id\": 1,\r\n  \"type\": \"Instalacion\",\r\n  \"loid\": \"9873247\",\r\n  \"request\": \"123431\",\r\n  \"emission_date\": \"2022-10-18 00:00:00\",\r\n  \"reception_date\": \"2022-10-18 00:00:00\"\r\n}",
+							"raw": "{\r\n  \"work_order\": {\r\n    \"service_id\": 1,\r\n    \"type\": \"Retiro\",\r\n    \"loid\": \"567983\",\r\n    \"request\": \"98776\",\r\n    \"emission_date\": \"2022-11-07 00:00:00\",\r\n    \"reception_date\": \"2022-11-07 00:00:00\",\r\n    \"supervisor_id\": 2\r\n  },\r\n  \"tags\": {\r\n    \"clasification_id\" : 6,\r\n    \"status_id\" : 1\r\n  },\r\n  \"groups\" : [{\"id\": 1, \"mandated\": true}]\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
