@@ -4394,6 +4394,45 @@
 							"response": []
 						},
 						{
+							"name": "update work order",
+							"protocolProfileBehavior": {
+								"disabledSystemHeaders": {
+									"accept": true
+								}
+							},
+							"request": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"work_order\": {\r\n    \"service_id\": 1,\r\n    \"observation\": \"observacion actualizado\",\r\n    \"claim_date\": \"2022-11-24 00:00:00\",\r\n    \"date\": \"2022-11-24 00:00:00\",\r\n    \"odeco_date\": \"2022-11-23 00:00:00\",\r\n    \"supervisor_id\": 2\r\n  },\r\n  \"estimated_date\" : {\r\n    \"start\": \"2022-11-24 00:00:00\",\r\n    \"finish\": \"2022-11-24 00:00:00\"\r\n  },\r\n  \"tags\": {\r\n    \"clasification_id\" : 6,\r\n    \"status_id\" : 1\r\n  },\r\n  \"groups\" : [{\"id\": 1, \"mandated\": true}]\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{url}}/faults/work-orders/1",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"faults",
+										"work-orders",
+										"1"
+									]
+								}
+							},
+							"response": []
+						},
+						{
 							"name": "get a work order",
 							"request": {
 								"method": "GET",
@@ -5324,6 +5363,24 @@
 							]
 						},
 						{
+							"name": "get work orders",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{url}}/provisions/work-orders",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"provisions",
+										"work-orders"
+									]
+								}
+							},
+							"response": []
+						},
+						{
 							"name": "post work order",
 							"protocolProfileBehavior": {
 								"disabledSystemHeaders": {
@@ -5362,18 +5419,39 @@
 							"response": []
 						},
 						{
-							"name": "get work orders",
+							"name": "update work order",
+							"protocolProfileBehavior": {
+								"disabledSystemHeaders": {
+									"accept": true
+								}
+							},
 							"request": {
-								"method": "GET",
-								"header": [],
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"work_order\": {\r\n    \"service_id\": 1,\r\n    \"type\": \"Retiro\",\r\n    \"loid\": \"234321\",\r\n    \"request\": \"672345\",\r\n    \"emission_date\": \"2022-11-07 00:00:00\",\r\n    \"reception_date\": \"2022-11-07 00:00:00\",\r\n    \"supervisor_id\": 2\r\n  },\r\n  \"tags\": {\r\n    \"clasification_id\" : 6,\r\n    \"status_id\" : 2\r\n  },\r\n  \"groups\" : [{\"id\": 1, \"mandated\": true}]\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
 								"url": {
-									"raw": "{{url}}/provisions/work-orders",
+									"raw": "{{url}}/provisions/work-orders/1",
 									"host": [
 										"{{url}}"
 									],
 									"path": [
 										"provisions",
-										"work-orders"
+										"work-orders",
+										"1"
 									]
 								}
 							},
@@ -7037,7 +7115,7 @@
 								],
 								"body": {
 									"mode": "raw",
-									"raw": "{\r\n  \"name\": \"daniel\",\r\n  \"last_name\": \"uno soto\",\r\n  \"cell_phone\": \"78453218\",\r\n  \"email\": \"unodaniel0@gmail.com\",\r\n  \"password\": \"daniel1998\",\r\n  \"password_confirmation\": \"daniel1998\",\r\n  \"role_id\": 1,\r\n  \"areas_id\": [1,3],\r\n  \"company_id\": 2,\r\n  \"avatar\": \"\"\r\n}",
+									"raw": "{\r\n  \"name\": \"daniel\",\r\n  \"last_name\": \"uno\",\r\n  \"cell_phone\": \"78453218\",\r\n  \"email\": \"unodaniel0@gmail.com\",\r\n  \"password\": \"daniel1998\",\r\n  \"password_confirmation\": \"daniel1998\",\r\n  \"role_id\": 2,\r\n  \"areas_id\": [1,3],\r\n  \"company_id\": 2,\r\n  \"avatar\": \"\"\r\n}",
 									"options": {
 										"raw": {
 											"language": "json"
@@ -7045,13 +7123,13 @@
 									}
 								},
 								"url": {
-									"raw": "{{url}}/users/3",
+									"raw": "{{url}}/users/2",
 									"host": [
 										"{{url}}"
 									],
 									"path": [
 										"users",
-										"3"
+										"2"
 									]
 								}
 							},
