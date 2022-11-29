@@ -4211,7 +4211,7 @@
 										],
 										"body": {
 											"mode": "raw",
-											"raw": "[\r\n  {\r\n    \"action_id\": 2,\r\n    \"group_item_id\": 1,\r\n    \"quantity\": 1.12,\r\n    \"materials\": [90, 21]\r\n  },\r\n  {\r\n    \"action_id\": 2,\r\n    \"group_item_id\": 1,\r\n    \"quantity\": 1.12,\r\n    \"materials\": [89,34]\r\n  }\r\n]",
+											"raw": "[\r\n  {\r\n    \"group_item_id\": 1,\r\n    \"quantity\": 1.12,\r\n    \"materials\": [90, 21]\r\n  },\r\n  {\r\n    \"group_item_id\": 1,\r\n    \"quantity\": 1.12,\r\n    \"materials\": [89,34]\r\n  }\r\n]",
 											"options": {
 												"raw": {
 													"language": "json"
@@ -4313,7 +4313,7 @@
 										],
 										"body": {
 											"mode": "raw",
-											"raw": "{\r\n  \"action_id\": 1,\r\n  \"group_item_id\": 1,\r\n  \"quantity\": 1.12,\r\n  \"workforce\": 10.23,\r\n  \"unit_price\": 13.12,\r\n  \"unit_workforce\": 1\r\n}",
+											"raw": "{\r\n  \"group_item_id\": 1,\r\n  \"quantity\": 1.12,\r\n  \"workforce\": 10.23,\r\n  \"unit_price\": 13.12,\r\n  \"unit_workforce\": 1\r\n}",
 											"options": {
 												"raw": {
 													"language": "json"
