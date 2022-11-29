@@ -4956,7 +4956,7 @@
 										],
 										"body": {
 											"mode": "raw",
-											"raw": "[\r\n  {\r\n    \"group_item_id\": 7,\r\n    \"quantity\": 1.43,\r\n    \"price_id\": 1,\r\n    \"materials\": [9]\r\n  },\r\n  {\r\n    \"group_item_id\": 8,\r\n    \"quantity\": 1.67,\r\n    \"price_id\": 1,\r\n    \"materials\": [34]\r\n  }\r\n]",
+											"raw": "[\r\n  {\r\n    \"group_item_id\": 7,\r\n    \"quantity\": 1.43,\r\n    \"materials\": [9]\r\n  },\r\n  {\r\n    \"group_item_id\": 8,\r\n    \"quantity\": 1.67,\r\n    \"materials\": [34]\r\n  }\r\n]",
 											"options": {
 												"raw": {
 													"language": "json"
@@ -5016,7 +5016,7 @@
 											}
 										},
 										"url": {
-											"raw": "{{url}}/provisions/work-orders/certifications/1",
+											"raw": "{{url}}/provisions/work-orders/certifications/2",
 											"host": [
 												"{{url}}"
 											],
@@ -5024,7 +5024,7 @@
 												"provisions",
 												"work-orders",
 												"certifications",
-												"1"
+												"2"
 											]
 										}
 									},
@@ -5058,7 +5058,7 @@
 										],
 										"body": {
 											"mode": "raw",
-											"raw": "{\r\n  \"group_item_id\": 1,\r\n  \"quantity\": 1.12,\r\n  \"price_id\": 1\r\n}",
+											"raw": "{\r\n  \"group_item_id\": 1,\r\n  \"quantity\": 1.12\r\n}",
 											"options": {
 												"raw": {
 													"language": "json"
@@ -5066,7 +5066,7 @@
 											}
 										},
 										"url": {
-											"raw": "{{url}}/provisions/work-orders/certifications/1",
+											"raw": "{{url}}/provisions/work-orders/certifications/2",
 											"host": [
 												"{{url}}"
 											],
@@ -5074,7 +5074,7 @@
 												"provisions",
 												"work-orders",
 												"certifications",
-												"1"
+												"2"
 											]
 										}
 									},
