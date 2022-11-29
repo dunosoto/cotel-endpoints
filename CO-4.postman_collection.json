@@ -2785,7 +2785,7 @@
 										],
 										"body": {
 											"mode": "raw",
-											"raw": "{\r\n  \"process\": \"\", \r\n  \"observation\": \"\"\r\n}",
+											"raw": "{\r\n  \"process\": \"\", \r\n  \"observation\": \"\",\r\n  \"justification_form\": \"\"\r\n}",
 											"options": {
 												"raw": {
 													"language": "json"
@@ -2835,7 +2835,7 @@
 										],
 										"body": {
 											"mode": "raw",
-											"raw": "{\r\n  \"process\": \"proces azasdfasdfafo\", \r\n  \"observation\": \"tuvimos problemas pero nada serio\"\r\n}",
+											"raw": "{\r\n  \"process\": \"proceso normal\", \r\n  \"observation\": \"tuvimos problemas pero nada serio\",\r\n  \"justification_form\": \"https://imagen.com/image\"\r\n}",
 											"options": {
 												"raw": {
 													"language": "json"
@@ -4579,7 +4579,7 @@
 										],
 										"body": {
 											"mode": "raw",
-											"raw": "{\r\n  \"process\": \"\", \r\n  \"observation\": \"\"\r\n}",
+											"raw": "{\r\n  \"process\": \"\", \r\n  \"observation\": \"\",\r\n  \"justification_form\": \"\"\r\n}",
 											"options": {
 												"raw": {
 													"language": "json"
