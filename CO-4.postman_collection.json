@@ -1919,7 +1919,7 @@
 											"response": []
 										},
 										{
-											"name": "post certification action Copy",
+											"name": "update certification action",
 											"protocolProfileBehavior": {
 												"disabledSystemHeaders": {
 													"accept": true
@@ -1937,6 +1937,46 @@
 												"body": {
 													"mode": "raw",
 													"raw": "{\r\n  \"observation\": \"observation update\",\r\n  \"amount\": 7.23,\r\n  \"amount_workforce\": 1.89\r\n}",
+													"options": {
+														"raw": {
+															"language": "json"
+														}
+													}
+												},
+												"url": {
+													"raw": "{{url}}/external-plant/work-order/certifications-actions/45",
+													"host": [
+														"{{url}}"
+													],
+													"path": [
+														"external-plant",
+														"work-order",
+														"certifications-actions",
+														"45"
+													]
+												}
+											},
+											"response": []
+										},
+										{
+											"name": "delete certification action",
+											"protocolProfileBehavior": {
+												"disabledSystemHeaders": {
+													"accept": true
+												}
+											},
+											"request": {
+												"method": "DELETE",
+												"header": [
+													{
+														"key": "Accept",
+														"value": "application/json",
+														"type": "text"
+													}
+												],
+												"body": {
+													"mode": "raw",
+													"raw": "",
 													"options": {
 														"raw": {
 															"language": "json"
@@ -7919,6 +7959,39 @@
 							"response": []
 						}
 					]
+				}
+			]
+		},
+		{
+			"name": "reports",
+			"item": [
+				{
+					"name": "get reports ots",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/reports/ots?year=2021&area=6",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"reports",
+								"ots"
+							],
+							"query": [
+								{
+									"key": "year",
+									"value": "2021"
+								},
+								{
+									"key": "area",
+									"value": "6"
+								}
+							]
+						}
+					},
+					"response": []
 				}
 			]
 		}
