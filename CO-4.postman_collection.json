@@ -60,13 +60,13 @@
 									}
 								},
 								"url": {
-									"raw": "{{url}}/clients/2/addresses",
+									"raw": "{{url}}/clients/1/addresses",
 									"host": [
 										"{{url}}"
 									],
 									"path": [
 										"clients",
-										"2",
+										"1",
 										"addresses"
 									]
 								}
@@ -450,25 +450,6 @@
 					"response": []
 				},
 				{
-					"name": "get  a service",
-					"request": {
-						"method": "GET",
-						"header": [],
-						"url": {
-							"raw": "{{url}}/faults/services/2",
-							"host": [
-								"{{url}}"
-							],
-							"path": [
-								"faults",
-								"services",
-								"2"
-							]
-						}
-					},
-					"response": []
-				},
-				{
 					"name": "post service",
 					"protocolProfileBehavior": {
 						"disabledSystemHeaders": {
@@ -501,6 +482,25 @@
 							"path": [
 								"faults",
 								"services"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get  a service",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/faults/services/2",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"faults",
+								"services",
+								"2"
 							]
 						}
 					},
@@ -1459,14 +1459,14 @@
 											}
 										},
 										"url": {
-											"raw": "{{url}}/external-plant/work-order/6/activities",
+											"raw": "{{url}}/external-plant/work-order/2/activities",
 											"host": [
 												"{{url}}"
 											],
 											"path": [
 												"external-plant",
 												"work-order",
-												"6",
+												"2",
 												"activities"
 											]
 										}
@@ -1501,7 +1501,7 @@
 										],
 										"body": {
 											"mode": "raw",
-											"raw": "{\r\n  \"process\": \"proces azasdfasdfafo\", \r\n  \"observation\": \"tuvimos sdfasdf\"\r\n}",
+											"raw": "{\r\n  \"process\": \"process done\", \r\n  \"observation\": \"tuvimos algunas complicaciones pero ya eesta\"\r\n}",
 											"options": {
 												"raw": {
 													"language": "json"
@@ -1509,7 +1509,7 @@
 											}
 										},
 										"url": {
-											"raw": "{{url}}/external-plant/work-order/activities/5",
+											"raw": "{{url}}/external-plant/work-order/activities/1",
 											"host": [
 												"{{url}}"
 											],
@@ -1517,7 +1517,7 @@
 												"external-plant",
 												"work-order",
 												"activities",
-												"5"
+												"1"
 											]
 										}
 									},
@@ -2610,13 +2610,23 @@
 								"method": "GET",
 								"header": [],
 								"url": {
-									"raw": "{{url}}/external-plant/work-orders",
+									"raw": "{{url}}/external-plant/work-orders?startDate=2022-12-11&endDate=2022-12-14",
 									"host": [
 										"{{url}}"
 									],
 									"path": [
 										"external-plant",
 										"work-orders"
+									],
+									"query": [
+										{
+											"key": "startDate",
+											"value": "2022-12-11"
+										},
+										{
+											"key": "endDate",
+											"value": "2022-12-14"
+										}
 									]
 								}
 							},
@@ -2640,7 +2650,7 @@
 								],
 								"body": {
 									"mode": "raw",
-									"raw": "{\r\n  \"work_order\": {\r\n    \"odn_id\" : 1,\r\n    \"description\": \"mantenimiento no preventivo programado\",\r\n    \"affected_customers\" : 20,\r\n    \"company_id\" : 2,\r\n    \"category_id\" : 3,\r\n    \"type_id\" : 2,\r\n    \"supervisor_id\": 2\r\n  },\r\n  \"estimated_date\" : {\r\n    \"start\": \"2022-11-11 00:00:00\",\r\n    \"finish\": \"2022-11-11 00:00:00\"\r\n  },\r\n  \"tags\": {\r\n    \"clasification_id\" : 6,\r\n    \"status_id\" : 2\r\n  },\r\n  \"groups\" : [{\"id\": 1, \"mandated\": true}]\r\n}",
+									"raw": "{\r\n  \"work_order\": {\r\n    \"odn_id\" : 1,\r\n    \"description\": \"mantenimiento no programado\",\r\n    \"affected_customers\" : 10,\r\n    \"company_id\" : 2,\r\n    \"category_id\" : 3,\r\n    \"type_id\" : 2,\r\n    \"supervisor_id\": 2\r\n  },\r\n  \"estimated_date\" : {\r\n    \"start\": \"2022-12-09 00:00:00\",\r\n    \"finish\": \"2022-12-10 00:00:00\"\r\n  },\r\n  \"tags\": {\r\n    \"clasification_id\" : 6,\r\n    \"status_id\" : 2\r\n  },\r\n  \"groups\" : [{\"id\": 1, \"mandated\": true}]\r\n}",
 									"options": {
 										"raw": {
 											"language": "json"
@@ -2697,7 +2707,7 @@
 								],
 								"body": {
 									"mode": "raw",
-									"raw": "{\r\n  \"work_order\": {\r\n    \"odn_id\" : 1,\r\n    \"description\": \"se tiene que hacer mantenimiento por dano\",\r\n    \"affected_customers\" : 15,\r\n    \"category_id\" : 2,\r\n    \"type_id\" : 1,\r\n    \"typology_id\": 1,\r\n    \"company_id\" : 2,\r\n    \"supervisor_id\": 1\r\n  },\r\n\r\n  \"estimated_date\" : {\r\n    \"start\": \"2022-10-05 00:00:00\",\r\n    \"finish\": \"2022-10-05 00:00:00\"\r\n  },\r\n\r\n  \"tags\": {\r\n    \"clasification_id\" : 6,\r\n    \"status_id\" : 2\r\n  },\r\n  \"groups\" : [{\"id\": 1, \"mandated\": true},{\"id\": 2, \"mandated\": false}]\r\n}",
+									"raw": "{\r\n  \"work_order\": {\r\n    \"odn_id\" : 1,\r\n    \"description\": \"mantenimiento preventivo no programado\",\r\n    \"affected_customers\" : 10,\r\n    \"company_id\" : 2,\r\n    \"category_id\" : 3,\r\n    \"type_id\" : 2,\r\n    \"supervisor_id\": 2\r\n  },\r\n  \"estimated_date\" : {\r\n    \"start\": \"2022-12-09 00:00:00\",\r\n    \"finish\": \"2022-12-10 00:00:00\"\r\n  },\r\n  \"tags\": {\r\n    \"clasification_id\" : 6,\r\n    \"status_id\" : 2\r\n  },\r\n  \"groups\" : [{\"id\": 1, \"mandated\": true}]\r\n}",
 									"options": {
 										"raw": {
 											"language": "json"
@@ -2923,7 +2933,7 @@
 											}
 										},
 										"url": {
-											"raw": "{{url}}/faults/work-orders/activities/1",
+											"raw": "{{url}}/faults/work-orders/activities/3",
 											"host": [
 												"{{url}}"
 											],
@@ -2931,7 +2941,7 @@
 												"faults",
 												"work-orders",
 												"activities",
-												"1"
+												"3"
 											]
 										}
 									},
@@ -3448,46 +3458,6 @@
 											"response": []
 										}
 									]
-								},
-								{
-									"name": "post activities",
-									"protocolProfileBehavior": {
-										"disabledSystemHeaders": {
-											"accept": true
-										}
-									},
-									"request": {
-										"method": "POST",
-										"header": [
-											{
-												"key": "Accept",
-												"value": "application/json",
-												"type": "text"
-											}
-										],
-										"body": {
-											"mode": "raw",
-											"raw": "{\r\n    \"process\": \" descripcion del proceso\",\r\n    \"observation\": \"observacion de una actividad de fallas\"\r\n  \r\n  \"images\": [\r\n    {\r\n      \"url\": \"https://imagen.com\",\r\n      \"date\": \"2022-07-08 00:00:00\"\r\n    },\r\n    {\r\n      \"url\": \"https://imagen.com\",\r\n      \"date\": \"2022-07-08 00:00:00\"\r\n    } \r\n}",
-											"options": {
-												"raw": {
-													"language": "json"
-												}
-											}
-										},
-										"url": {
-											"raw": "{{url}}/faults/work-orders/1/activities",
-											"host": [
-												"{{url}}"
-											],
-											"path": [
-												"faults",
-												"work-orders",
-												"1",
-												"activities"
-											]
-										}
-									},
-									"response": []
 								}
 							]
 						},
@@ -4423,13 +4393,23 @@
 								"method": "GET",
 								"header": [],
 								"url": {
-									"raw": "{{url}}/faults/work-orders",
+									"raw": "{{url}}/faults/work-orders?startDate=2022-12-13&endDate=2022-12-15",
 									"host": [
 										"{{url}}"
 									],
 									"path": [
 										"faults",
 										"work-orders"
+									],
+									"query": [
+										{
+											"key": "startDate",
+											"value": "2022-12-13"
+										},
+										{
+											"key": "endDate",
+											"value": "2022-12-15"
+										}
 									]
 								}
 							},
@@ -4453,7 +4433,7 @@
 								],
 								"body": {
 									"mode": "raw",
-									"raw": "{\r\n  \"work_order\": {\r\n    \"service_id\": 1,\r\n    \"observation\": \"observacion\",\r\n    \"claim_date\": \"2022-12-01 00:00:00\",\r\n    \"date\": \"2022-11-21 00:00:00\",\r\n    \"odeco_date\": \"2022-12-01 00:00:00\",\r\n    \"supervisor_id\": 2\r\n  },\r\n  \"estimated_date\" : {\r\n    \"start\": \"2022-12-01 00:00:00\",\r\n    \"finish\": \"2022-12-01 00:00:00\"\r\n  },\r\n  \"tags\": {\r\n    \"clasification_id\" : 6,\r\n    \"status_id\" : 2\r\n  },\r\n  \"groups\" : [{\"id\": 1, \"mandated\": true}]\r\n}",
+									"raw": "{\r\n  \"work_order\": {\r\n    \"service_id\": 1,\r\n    \"observation\": \"observacion\",\r\n    \"claim_date\": \"2022-12-01 00:00:00\",\r\n    \"date\": \"2022-11-21 00:00:00\",\r\n    \"odeco_date\": \"2022-12-01 00:00:00\",\r\n    \"supervisor_id\": 2\r\n  },\r\n  \"estimated_date\" : {\r\n    \"start\": \"2022-12-14 00:00:00\",\r\n    \"finish\": \"2022-12-15 00:00:00\"\r\n  },\r\n  \"tags\": {\r\n    \"clasification_id\" : 6,\r\n    \"status_id\" : 2\r\n  },\r\n  \"groups\" : [{\"id\": 1, \"mandated\": true}]\r\n}",
 									"options": {
 										"raw": {
 											"language": "json"
@@ -4667,14 +4647,14 @@
 											}
 										},
 										"url": {
-											"raw": "{{url}}/provisions/work-orders/5/activities",
+											"raw": "{{url}}/provisions/work-orders/13/activities",
 											"host": [
 												"{{url}}"
 											],
 											"path": [
 												"provisions",
 												"work-orders",
-												"5",
+												"13",
 												"activities"
 											]
 										}
@@ -4709,7 +4689,7 @@
 										],
 										"body": {
 											"mode": "raw",
-											"raw": "{\r\n  \"process\": \"proces azasdfasdfafo\", \r\n  \"observation\": \"tuvimos problemas pero nada serio\",\r\n  \"justification_form\": \"http://test.com/images\"\r\n}",
+											"raw": "{\r\n  \"process\": \"proces de la ot con id 13\", \r\n  \"observation\": \"tuvimos problemaffts \",\r\n  \"justification_form\": \"http://test.com/images\"\r\n}",
 											"options": {
 												"raw": {
 													"language": "json"
@@ -4717,7 +4697,7 @@
 											}
 										},
 										"url": {
-											"raw": "{{url}}/provisions/work-orders/activities/1",
+											"raw": "{{url}}/provisions/work-orders/activities/22",
 											"host": [
 												"{{url}}"
 											],
@@ -4725,7 +4705,7 @@
 												"provisions",
 												"work-orders",
 												"activities",
-												"1"
+												"22"
 											]
 										}
 									},
@@ -4758,7 +4738,7 @@
 											}
 										],
 										"url": {
-											"raw": "{{url}}/provisions/work-orders/activities/1",
+											"raw": "{{url}}/provisions/work-orders/activities/4",
 											"host": [
 												"{{url}}"
 											],
@@ -4766,7 +4746,7 @@
 												"provisions",
 												"work-orders",
 												"activities",
-												"1"
+												"4"
 											]
 										}
 									},
@@ -5548,13 +5528,23 @@
 								"method": "GET",
 								"header": [],
 								"url": {
-									"raw": "{{url}}/provisions/work-orders",
+									"raw": "{{url}}/provisions/work-orders?startDate=2022-12-12&endDate=2022-12-14",
 									"host": [
 										"{{url}}"
 									],
 									"path": [
 										"provisions",
 										"work-orders"
+									],
+									"query": [
+										{
+											"key": "startDate",
+											"value": "2022-12-12"
+										},
+										{
+											"key": "endDate",
+											"value": "2022-12-14"
+										}
 									]
 								}
 							},
@@ -5643,14 +5633,14 @@
 								"method": "GET",
 								"header": [],
 								"url": {
-									"raw": "{{url}}/provisions/work-orders/5",
+									"raw": "{{url}}/provisions/work-orders/13",
 									"host": [
 										"{{url}}"
 									],
 									"path": [
 										"provisions",
 										"work-orders",
-										"5"
+										"13"
 									]
 								}
 							},
@@ -7660,7 +7650,7 @@
 								],
 								"body": {
 									"mode": "raw",
-									"raw": "{\r\n  \"prefix\": \"PEX-02\",\r\n  \"areas_id\": [1],\r\n  \"users_id\": [1]\r\n}",
+									"raw": "{\r\n  \"prefix\": \"PEX-02\",\r\n  \"areas_id\": [1],\r\n  \"users_id\": [2]\r\n}",
 									"options": {
 										"raw": {
 											"language": "json"
@@ -7884,13 +7874,12 @@
 								"method": "GET",
 								"header": [],
 								"url": {
-									"raw": "{{url}}/tags/work-orders",
+									"raw": "{{url}}/tags",
 									"host": [
 										"{{url}}"
 									],
 									"path": [
-										"tags",
-										"work-orders"
+										"tags"
 									]
 								}
 							},
