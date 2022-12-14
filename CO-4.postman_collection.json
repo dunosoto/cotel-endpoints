@@ -154,12 +154,23 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "{{url}}/clients",
+							"raw": "{{url}}/clients?lastName=silvestre",
 							"host": [
 								"{{url}}"
 							],
 							"path": [
 								"clients"
+							],
+							"query": [
+								{
+									"key": "name",
+									"value": "miguel",
+									"disabled": true
+								},
+								{
+									"key": "lastName",
+									"value": "silvestre"
+								}
 							]
 						}
 					},
@@ -4454,6 +4465,25 @@
 							"response": []
 						},
 						{
+							"name": "get a work order",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{url}}/faults/work-orders/1",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"faults",
+										"work-orders",
+										"1"
+									]
+								}
+							},
+							"response": []
+						},
+						{
 							"name": "update work order",
 							"protocolProfileBehavior": {
 								"disabledSystemHeaders": {
@@ -4487,25 +4517,6 @@
 										"faults",
 										"work-orders",
 										"1"
-									]
-								}
-							},
-							"response": []
-						},
-						{
-							"name": "get a work order",
-							"request": {
-								"method": "GET",
-								"header": [],
-								"url": {
-									"raw": "{{url}}/faults/work-orders/3",
-									"host": [
-										"{{url}}"
-									],
-									"path": [
-										"faults",
-										"work-orders",
-										"3"
 									]
 								}
 							},
