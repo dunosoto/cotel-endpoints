@@ -154,7 +154,7 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "{{url}}/clients?name=mi",
+							"raw": "{{url}}/clients?lastName=torrico peredo",
 							"host": [
 								"{{url}}"
 							],
@@ -164,12 +164,12 @@
 							"query": [
 								{
 									"key": "lastName",
-									"value": "silvestre",
-									"disabled": true
+									"value": "torrico peredo"
 								},
 								{
 									"key": "name",
-									"value": "mi"
+									"value": "jimi joe",
+									"disabled": true
 								}
 							]
 						}
@@ -194,7 +194,7 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n  \"code\": \"08zxaesvddfsdf\",\r\n  \"name\": \"miguel\",\r\n  \"last_name\": \"silvestre\",\r\n  \"phones\": [\"61608275\", \"4756025\",\"72210334\"],\r\n  \"category_id\": 1,\r\n  \"contacts\": [\r\n    {\r\n      \"name\": \"Javier Choque\",\r\n      \"phone\": \"61608275\"\r\n    },\r\n    {\r\n      \"name\": \"Maria Mercedes\",\r\n      \"phone\": \"72210334\"\r\n    }\r\n  ]\r\n}",
+							"raw": "{\r\n  \"code\": \"08zxaesvd90f\",\r\n  \"name\": \"jimi joe\",\r\n  \"last_name\": \"torrico peredo\",\r\n  \"phones\": [\"61608275\", \"4756025\",\"72210334\"],\r\n  \"category_id\": 1,\r\n  \"contacts\": [\r\n    {\r\n      \"name\": \"Javier Choque\",\r\n      \"phone\": \"61608275\"\r\n    },\r\n    {\r\n      \"name\": \"Maria Mercedes\",\r\n      \"phone\": \"72210334\"\r\n    }\r\n  ]\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -1155,13 +1155,13 @@
 								"method": "GET",
 								"header": [],
 								"url": {
-									"raw": "{{url}}/odns/9",
+									"raw": "{{url}}/odns/1",
 									"host": [
 										"{{url}}"
 									],
 									"path": [
 										"odns",
-										"9"
+										"1"
 									]
 								}
 							},
@@ -1908,7 +1908,7 @@
 												],
 												"body": {
 													"mode": "raw",
-													"raw": "{\r\n  \"price_id\": 1,\r\n  \"work_order_id\": 1,\r\n  \"observation\": \"observation\",\r\n  \"amount\": 2.12,\r\n  \"amount_workforce\": 2.12\r\n}",
+													"raw": "{\r\n  \"price_id\": 1,\r\n  \"work_order_id\": 1,\r\n  \"observation\": \"other observation\",\r\n  \"amount\": 3.88,\r\n  \"amount_workforce\": 2.12\r\n}",
 													"options": {
 														"raw": {
 															"language": "json"
@@ -2485,7 +2485,7 @@
 										],
 										"body": {
 											"mode": "raw",
-											"raw": "{\r\n  \"work_order_id\": 2,\r\n  \"used_material\": true,\r\n  \"personal_presentation\": \"Buena\",\r\n  \"repair_quality\": \"Mala\",\r\n  \"diferences\": true,\r\n  \"current_report\": true,\r\n  \"used_report\": true\r\n}",
+											"raw": "{\r\n  \"work_order_id\": 1,\r\n  \"used_material\": true,\r\n  \"personal_presentation\": \"Buena\",\r\n  \"repair_quality\": \"Mala\",\r\n  \"diferences\": true,\r\n  \"current_report\": true,\r\n  \"used_report\": true\r\n}",
 											"options": {
 												"raw": {
 													"language": "json"
@@ -2621,7 +2621,7 @@
 								"method": "GET",
 								"header": [],
 								"url": {
-									"raw": "{{url}}/external-plant/work-orders",
+									"raw": "{{url}}/external-plant/work-orders?startDate=2023-01-10&endDate=2023-01-12",
 									"host": [
 										"{{url}}"
 									],
@@ -2632,13 +2632,11 @@
 									"query": [
 										{
 											"key": "startDate",
-											"value": "2022-12-11",
-											"disabled": true
+											"value": "2023-01-10"
 										},
 										{
 											"key": "endDate",
-											"value": "2022-12-14",
-											"disabled": true
+											"value": "2023-01-12"
 										}
 									]
 								}
@@ -2663,7 +2661,7 @@
 								],
 								"body": {
 									"mode": "raw",
-									"raw": "{\r\n  \"work_order\": {\r\n    \"odn_id\" : 1,\r\n    \"description\": \"mantenimiento no programado\",\r\n    \"affected_customers\" : 10,\r\n    \"company_id\" : 2,\r\n    \"category_id\" : 3,\r\n    \"type_id\" : 2,\r\n    \"supervisor_id\": 2\r\n  },\r\n  \"estimated_date\" : {\r\n    \"start\": \"2022-12-09 00:00:00\",\r\n    \"finish\": \"2022-12-10 00:00:00\"\r\n  },\r\n  \"tags\": {\r\n    \"clasification_id\" : 6,\r\n    \"status_id\" : 2\r\n  },\r\n  \"groups\" : [{\"id\": 1, \"mandated\": true}]\r\n}",
+									"raw": "{\r\n  \"work_order\": {\r\n    \"odn_id\" : 1,\r\n    \"description\": \"mantenimiento no programado\",\r\n    \"affected_customers\" : 10,\r\n    \"company_id\" : 2,\r\n    \"category_id\" : 3,\r\n    \"type_id\" : 2,\r\n    \"supervisor_id\": 2\r\n  },\r\n  \"estimated_date\" : {\r\n    \"start\": \"2023-01-11 00:00:00\",\r\n    \"finish\": \"2023-01-12 00:00:00\"\r\n  },\r\n  \"tags\": {\r\n    \"clasification_id\" : 6,\r\n    \"status_id\" : 2\r\n  },\r\n  \"groups\" : [{\"id\": 1, \"mandated\": true}]\r\n}",
 									"options": {
 										"raw": {
 											"language": "json"
@@ -2689,14 +2687,14 @@
 								"method": "GET",
 								"header": [],
 								"url": {
-									"raw": "{{url}}/external-plant/work-orders/1",
+									"raw": "{{url}}/external-plant/work-orders/89",
 									"host": [
 										"{{url}}"
 									],
 									"path": [
 										"external-plant",
 										"work-orders",
-										"1"
+										"89"
 									]
 								}
 							},
@@ -2728,14 +2726,14 @@
 									}
 								},
 								"url": {
-									"raw": "{{url}}/external-plant/work-orders/1",
+									"raw": "{{url}}/external-plant/work-orders/78",
 									"host": [
 										"{{url}}"
 									],
 									"path": [
 										"external-plant",
 										"work-orders",
-										"1"
+										"78"
 									]
 								}
 							},
@@ -2747,14 +2745,14 @@
 								"method": "DELETE",
 								"header": [],
 								"url": {
-									"raw": "{{url}}/external-plant/work-orders/3",
+									"raw": "{{url}}/external-plant/work-orders/78",
 									"host": [
 										"{{url}}"
 									],
 									"path": [
 										"external-plant",
 										"work-orders",
-										"3"
+										"78"
 									]
 								}
 							},
@@ -2771,12 +2769,14 @@
 								"method": "GET",
 								"header": [],
 								"url": {
-									"raw": "{{url}}/external-plant/reports/download",
+									"raw": "{{url}}/external-plant/work-order/1/reports/download",
 									"host": [
 										"{{url}}"
 									],
 									"path": [
 										"external-plant",
+										"work-order",
+										"1",
 										"reports",
 										"download"
 									]
@@ -4430,7 +4430,7 @@
 								"method": "GET",
 								"header": [],
 								"url": {
-									"raw": "{{url}}/faults/work-orders",
+									"raw": "{{url}}/faults/work-orders?startDate=2022-12-13&endDate=2022-12-14",
 									"host": [
 										"{{url}}"
 									],
@@ -4441,13 +4441,11 @@
 									"query": [
 										{
 											"key": "startDate",
-											"value": "2022-12-13",
-											"disabled": true
+											"value": "2022-12-13"
 										},
 										{
 											"key": "endDate",
-											"value": "2022-12-15",
-											"disabled": true
+											"value": "2022-12-14"
 										}
 									]
 								}
@@ -4496,6 +4494,25 @@
 							"name": "get a work order",
 							"request": {
 								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{url}}/faults/work-orders/2",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"faults",
+										"work-orders",
+										"2"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "delete a work order",
+							"request": {
+								"method": "DELETE",
 								"header": [],
 								"url": {
 									"raw": "{{url}}/faults/work-orders/1",
