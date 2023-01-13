@@ -2621,7 +2621,7 @@
 								"method": "GET",
 								"header": [],
 								"url": {
-									"raw": "{{url}}/external-plant/work-orders?startDate=2023-01-10&endDate=2023-01-12",
+									"raw": "{{url}}/external-plant/work-orders",
 									"host": [
 										"{{url}}"
 									],
@@ -2632,11 +2632,13 @@
 									"query": [
 										{
 											"key": "startDate",
-											"value": "2023-01-10"
+											"value": "2023-01-10",
+											"disabled": true
 										},
 										{
 											"key": "endDate",
-											"value": "2023-01-12"
+											"value": "2023-01-12",
+											"disabled": true
 										}
 									]
 								}
@@ -4575,6 +4577,106 @@
 			"name": "provisions",
 			"item": [
 				{
+					"name": "poles",
+					"item": [
+						{
+							"name": "get poles",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{url}}/provisions/poles",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"provisions",
+										"poles"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "post a pole",
+							"protocolProfileBehavior": {
+								"disabledSystemHeaders": {
+									"accept": true
+								}
+							},
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"company_id\": 2,\r\n  \"lat\": \"-123.123\",\r\n  \"lon\": \"123.123\",\r\n  \"observation\": \"observation can be null\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{url}}/provisions/poles",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"provisions",
+										"poles"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "update a pole",
+							"protocolProfileBehavior": {
+								"disabledSystemHeaders": {
+									"accept": true
+								}
+							},
+							"request": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"company_id\": 1,\r\n  \"lat\": \"-456.456\",\r\n  \"lon\": \"567.567\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{url}}/provisions/poles/1",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"provisions",
+										"poles",
+										"1"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
 					"name": "work order",
 					"item": [
 						{
@@ -5571,6 +5673,50 @@
 												"provisions",
 												"quality-interventions",
 												"1"
+											]
+										}
+									},
+									"response": []
+								}
+							]
+						},
+						{
+							"name": "work order pole",
+							"item": [
+								{
+									"name": "post work order pole",
+									"protocolProfileBehavior": {
+										"disabledSystemHeaders": {
+											"accept": true
+										}
+									},
+									"request": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "application/json",
+												"type": "text"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n  \"work_order_id\": 1,\r\n  \"pole_id\": 1,\r\n  \"status\": \"Retirado\"\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{url}}/provisions/work-orders/poles",
+											"host": [
+												"{{url}}"
+											],
+											"path": [
+												"provisions",
+												"work-orders",
+												"poles"
 											]
 										}
 									},
