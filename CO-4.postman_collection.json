@@ -2689,14 +2689,14 @@
 								"method": "GET",
 								"header": [],
 								"url": {
-									"raw": "{{url}}/external-plant/work-orders/89",
+									"raw": "{{url}}/external-plant/work-orders/1",
 									"host": [
 										"{{url}}"
 									],
 									"path": [
 										"external-plant",
 										"work-orders",
-										"89"
+										"1"
 									]
 								}
 							},
@@ -2767,9 +2767,30 @@
 					"item": [
 						{
 							"name": "reports download",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true,
+								"disabledSystemHeaders": {
+									"accept": true
+								}
+							},
 							"request": {
 								"method": "GET",
-								"header": [],
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "[\r\n  {\r\n    \"name\": \"daniel uno\",\r\n    \"identity_card\": \"7997232\",\r\n    \"company\": \"CO4 S.R.L.\"\r\n  },\r\n  {\r\n    \"name\": \"alberto\",\r\n    \"identity_card\": \"1232457\",\r\n    \"company\": \"Entel S.A.\"\r\n  }\r\n]",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
 								"url": {
 									"raw": "{{url}}/external-plant/work-order/1/reports/download",
 									"host": [
@@ -4432,7 +4453,7 @@
 								"method": "GET",
 								"header": [],
 								"url": {
-									"raw": "{{url}}/faults/work-orders?startDate=2022-12-13&endDate=2022-12-14",
+									"raw": "{{url}}/faults/work-orders",
 									"host": [
 										"{{url}}"
 									],
@@ -4443,11 +4464,13 @@
 									"query": [
 										{
 											"key": "startDate",
-											"value": "2022-12-13"
+											"value": "2022-01-13",
+											"disabled": true
 										},
 										{
 											"key": "endDate",
-											"value": "2022-12-14"
+											"value": "2023-1-09",
+											"disabled": true
 										}
 									]
 								}
@@ -7809,13 +7832,13 @@
 										"method": "GET",
 										"header": [],
 										"url": {
-											"raw": "{{url}}/groups/1/work-orders",
+											"raw": "{{url}}/groups/2/work-orders",
 											"host": [
 												"{{url}}"
 											],
 											"path": [
 												"groups",
-												"1",
+												"2",
 												"work-orders"
 											]
 										}
