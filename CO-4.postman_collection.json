@@ -359,7 +359,7 @@
 								],
 								"body": {
 									"mode": "raw",
-									"raw": "{\r\n  \"service_id\": 1,\r\n  \"box\": \"1234\",\r\n  \"pair\": \"1234\",\r\n  \"node\": \"1234\",\r\n  \"descent\": \"1234\",\r\n  \"primary\": \"1234\",\r\n  \"observation\": \"this is a observation\",\r\n  \r\n  \"primary_borne\": \"1234\",\r\n  \"wardrobe\": \"1234\",\r\n  \"borne\": \"1234\",\r\n  \"second_borne\": \"1234\",\r\n  \"ring\": \"1234\",\r\n  \"adm_node\": \"1234\",\r\n  \"flow\": \"1234\",\r\n  \"time_slote\": \"1234\"\r\n}",
+									"raw": "{\r\n  \"service_id\": 1,\r\n  \"box\": \"\",\r\n  \"pair\": \"123\",\r\n  \"node\": \"\",\r\n  \"descent\": \"123\",\r\n  \"primary\": \"\",\r\n  \"observation\": \"this is a observation\",\r\n  \r\n  \"primary_borne\": \"123\",\r\n  \"wardrobe\": \"\",\r\n  \"borne\": \"\",\r\n  \"second_borne\": \"\",\r\n  \"ring\": \"\",\r\n  \"adm_node\": \"\",\r\n  \"flow\": \"\",\r\n  \"time_slote\": \"1234\",\r\n  \"work_order_id\": 34\r\n}",
 									"options": {
 										"raw": {
 											"language": "json"
@@ -4638,7 +4638,7 @@
 								],
 								"body": {
 									"mode": "raw",
-									"raw": "{\r\n  \"company_id\": 2,\r\n  \"lat\": \"-123.123\",\r\n  \"lon\": \"123.123\",\r\n  \"observation\": \"observation can be null\"\r\n}",
+									"raw": "{\r\n  \"company_id\": 2,\r\n  \"code\": \"123-WER\",\r\n  \"lat\": \"-123.123\",\r\n  \"lon\": \"123.123\",\r\n  \"observation\": \"observation can be null\"\r\n}",
 									"options": {
 										"raw": {
 											"language": "json"
