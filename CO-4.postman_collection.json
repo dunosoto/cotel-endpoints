@@ -4696,6 +4696,25 @@
 								}
 							},
 							"response": []
+						},
+						{
+							"name": "get pole by code",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{url}}/provisions/poles/123-WEk",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"provisions",
+										"poles",
+										"123-WEk"
+									]
+								}
+							},
+							"response": []
 						}
 					]
 				},
