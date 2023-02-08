@@ -154,7 +154,7 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "{{url}}/clients?lastName=torrico peredo",
+							"raw": "{{url}}/clients",
 							"host": [
 								"{{url}}"
 							],
@@ -164,7 +164,8 @@
 							"query": [
 								{
 									"key": "lastName",
-									"value": "torrico peredo"
+									"value": "torrico peredo",
+									"disabled": true
 								},
 								{
 									"key": "name",
@@ -997,7 +998,7 @@
 								],
 								"body": {
 									"mode": "raw",
-									"raw": "{\r\n  \"olt\": {\r\n    \"name\":\"cercado\",\r\n    \"address\":\"Plaza colo\",\r\n    \"lat\":\"-11.345623\",\r\n    \"lon\":\"-12.12765\",\r\n    \"image\":\"asdqwe\",\r\n    \"category_id\": 1,\r\n    \"state_id\": 1,\r\n    \"date_mantenance\":\"2022-03-07 00:00:00\",\r\n    \"lapse_time_in_month\":1\r\n  },\r\n  \"variants\": [\r\n    {\r\n      \"id\": 1,\r\n      \"amount\": 10.11\r\n    }\r\n  ]\r\n}",
+									"raw": "{\r\n  \"olt\": {\r\n    \"name\":\"cercado\",\r\n    \"address\":\"Plaza colon\",\r\n    \"lat\":\"-11.345623\",\r\n    \"lon\":\"-12.12765\",\r\n    \"image\":\"asdqwe\",\r\n    \"category_id\": 1,\r\n    \"state_id\": 1,\r\n    \"date_mantenance\":\"2022-03-07 00:00:00\",\r\n    \"lapse_time_in_month\":1\r\n  },\r\n  \"variants\": [\r\n    {\r\n      \"id\": 1,\r\n      \"amount\": 10.11\r\n    }\r\n  ]\r\n}",
 									"options": {
 										"raw": {
 											"language": "json"
@@ -1470,14 +1471,14 @@
 											}
 										},
 										"url": {
-											"raw": "{{url}}/external-plant/work-order/2/activities",
+											"raw": "{{url}}/external-plant/work-order/1/activities",
 											"host": [
 												"{{url}}"
 											],
 											"path": [
 												"external-plant",
 												"work-order",
-												"2",
+												"1",
 												"activities"
 											]
 										}
@@ -1561,7 +1562,7 @@
 											}
 										],
 										"url": {
-											"raw": "{{url}}/external-plant/work-order/activities/7/finish",
+											"raw": "{{url}}/external-plant/work-order/activities/1/finish",
 											"host": [
 												"{{url}}"
 											],
@@ -1569,7 +1570,7 @@
 												"external-plant",
 												"work-order",
 												"activities",
-												"7",
+												"1",
 												"finish"
 											]
 										}
@@ -1637,7 +1638,7 @@
 										],
 										"body": {
 											"mode": "raw",
-											"raw": "{\r\n  \"name\": \"Installacion duplo\",\r\n  \"code\": \"A-89\",\r\n  \"unit\": 2,\r\n  \"prices\": {\r\n    \"material\": 12.12,\r\n    \"work_force\": 30.30\r\n  }\r\n}",
+											"raw": "{\r\n  \"name\": \"Instalacion duplo\",\r\n  \"code\": \"A-89\",\r\n  \"unit\": 2,\r\n  \"prices\": {\r\n    \"material\": 12.12,\r\n    \"work_force\": 30.30\r\n  }\r\n}",
 											"options": {
 												"raw": {
 													"language": "json"
@@ -1730,7 +1731,7 @@
 													}
 												},
 												"url": {
-													"raw": "{{url}}/external-plant/work-order/certifications/6/check",
+													"raw": "{{url}}/external-plant/work-order/certifications/1/check",
 													"host": [
 														"{{url}}"
 													],
@@ -1738,7 +1739,7 @@
 														"external-plant",
 														"work-order",
 														"certifications",
-														"6",
+														"1",
 														"check"
 													]
 												}
@@ -2663,7 +2664,7 @@
 								],
 								"body": {
 									"mode": "raw",
-									"raw": "{\r\n  \"work_order\": {\r\n    \"odn_id\" : 1,\r\n    \"description\": \"mantenimiento no programado\",\r\n    \"affected_customers\" : 10,\r\n    \"company_id\" : 2,\r\n    \"category_id\" : 3,\r\n    \"type_id\" : 2,\r\n    \"supervisor_id\": 2\r\n  },\r\n  \"estimated_date\" : {\r\n    \"start\": \"2023-01-11 00:00:00\",\r\n    \"finish\": \"2023-01-12 00:00:00\"\r\n  },\r\n  \"tags\": {\r\n    \"clasification_id\" : 6,\r\n    \"status_id\" : 2\r\n  },\r\n  \"groups\" : [{\"id\": 1, \"mandated\": true}]\r\n}",
+									"raw": "{\r\n  \"work_order\": {\r\n    \"odn_id\" : 1,\r\n    \"description\": \"mantenimiento no programado\",\r\n    \"affected_customers\" : 10,\r\n    \"company_id\" : 2,\r\n    \"category_id\" : 3,\r\n    \"type_id\" : 2,\r\n    \"supervisor_id\": 2\r\n  },\r\n  \"estimated_date\" : {\r\n    \"start\": \"2023-02-07 00:00:00\",\r\n    \"finish\": \"2023-02-08 00:00:00\"\r\n  },\r\n  \"tags\": {\r\n    \"clasification_id\" : 6,\r\n    \"status_id\" : 2\r\n  },\r\n  \"groups\" : [{\"id\": 1, \"mandated\": true}]\r\n}",
 									"options": {
 										"raw": {
 											"language": "json"
@@ -2768,13 +2769,12 @@
 						{
 							"name": "reports download",
 							"protocolProfileBehavior": {
-								"disableBodyPruning": true,
 								"disabledSystemHeaders": {
 									"accept": true
 								}
 							},
 							"request": {
-								"method": "GET",
+								"method": "POST",
 								"header": [
 									{
 										"key": "Accept",
@@ -2784,7 +2784,7 @@
 								],
 								"body": {
 									"mode": "raw",
-									"raw": "[\r\n  {\r\n    \"name\": \"daniel uno\",\r\n    \"identity_card\": \"7997232\",\r\n    \"company\": \"CO4 S.R.L.\"\r\n  },\r\n  {\r\n    \"name\": \"alberto\",\r\n    \"identity_card\": \"1232457\",\r\n    \"company\": \"Entel S.A.\"\r\n  }\r\n]",
+									"raw": "[\r\n  {\r\n    \"name\": \"daniel uno\",\r\n    \"identity_card\": \"7997232\",\r\n    \"company\": \"CO4 S.R.L.\"\r\n  },\r\n  {\r\n    \"name\": \"alberto rodriguez\",\r\n    \"identity_card\": \"1232457\",\r\n    \"company\": \"Entel S.A.\"\r\n  }\r\n]",
 									"options": {
 										"raw": {
 											"language": "json"
@@ -4676,7 +4676,7 @@
 								],
 								"body": {
 									"mode": "raw",
-									"raw": "{\r\n  \"company_id\": 1,\r\n  \"lat\": \"-456.456\",\r\n  \"lon\": \"567.567\"\r\n}",
+									"raw": "{\r\n  \"code\": \"123-WER\",\r\n  \"company_id\": 1,\r\n  \"lat\": \"-456.856\",\r\n  \"lon\": \"567.517\"\r\n}",
 									"options": {
 										"raw": {
 											"language": "json"
@@ -4703,14 +4703,14 @@
 								"method": "GET",
 								"header": [],
 								"url": {
-									"raw": "{{url}}/provisions/poles/123-WEk",
+									"raw": "{{url}}/provisions/poles/ASS2",
 									"host": [
 										"{{url}}"
 									],
 									"path": [
 										"provisions",
 										"poles",
-										"123-WEk"
+										"ASS2"
 									]
 								}
 							},
@@ -7087,7 +7087,7 @@
 										"header": [],
 										"body": {
 											"mode": "raw",
-											"raw": "{\r\n  \"variant_id\": 3,\r\n  \"price\": 42.34\r\n}",
+											"raw": "{\r\n  \"variant_id\": 1,\r\n  \"price\": 42.34\r\n}",
 											"options": {
 												"raw": {
 													"language": "json"
@@ -7296,13 +7296,13 @@
 											}
 										},
 										"url": {
-											"raw": "{{url}}/user-roles/1",
+											"raw": "{{url}}/user-roles/2",
 											"host": [
 												"{{url}}"
 											],
 											"path": [
 												"user-roles",
-												"1"
+												"2"
 											]
 										}
 									},
@@ -7492,7 +7492,7 @@
 								],
 								"body": {
 									"mode": "raw",
-									"raw": "{\r\n  \"name\": \"ariel\",\r\n  \"last_name\": \"unos soto\",\r\n  \"cell_phone\": \"72210334\",\r\n  \"email\": \"cibib13948@bongcs.com\",\r\n  \"password\": \"daniel1998\",\r\n  \"password_confirmation\": \"daniel1998\",\r\n  \"role_id\": 2,\r\n  \"areas_id\": [1,2],\r\n  \"company_id\": 2,\r\n  \"avatar\": \"\"\r\n}",
+									"raw": "{\r\n  \"name\": \"ariel\",\r\n  \"last_name\": \"andia rodriguez\",\r\n  \"cell_phone\": \"78920336\",\r\n  \"email\": \"cibib13948@bongcs.com\",\r\n  \"password\": \"password\",\r\n  \"password_confirmation\": \"password\",\r\n  \"role_id\": 2,\r\n  \"areas_id\": [1,2],\r\n  \"company_id\": 2,\r\n  \"avatar\": \"\"\r\n}",
 									"options": {
 										"raw": {
 											"language": "json"
@@ -7647,7 +7647,7 @@
 										],
 										"body": {
 											"mode": "raw",
-											"raw": "{\r\n  \"group_items\": [\r\n    {\r\n      \"group_id\": 3,\r\n      \"quantity_variant_id\": 1,\r\n      \"incoming\": 30,\r\n      \"date_incoming\": \"2022-05-14 00:00:00\"\r\n    }\r\n  ]\r\n}",
+											"raw": "{\r\n  \"group_items\": [\r\n    {\r\n      \"group_id\": 1,\r\n      \"quantity_variant_id\": 1,\r\n      \"incoming\": 80,\r\n      \"date_incoming\": \"2022-05-14 00:00:00\"\r\n    }\r\n  ]\r\n}",
 											"options": {
 												"raw": {
 													"language": "json"
@@ -7901,7 +7901,7 @@
 								],
 								"body": {
 									"mode": "raw",
-									"raw": "{\r\n  \"prefix\": \"PEX-02\",\r\n  \"areas_id\": [1],\r\n  \"users_id\": [2]\r\n}",
+									"raw": "{\r\n  \"prefix\": \"PEX-01\",\r\n  \"areas_id\": [1],\r\n  \"users_id\": [2]\r\n}",
 									"options": {
 										"raw": {
 											"language": "json"
