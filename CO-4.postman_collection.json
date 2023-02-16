@@ -1700,10 +1700,10 @@
 							]
 						},
 						{
-							"name": "certification quantities",
+							"name": "certification actions",
 							"item": [
 								{
-									"name": "certification check",
+									"name": "certification action check",
 									"item": [
 										{
 											"name": "post certifications check",
@@ -1731,14 +1731,14 @@
 													}
 												},
 												"url": {
-													"raw": "{{url}}/external-plant/work-order/certifications/1/check",
+													"raw": "{{url}}/external-plant/work-order/certifications-actions/1/check",
 													"host": [
 														"{{url}}"
 													],
 													"path": [
 														"external-plant",
 														"work-order",
-														"certifications",
+														"certifications-actions",
 														"1",
 														"check"
 													]
@@ -1752,16 +1752,16 @@
 												"method": "GET",
 												"header": [],
 												"url": {
-													"raw": "{{url}}/external-plant/work-order/certifications/check/5",
+													"raw": "{{url}}/external-plant/work-order/certifications-actions/check/1",
 													"host": [
 														"{{url}}"
 													],
 													"path": [
 														"external-plant",
 														"work-order",
-														"certifications",
+														"certifications-actions",
 														"check",
-														"5"
+														"1"
 													]
 												}
 											},
@@ -1793,16 +1793,16 @@
 													}
 												},
 												"url": {
-													"raw": "{{url}}/external-plant/work-order/certifications/check/6",
+													"raw": "{{url}}/external-plant/work-order/certifications-actions/check/1",
 													"host": [
 														"{{url}}"
 													],
 													"path": [
 														"external-plant",
 														"work-order",
-														"certifications",
+														"certifications-actions",
 														"check",
-														"6"
+														"1"
 													]
 												}
 											},
@@ -1810,6 +1810,130 @@
 										}
 									]
 								},
+								{
+									"name": "post certification action",
+									"protocolProfileBehavior": {
+										"disabledSystemHeaders": {
+											"accept": true
+										}
+									},
+									"request": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "application/json",
+												"type": "text"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n  \"price_id\": 1,\r\n  \"work_order_id\": 1,\r\n  \"observation\": \"other observation\",\r\n  \"amount\": 3.88,\r\n  \"amount_workforce\": 2.12\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{url}}/external-plant/work-order/certifications-actions",
+											"host": [
+												"{{url}}"
+											],
+											"path": [
+												"external-plant",
+												"work-order",
+												"certifications-actions"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "update certification action",
+									"protocolProfileBehavior": {
+										"disabledSystemHeaders": {
+											"accept": true
+										}
+									},
+									"request": {
+										"method": "PUT",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "application/json",
+												"type": "text"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n  \"observation\": \"observation update\",\r\n  \"amount\": 7.23,\r\n  \"amount_workforce\": 1.89\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{url}}/external-plant/work-order/certifications-actions/2",
+											"host": [
+												"{{url}}"
+											],
+											"path": [
+												"external-plant",
+												"work-order",
+												"certifications-actions",
+												"2"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "delete certification action",
+									"protocolProfileBehavior": {
+										"disabledSystemHeaders": {
+											"accept": true
+										}
+									},
+									"request": {
+										"method": "DELETE",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "application/json",
+												"type": "text"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{url}}/external-plant/work-order/certifications-actions/2",
+											"host": [
+												"{{url}}"
+											],
+											"path": [
+												"external-plant",
+												"work-order",
+												"certifications-actions",
+												"2"
+											]
+										}
+									},
+									"response": []
+								}
+							]
+						},
+						{
+							"name": "certification quantities",
+							"item": [
 								{
 									"name": "certication materials details",
 									"item": [
@@ -1881,130 +2005,6 @@
 														"certifications",
 														"materials-details",
 														"3"
-													]
-												}
-											},
-											"response": []
-										}
-									]
-								},
-								{
-									"name": "certification actions",
-									"item": [
-										{
-											"name": "post certification action",
-											"protocolProfileBehavior": {
-												"disabledSystemHeaders": {
-													"accept": true
-												}
-											},
-											"request": {
-												"method": "POST",
-												"header": [
-													{
-														"key": "Accept",
-														"value": "application/json",
-														"type": "text"
-													}
-												],
-												"body": {
-													"mode": "raw",
-													"raw": "{\r\n  \"price_id\": 1,\r\n  \"work_order_id\": 1,\r\n  \"observation\": \"other observation\",\r\n  \"amount\": 3.88,\r\n  \"amount_workforce\": 2.12\r\n}",
-													"options": {
-														"raw": {
-															"language": "json"
-														}
-													}
-												},
-												"url": {
-													"raw": "{{url}}/external-plant/work-order/certifications-actions",
-													"host": [
-														"{{url}}"
-													],
-													"path": [
-														"external-plant",
-														"work-order",
-														"certifications-actions"
-													]
-												}
-											},
-											"response": []
-										},
-										{
-											"name": "update certification action",
-											"protocolProfileBehavior": {
-												"disabledSystemHeaders": {
-													"accept": true
-												}
-											},
-											"request": {
-												"method": "PUT",
-												"header": [
-													{
-														"key": "Accept",
-														"value": "application/json",
-														"type": "text"
-													}
-												],
-												"body": {
-													"mode": "raw",
-													"raw": "{\r\n  \"observation\": \"observation update\",\r\n  \"amount\": 7.23,\r\n  \"amount_workforce\": 1.89\r\n}",
-													"options": {
-														"raw": {
-															"language": "json"
-														}
-													}
-												},
-												"url": {
-													"raw": "{{url}}/external-plant/work-order/certifications-actions/2",
-													"host": [
-														"{{url}}"
-													],
-													"path": [
-														"external-plant",
-														"work-order",
-														"certifications-actions",
-														"2"
-													]
-												}
-											},
-											"response": []
-										},
-										{
-											"name": "delete certification action",
-											"protocolProfileBehavior": {
-												"disabledSystemHeaders": {
-													"accept": true
-												}
-											},
-											"request": {
-												"method": "DELETE",
-												"header": [
-													{
-														"key": "Accept",
-														"value": "application/json",
-														"type": "text"
-													}
-												],
-												"body": {
-													"mode": "raw",
-													"raw": "",
-													"options": {
-														"raw": {
-															"language": "json"
-														}
-													}
-												},
-												"url": {
-													"raw": "{{url}}/external-plant/work-order/certifications-actions/2",
-													"host": [
-														"{{url}}"
-													],
-													"path": [
-														"external-plant",
-														"work-order",
-														"certifications-actions",
-														"2"
 													]
 												}
 											},
@@ -2664,7 +2664,7 @@
 								],
 								"body": {
 									"mode": "raw",
-									"raw": "{\r\n  \"work_order\": {\r\n    \"odn_id\" : 1,\r\n    \"description\": \"mantenimiento no programado\",\r\n    \"affected_customers\" : 10,\r\n    \"company_id\" : 2,\r\n    \"category_id\" : 3,\r\n    \"type_id\" : 2,\r\n    \"supervisor_id\": 2\r\n  },\r\n  \"estimated_date\" : {\r\n    \"start\": \"2023-02-07 00:00:00\",\r\n    \"finish\": \"2023-02-08 00:00:00\"\r\n  },\r\n  \"tags\": {\r\n    \"clasification_id\" : 6,\r\n    \"status_id\" : 2\r\n  },\r\n  \"groups\" : [{\"id\": 1, \"mandated\": true}]\r\n}",
+									"raw": "{\r\n  \"work_order\": {\r\n    \"odn_id\" : 1,\r\n    \"description\": \"mantenimiento no programado\",\r\n    \"affected_customers\" : 10,\r\n    \"company_id\" : 2,\r\n    \"category_id\" : 3,\r\n    \"type_id\" : 2,\r\n    \"supervisor_id\": 2\r\n  },\r\n  \"estimated_date\" : {\r\n    \"start\": \"2023-02-13 00:00:00\",\r\n    \"finish\": \"2023-02-14 00:00:00\"\r\n  },\r\n  \"tags\": {\r\n    \"clasification_id\" : 6,\r\n    \"status_id\" : 2\r\n  },\r\n  \"groups\" : [{\"id\": 1, \"mandated\": true}]\r\n}",
 									"options": {
 										"raw": {
 											"language": "json"
@@ -7647,7 +7647,7 @@
 										],
 										"body": {
 											"mode": "raw",
-											"raw": "{\r\n  \"group_items\": [\r\n    {\r\n      \"group_id\": 1,\r\n      \"quantity_variant_id\": 1,\r\n      \"incoming\": 80,\r\n      \"date_incoming\": \"2022-05-14 00:00:00\"\r\n    }\r\n  ]\r\n}",
+											"raw": "{\r\n  \"group_items\": [\r\n    {\r\n      \"group_id\": 1,\r\n      \"quantity_variant_id\": 1,\r\n      \"incoming\": 100,\r\n      \"date_incoming\": \"2022-05-14 00:00:00\"\r\n    }\r\n  ]\r\n}",
 											"options": {
 												"raw": {
 													"language": "json"
@@ -7901,7 +7901,7 @@
 								],
 								"body": {
 									"mode": "raw",
-									"raw": "{\r\n  \"prefix\": \"PEX-01\",\r\n  \"areas_id\": [1],\r\n  \"users_id\": [2]\r\n}",
+									"raw": "{\r\n  \"prefix\": \"PEX-02\",\r\n  \"areas_id\": [1,2],\r\n  \"users_id\": [2]\r\n}",
 									"options": {
 										"raw": {
 											"language": "json"
@@ -8211,7 +8211,7 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "{{url}}/reports/ots?year=2022&area=3",
+							"raw": "{{url}}/reports/ots?year=2023&area=1",
 							"host": [
 								"{{url}}"
 							],
@@ -8222,11 +8222,39 @@
 							"query": [
 								{
 									"key": "year",
-									"value": "2022"
+									"value": "2023"
 								},
 								{
 									"key": "area",
-									"value": "3"
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get reports groups",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/reports/groups?year=2023&area=2",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"reports",
+								"groups"
+							],
+							"query": [
+								{
+									"key": "year",
+									"value": "2023"
+								},
+								{
+									"key": "area",
+									"value": "2"
 								}
 							]
 						}
