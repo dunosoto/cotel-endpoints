@@ -8239,7 +8239,7 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "{{url}}/reports/groups?year=2023&area=2",
+							"raw": "{{url}}/reports/groups?year=2023&area=1",
 							"host": [
 								"{{url}}"
 							],
@@ -8254,7 +8254,35 @@
 								},
 								{
 									"key": "area",
-									"value": "2"
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get reports amount work order by group",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/reports/workorder-by-type?year=2023&group=1",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"reports",
+								"workorder-by-type"
+							],
+							"query": [
+								{
+									"key": "year",
+									"value": "2023"
+								},
+								{
+									"key": "group",
+									"value": "1"
 								}
 							]
 						}
