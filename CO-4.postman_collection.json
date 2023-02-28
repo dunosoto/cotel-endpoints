@@ -2040,7 +2040,7 @@
 										],
 										"body": {
 											"mode": "raw",
-											"raw": "[\r\n  {\r\n    \"group_item_id\": 1,\r\n    \"quantity\": 1.12,\r\n    \"materials\": [3,2]\r\n  },\r\n  {\r\n    \"group_item_id\": 1,\r\n    \"quantity\": 1.12,\r\n    \"materials\": [1]\r\n  }\r\n]",
+											"raw": "[\r\n  {\r\n    \"group_item_id\": 1,\r\n    \"quantity\": 10.12\r\n  }\r\n]",
 											"options": {
 												"raw": {
 													"language": "json"
@@ -2664,7 +2664,7 @@
 								],
 								"body": {
 									"mode": "raw",
-									"raw": "{\r\n  \"work_order\": {\r\n    \"odn_id\" : 1,\r\n    \"description\": \"mantenimiento no programado\",\r\n    \"affected_customers\" : 10,\r\n    \"company_id\" : 2,\r\n    \"category_id\" : 3,\r\n    \"type_id\" : 2,\r\n    \"supervisor_id\": 2\r\n  },\r\n  \"estimated_date\" : {\r\n    \"start\": \"2023-02-13 00:00:00\",\r\n    \"finish\": \"2023-02-14 00:00:00\"\r\n  },\r\n  \"tags\": {\r\n    \"clasification_id\" : 6,\r\n    \"status_id\" : 2\r\n  },\r\n  \"groups\" : [{\"id\": 1, \"mandated\": true}]\r\n}",
+									"raw": "{\r\n  \"work_order\": {\r\n    \"odn_id\" : 1,\r\n    \"description\": \"mantenimiento no programado\",\r\n    \"affected_customers\" : 10,\r\n    \"company_id\" : 2,\r\n    \"category_id\" : 3,\r\n    \"type_id\" : 2,\r\n    \"supervisor_id\": 2\r\n  },\r\n  \"estimated_date\" : {\r\n    \"start\": \"2023-02-28 00:00:00\",\r\n    \"finish\": \"2023-02-28 00:00:00\"\r\n  },\r\n  \"tags\": {\r\n    \"clasification_id\" : 6,\r\n    \"status_id\" : 2\r\n  },\r\n  \"groups\" : [{\"id\": 1, \"mandated\": true}]\r\n}",
 									"options": {
 										"raw": {
 											"language": "json"
@@ -8267,7 +8267,7 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "{{url}}/reports/workorder-by-type?year=2023&group=1",
+							"raw": "{{url}}/reports/workorder-by-type?year=2023&group=8",
 							"host": [
 								"{{url}}"
 							],
@@ -8282,6 +8282,34 @@
 								},
 								{
 									"key": "group",
+									"value": "8"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get reports materials",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/reports/materials?year=2023&area=1",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"reports",
+								"materials"
+							],
+							"query": [
+								{
+									"key": "year",
+									"value": "2023"
+								},
+								{
+									"key": "area",
 									"value": "1"
 								}
 							]
