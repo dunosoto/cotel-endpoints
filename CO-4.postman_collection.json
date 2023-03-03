@@ -1638,7 +1638,7 @@
 										],
 										"body": {
 											"mode": "raw",
-											"raw": "{\r\n  \"name\": \"Instalacion duplo\",\r\n  \"code\": \"A-89\",\r\n  \"unit\": 2,\r\n  \"prices\": {\r\n    \"material\": 12.12,\r\n    \"work_force\": 30.30\r\n  }\r\n}",
+											"raw": "{\r\n  \"name\": \"Instalacion ruter\",\r\n  \"code\": \"A-91\",\r\n  \"unit\": 2,\r\n  \"prices\": {\r\n    \"material\": 10.12,\r\n    \"work_force\": 32.30\r\n  }\r\n}",
 											"options": {
 												"raw": {
 													"language": "json"
@@ -1677,6 +1677,45 @@
 										"body": {
 											"mode": "raw",
 											"raw": "{\r\n  \"name\": \"Installacion duplo\",\r\n  \"code\": \"A-20\",\r\n  \"unit\": 1,\r\n  \"prices\": {\r\n    \"material\": 12.12,\r\n    \"work_force\": 30.30\r\n  }\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{url}}/external-plant/actions/1",
+											"host": [
+												"{{url}}"
+											],
+											"path": [
+												"external-plant",
+												"actions",
+												"1"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "delete external plant action",
+									"protocolProfileBehavior": {
+										"disabledSystemHeaders": {
+											"accept": true
+										}
+									},
+									"request": {
+										"method": "DELETE",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "application/json",
+												"type": "text"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "",
 											"options": {
 												"raw": {
 													"language": "json"
