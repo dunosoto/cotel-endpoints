@@ -1253,7 +1253,7 @@
 												],
 												"body": {
 													"mode": "raw",
-													"raw": "{\r\n  \"url\": \"http://imagen3.com/imagen3\"\r\n}",
+													"raw": "{\r\n  \"url\": \"https://firebasestorage.googleapis.com/v0/b/cotel-2646f.appspot.com/o/cotel-app%2Factivities%2F1%2Fbefore_after_image%2F18b9?alt=media&token=1f6a28a7-df24-42c8-9194-76a65bbbc6e8\"\r\n}",
 													"options": {
 														"raw": {
 															"language": "json"
@@ -1261,7 +1261,7 @@
 													}
 												},
 												"url": {
-													"raw": "{{url}}/external-plant/work-order/activities/2/images",
+													"raw": "{{url}}/external-plant/work-order/activities/1/images",
 													"host": [
 														"{{url}}"
 													],
@@ -1269,7 +1269,7 @@
 														"external-plant",
 														"work-order",
 														"activities",
-														"2",
+														"1",
 														"images"
 													]
 												}
@@ -1340,7 +1340,7 @@
 												],
 												"body": {
 													"mode": "raw",
-													"raw": "{\r\n  \"url\": \"http://blueprint.com/blueprint\"\r\n}",
+													"raw": "{\r\n  \"url\": \"https://www.google.com/url?sa=i&url=https%3A%2F%2Faire.ec%2Fproducto%2Ffibraec-caja-nap-16-puertos-ip65-sc-upc-high-quality%2F&psig=AOvVaw3LcJ-orPW9YyqylCFVCUVs&ust=1678761843445000&source=images&cd=vfe&ved=0CBAQjRxqFwoTCICMhq7x1_0CFQAAAAAdAAAAABAM\"\r\n}",
 													"options": {
 														"raw": {
 															"language": "json"
@@ -1348,7 +1348,7 @@
 													}
 												},
 												"url": {
-													"raw": "{{url}}/external-plant/work-order/activities/2/blueprints",
+													"raw": "{{url}}/external-plant/work-order/activities/1/blueprints",
 													"host": [
 														"{{url}}"
 													],
@@ -1356,7 +1356,7 @@
 														"external-plant",
 														"work-order",
 														"activities",
-														"2",
+														"1",
 														"blueprints"
 													]
 												}
@@ -1513,7 +1513,7 @@
 										],
 										"body": {
 											"mode": "raw",
-											"raw": "{\r\n  \"process\": \"process done\", \r\n  \"observation\": \"tuvimos algunas complicaciones pero ya eesta\"\r\n}",
+											"raw": "{\r\n  \"process\": \"process done\", \r\n  \"observation\": \"tuvimos algunas complicaciones pero ya eesta, esto ira en el reporte\"\r\n}",
 											"options": {
 												"raw": {
 													"language": "json"
@@ -2840,6 +2840,87 @@
 										"work-order",
 										"1",
 										"reports",
+										"download"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "control work report download",
+							"protocolProfileBehavior": {
+								"disabledSystemHeaders": {
+									"accept": true
+								}
+							},
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"managers\": [\r\n    {\r\n      \"name\": \"daniel uno\",\r\n      \"identity_card\": \"7997232\",\r\n      \"company\": \"CO4 S.R.L.\"\r\n    },\r\n    {\r\n      \"name\": \"alberto rodriguez\",\r\n      \"identity_card\": \"1232457\",\r\n      \"company\": \"Entel S.A.\"\r\n    }\r\n  ],\r\n  \"startDate\": \"2023-01-01\",\r\n  \"finishDate\": \"2023-03-10\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{url}}/external-plant/olts/1/control-work-report/download",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"external-plant",
+										"olts",
+										"1",
+										"control-work-report",
+										"download"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "control work report fttx-fo",
+							"protocolProfileBehavior": {
+								"disabledSystemHeaders": {
+									"accept": true
+								}
+							},
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"managers\": [\r\n    {\r\n      \"name\": \"daniel uno\",\r\n      \"identity_card\": \"7997232\",\r\n      \"company\": \"CO4 S.R.L.\"\r\n    },\r\n    {\r\n      \"name\": \"alberto rodriguez\",\r\n      \"identity_card\": \"1232457\",\r\n      \"company\": \"Entel S.A.\"\r\n    }\r\n  ],\r\n  \"startDate\": \"2023-01-01\",\r\n  \"finishDate\": \"2023-03-10\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{url}}/external-plant/olts/control-work-report/download",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"external-plant",
+										"olts",
+										"control-work-report",
 										"download"
 									]
 								}
