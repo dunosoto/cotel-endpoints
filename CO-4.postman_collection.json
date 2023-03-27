@@ -998,7 +998,7 @@
 								],
 								"body": {
 									"mode": "raw",
-									"raw": "{\r\n  \"olt\": {\r\n    \"name\":\"cercado\",\r\n    \"address\":\"Plaza colon\",\r\n    \"lat\":\"-11.345623\",\r\n    \"lon\":\"-12.12765\",\r\n    \"image\":\"asdqwe\",\r\n    \"category_id\": 1,\r\n    \"state_id\": 1,\r\n    \"date_mantenance\":\"2022-03-07 00:00:00\",\r\n    \"lapse_time_in_month\":1\r\n  },\r\n  \"variants\": [\r\n    {\r\n      \"id\": 1,\r\n      \"amount\": 10.11\r\n    }\r\n  ]\r\n}",
+									"raw": "{\r\n  \"olt\": {\r\n    \"name\":\"cercado\",\r\n    \"address\":\"Plaza colon\",\r\n    \"lat\":\"-11.345623\",\r\n    \"lon\":\"-12.12765\",\r\n    \"image\":\"asdqwe\",\r\n    \"category_id\": 1,\r\n    \"state_id\": 1,\r\n    \"date_mantenance\":\"2022-03-07 00:00:00\",\r\n    \"lapse_time_in_month\":1,\r\n    \"zone_type\": \"LOCALIDAD\"\r\n  },\r\n  \"variants\": [\r\n    {\r\n      \"id\": 1,\r\n      \"amount\": 11.11\r\n    }\r\n  ]\r\n}",
 									"options": {
 										"raw": {
 											"language": "json"
@@ -1053,7 +1053,7 @@
 								],
 								"body": {
 									"mode": "raw",
-									"raw": "{\r\n  \"name\": \"Heroinas\",\r\n  \"address\": \"Av Heroinas y Av ayacucho\",\r\n  \"lat\": \"-12.345677\",\r\n  \"lon\": \"-15.123766\",\r\n  \"image\": \"imagen.png\",\r\n  \"category_id\": 1,\r\n  \"state_id\": 2,\r\n  \"date_mantenance\":\"2022-03-07 00:00:00\",\r\n  \"lapse_time_in_month\":1\r\n}",
+									"raw": "{\r\n  \"name\": \"Heroinas\",\r\n  \"address\": \"Av Heroinas y Av ayacucho\",\r\n  \"lat\": \"-12.345677\",\r\n  \"lon\": \"-15.123766\",\r\n  \"image\": \"imagen.png\",\r\n  \"category_id\": 1,\r\n  \"state_id\": 2,\r\n  \"date_mantenance\":\"2022-03-07 00:00:00\",\r\n  \"lapse_time_in_month\":1,\r\n  \"zone_type\": \"CAPITAL\"\r\n}",
 									"options": {
 										"raw": {
 											"language": "json"
@@ -1061,13 +1061,13 @@
 									}
 								},
 								"url": {
-									"raw": "{{url}}/olts/3",
+									"raw": "{{url}}/olts/2",
 									"host": [
 										"{{url}}"
 									],
 									"path": [
 										"olts",
-										"3"
+										"2"
 									]
 								}
 							},
@@ -1131,7 +1131,7 @@
 								],
 								"body": {
 									"mode": "raw",
-									"raw": "{\r\n  \"odns\":[\r\n    {\r\n      \"code\": \"dan123\",\r\n      \"lat\": \"-14.098756\",\r\n      \"lon\": \"-13.123543\",\r\n      \"address\" : \"Av juan de la rosa No 567\",\r\n      \"olt_id\": 1\r\n    },\r\n    {\r\n      \"code\": \"dan890\",\r\n      \"lat\": \"-14.098756\",\r\n      \"lon\": \"-13.123543\",\r\n      \"address\" : \"Av america esq Libertador\",\r\n      \"olt_id\": 1\r\n    }\r\n  ]\r\n}",
+									"raw": "{\r\n  \"odns\":[\r\n    {\r\n      \"code\": \"dan1231234765467456dyueruyet\",\r\n      \"lat\": \"-14.098756\",\r\n      \"lon\": \"-13.123543\",\r\n      \"address\" : \"Av juan de la rosa No 567\",\r\n      \"olt_id\": 1\r\n    },\r\n    {\r\n      \"code\": \"dan890689876tyiodfgh234\",\r\n      \"lat\": \"-14.098756\",\r\n      \"lon\": \"-13.123543\",\r\n      \"address\" : \"Av america esq Libertador\",\r\n      \"olt_id\": 1\r\n    }\r\n  ]\r\n}",
 									"options": {
 										"raw": {
 											"language": "json"
@@ -1638,7 +1638,7 @@
 										],
 										"body": {
 											"mode": "raw",
-											"raw": "{\r\n  \"name\": \"Instalacion ruter\",\r\n  \"code\": \"A-91\",\r\n  \"unit\": 2,\r\n  \"prices\": {\r\n    \"material\": 10.12,\r\n    \"work_force\": 32.30\r\n  }\r\n}",
+											"raw": "{\r\n  \"name\": \"Instalacion ruter\",\r\n  \"code\": \"A-93\",\r\n  \"unit\": 2,\r\n  \"prices\": {\r\n    \"material\": 10.12,\r\n    \"work_force\": 32.30,\r\n    \"price_type\": \"LOCALIDAD\"\r\n  }\r\n}",
 											"options": {
 												"raw": {
 													"language": "json"
@@ -1676,7 +1676,7 @@
 										],
 										"body": {
 											"mode": "raw",
-											"raw": "{\r\n  \"name\": \"Installacion duplo\",\r\n  \"code\": \"A-20\",\r\n  \"unit\": 1,\r\n  \"prices\": {\r\n    \"material\": 12.12,\r\n    \"work_force\": 30.30\r\n  }\r\n}",
+											"raw": "{\r\n  \"name\": \"Installacion duplo\",\r\n  \"code\": \"A-93\",\r\n  \"unit\": 1,\r\n  \"prices\": {\r\n    \"material\": 12.12,\r\n    \"work_force\": 30.30,\r\n    \"price_type\": \"CAPITAL\"\r\n  }\r\n}",
 											"options": {
 												"raw": {
 													"language": "json"
@@ -1684,14 +1684,14 @@
 											}
 										},
 										"url": {
-											"raw": "{{url}}/external-plant/actions/1",
+											"raw": "{{url}}/external-plant/actions/4",
 											"host": [
 												"{{url}}"
 											],
 											"path": [
 												"external-plant",
 												"actions",
-												"1"
+												"4"
 											]
 										}
 									},
@@ -2872,14 +2872,13 @@
 									}
 								},
 								"url": {
-									"raw": "{{url}}/external-plant/olts/1/control-work-report/download",
+									"raw": "{{url}}/external-plant/network/control-work-report/download",
 									"host": [
 										"{{url}}"
 									],
 									"path": [
 										"external-plant",
-										"olts",
-										"1",
+										"network",
 										"control-work-report",
 										"download"
 									]
@@ -6614,7 +6613,7 @@
 										],
 										"body": {
 											"mode": "raw",
-											"raw": "{\r\n  \"item_id\": 1,\r\n  \"code\": \"208.30\",\r\n  \"name\": \"cable\"\r\n}",
+											"raw": "{\r\n  \"item_id\": 1,\r\n  \"code\": \"08.30\",\r\n  \"name\": \"alicates\"\r\n}",
 											"options": {
 												"raw": {
 													"language": "json"
@@ -6708,7 +6707,7 @@
 								],
 								"body": {
 									"mode": "raw",
-									"raw": "{\r\n  \"code\": \"208\",\r\n  \"name\": \"materiales electricos\"\r\n}",
+									"raw": "{\r\n  \"code\": \"08\",\r\n  \"name\": \"tropper\"\r\n}",
 									"options": {
 										"raw": {
 											"language": "json"
@@ -6816,13 +6815,13 @@
 										"method": "GET",
 										"header": [],
 										"url": {
-											"raw": "{{url}}/variants-quantities/2",
+											"raw": "{{url}}/variants-quantities/4",
 											"host": [
 												"{{url}}"
 											],
 											"path": [
 												"variants-quantities",
-												"2"
+												"4"
 											],
 											"query": [
 												{
@@ -6987,7 +6986,7 @@
 										],
 										"body": {
 											"mode": "raw",
-											"raw": "{\r\n  \"code\": \"as23\",\r\n  \"name\": \"adsfasadf\",\r\n  \"type_id\": 1\r\n}",
+											"raw": "{\r\n  \"code\": \"200\",\r\n  \"name\": \"vehiculos\",\r\n  \"type_id\": 1\r\n}",
 											"options": {
 												"raw": {
 													"language": "json"
@@ -7085,7 +7084,7 @@
 										],
 										"body": {
 											"mode": "raw",
-											"raw": "{\r\n  \"category_id\": 1,\r\n  \"code\": \"asdf\",\r\n  \"name\": \"adsf\"\r\n}",
+											"raw": "{\r\n  \"category_id\": 1,\r\n  \"code\": \"06\",\r\n  \"name\": \"adsf\"\r\n}",
 											"options": {
 												"raw": {
 													"language": "json"
@@ -7263,7 +7262,7 @@
 								],
 								"body": {
 									"mode": "raw",
-									"raw": "{\r\n  \"item_category_id\": 1,\r\n  \"name\":\"filtro para camiones\",\r\n  \"code\": \"208.30.03\",\r\n  \"description\":\"FILTRO ACEITE MULTI 2/4 COD. W7MUUI34/9S\",\r\n  \"unit_id\": 2,\r\n  \"image\": \"imagen.kpg\",\r\n  \"company_id\": 1,\r\n  \"stock\": {\r\n    \"incoming\": 800,\r\n    \"minimum\": 60,\r\n    \"cost\": 20.3,\r\n    \"date_incoming\": \"2022-12-14 00:00:00\"\r\n  }\r\n}",
+									"raw": "{\r\n  \"item_category_id\": 1,\r\n  \"name\":\"filtro para camiones\",\r\n  \"code\": \"06.32.05\",\r\n  \"description\":\"FILTRO diesel\",\r\n  \"unit_id\": 2,\r\n  \"image\": \"imagen1.jpeg\",\r\n  \"company_id\": 2,\r\n  \"stock\": {\r\n    \"incoming\": 300,\r\n    \"minimum\": 20,\r\n    \"cost\": 15.34567,\r\n    \"date_incoming\": \"2023-02-14 00:00:00\"\r\n  }\r\n}",
 									"options": {
 										"raw": {
 											"language": "json"
