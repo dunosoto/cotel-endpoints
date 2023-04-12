@@ -1638,7 +1638,7 @@
 										],
 										"body": {
 											"mode": "raw",
-											"raw": "{\r\n  \"name\": \"Instalacion ruter\",\r\n  \"code\": \"A-93\",\r\n  \"unit\": 2,\r\n  \"prices\": {\r\n    \"material\": 10.12,\r\n    \"work_force\": 32.30,\r\n    \"price_type\": \"LOCALIDAD\"\r\n  }\r\n}",
+											"raw": "{\r\n  \"name\": \"Instalacion ruter\",\r\n  \"code\": \"A-97\",\r\n  \"unit\": 2,\r\n  \"prices\": [\r\n    {\r\n      \"material\": 13.12,\r\n      \"work_force\": 33.30,\r\n      \"price_type\": \"LOCALIDAD\"\r\n    },\r\n    {\r\n      \"material\": 13.12,\r\n      \"work_force\": 33.30,\r\n      \"price_type\": \"CAPITAL\"\r\n    }\r\n  ]\r\n}",
 											"options": {
 												"raw": {
 													"language": "json"
@@ -1676,7 +1676,7 @@
 										],
 										"body": {
 											"mode": "raw",
-											"raw": "{\r\n  \"name\": \"Installacion duplo\",\r\n  \"code\": \"A-93\",\r\n  \"unit\": 1,\r\n  \"prices\": {\r\n    \"material\": 12.12,\r\n    \"work_force\": 30.30,\r\n    \"price_type\": \"CAPITAL\"\r\n  }\r\n}",
+											"raw": "{\r\n  \"name\": \"Installacion duplo\",\r\n  \"code\": \"A-97\",\r\n  \"unit\": 1,\r\n  \"prices\": [\r\n    {\r\n      \"material\": 11.11,\r\n      \"work_force\": 11.11,\r\n      \"price_type\": \"CAPITAL\"\r\n    },\r\n    {\r\n      \"material\": 33,\r\n      \"work_force\": 33,\r\n      \"price_type\": \"LOCALIDAD\"\r\n    }\r\n  ]\r\n}",
 											"options": {
 												"raw": {
 													"language": "json"
@@ -1684,14 +1684,14 @@
 											}
 										},
 										"url": {
-											"raw": "{{url}}/external-plant/actions/4",
+											"raw": "{{url}}/external-plant/actions/5",
 											"host": [
 												"{{url}}"
 											],
 											"path": [
 												"external-plant",
 												"actions",
-												"4"
+												"5"
 											]
 										}
 									},
